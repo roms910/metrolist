@@ -39,11 +39,14 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build Debug APK
-        run: ./gradlew assembleFossDebug --stacktrace 2>&1 | tail -100
+        run: ./gradlew assembleFossDebug
+
+      - name: Find APK
+        run: find . -name "*.apk" -type f
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
         with:
           name: metrolist-debug
-          path: app/build/outputs/apk/fossDebug/app-foss-debug.apk
+          path: app/build/outputs/apk/**/*.apk
           retention-days: 7
