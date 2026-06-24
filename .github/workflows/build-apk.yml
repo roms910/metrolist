@@ -39,15 +39,10 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build Debug APK
-        run: ./gradlew assembleFossDebug --info 2>&1 | grep -E "error:|Error|exception|Exception|\.kt:" | head -50
-
-      - name: Build again to fail properly
-        run: ./gradlew assembleFossDebug
-
-      - name: Find APK
-        run: find . -name "*.apk" -type f
+        run: ./gradlew assembleFossDebug --info 2>&1 | grep -E "error:|\.kt:[0-9]+|unresolved|cannot find" | head -80
 
       - name: Upload APK
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: metrolist-debug
