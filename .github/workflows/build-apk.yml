@@ -39,6 +39,9 @@ jobs:
         run: chmod +x gradlew
 
       - name: Build Debug APK
+        run: ./gradlew assembleFossDebug --info 2>&1 | grep -E "error:|Error|exception|Exception|\.kt:" | head -50
+
+      - name: Build again to fail properly
         run: ./gradlew assembleFossDebug
 
       - name: Find APK
