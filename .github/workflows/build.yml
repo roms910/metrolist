@@ -61,14 +61,17 @@ jobs:
           LASTFM_SECRET: ${{ secrets.LASTFM_SECRET }}
 
       - name: Sign APK
-        uses: r0adkll/sign-android-release@v1
-        with:
-          releaseDirectory: app/build/outputs/apk/${{ matrix.variant }}/release
-          signingKeyBase64: ${{ secrets.KEYSTORE }}
-          alias: ${{ secrets.KEY_ALIAS }}
-          keyStorePassword: ${{ secrets.KEYSTORE_PASSWORD }}
-          keyPassword: ${{ secrets.KEY_PASSWORD }}
-          buildToolsVersion: 35.0.0
+        run: |
+          echo "${{ secrets.KEYSTORE }}" | base64 -d > keystore.jks
+          UNSIGNED_APK=$(find app/build/outputs/apk/${{ matrix.variant }}/release -name "*.apk" ! -name "*-signed.apk" | head -1)
+          $ANDROID_HOME/build-tools/35.0.0/apksigner sign \
+            --ks keystore.jks \
+            --ks-key-alias ${{ secrets.KEY_ALIAS }} \
+            --ks-pass pass:${{ secrets.KEYSTORE_PASSWORD }} \
+            --key-pass pass:${{ secrets.KEY_PASSWORD }} \
+            --out ${UNSIGNED_APK%-unsigned.apk}-signed.apk \
+            $UNSIGNED_APK
+          rm keystore.jks
 
       - name: Move signed APK
         run: |
