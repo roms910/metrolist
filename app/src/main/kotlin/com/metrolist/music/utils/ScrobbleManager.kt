@@ -3,10 +3,10 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.utils
+package com.romzz.musify.utils
 
 import com.metrolist.lastfm.LastFM
-import com.metrolist.music.models.MediaMetadata
+import com.romzz.musify.models.MediaMetadata
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay

@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.menu
+package com.romzz.musify.ui.menu
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -57,28 +57,28 @@ import androidx.media3.exoplayer.offline.Download
 import androidx.media3.exoplayer.offline.DownloadRequest
 import androidx.media3.exoplayer.offline.DownloadService
 import com.metrolist.innertube.YouTube
-import com.metrolist.music.LocalNavController
+import com.romzz.musify.LocalNavController
 import com.metrolist.innertube.models.AlbumItem
-import com.metrolist.music.LocalDatabase
-import com.metrolist.music.LocalDownloadUtil
-import com.metrolist.music.LocalListenTogetherManager
-import com.metrolist.music.LocalPlayerConnection
-import com.metrolist.music.R
-import com.metrolist.music.constants.ListItemHeight
-import com.metrolist.music.constants.ListThumbnailSize
-import com.metrolist.music.db.entities.Song
-import com.metrolist.music.db.entities.SpeedDialItem
-import com.metrolist.music.extensions.toMediaItem
-import com.metrolist.music.playback.ExoDownloadService
-import com.metrolist.music.playback.queues.YouTubeAlbumRadio
-import com.metrolist.music.ui.component.ListDialog
-import com.metrolist.music.ui.component.Material3MenuGroup
-import com.metrolist.music.ui.component.Material3MenuItemData
-import com.metrolist.music.ui.component.NewAction
-import com.metrolist.music.ui.component.NewActionGrid
-import com.metrolist.music.ui.component.SongListItem
-import com.metrolist.music.ui.component.YouTubeListItem
-import com.metrolist.music.utils.reportException
+import com.romzz.musify.LocalDatabase
+import com.romzz.musify.LocalDownloadUtil
+import com.romzz.musify.LocalListenTogetherManager
+import com.romzz.musify.LocalPlayerConnection
+import com.romzz.musify.R
+import com.romzz.musify.constants.ListItemHeight
+import com.romzz.musify.constants.ListThumbnailSize
+import com.romzz.musify.db.entities.Song
+import com.romzz.musify.db.entities.SpeedDialItem
+import com.romzz.musify.extensions.toMediaItem
+import com.romzz.musify.playback.ExoDownloadService
+import com.romzz.musify.playback.queues.YouTubeAlbumRadio
+import com.romzz.musify.ui.component.ListDialog
+import com.romzz.musify.ui.component.Material3MenuGroup
+import com.romzz.musify.ui.component.Material3MenuItemData
+import com.romzz.musify.ui.component.NewAction
+import com.romzz.musify.ui.component.NewActionGrid
+import com.romzz.musify.ui.component.SongListItem
+import com.romzz.musify.ui.component.YouTubeListItem
+import com.romzz.musify.utils.reportException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 

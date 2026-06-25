@@ -1,4 +1,4 @@
-package com.metrolist.music.ui.screens.wrapped.pages
+package com.romzz.musify.ui.screens.wrapped.pages
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -22,9 +22,9 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.metrolist.music.R
-import com.metrolist.music.ui.screens.wrapped.components.AnimatedBackground
-import com.metrolist.music.ui.screens.wrapped.components.ShapeType
+import com.romzz.musify.R
+import com.romzz.musify.ui.screens.wrapped.components.AnimatedBackground
+import com.romzz.musify.ui.screens.wrapped.components.ShapeType
 
 @Composable
 fun ConclusionPage(onClose: () -> Unit) {

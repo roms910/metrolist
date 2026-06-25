@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.viewmodels
+package com.romzz.musify.viewmodels
 
 import android.content.Context
 import androidx.compose.runtime.getValue
@@ -18,14 +18,14 @@ import com.metrolist.innertube.models.filterExplicit
 import com.metrolist.innertube.models.filterVideoSongs
 import com.metrolist.innertube.models.filterYoutubeShorts
 import com.metrolist.innertube.pages.SearchSummaryPage
-import com.metrolist.music.constants.HideExplicitKey
-import com.metrolist.music.constants.HideVideoSongsKey
-import com.metrolist.music.constants.HideYoutubeShortsKey
-import com.metrolist.music.models.ItemsPage
-import com.metrolist.music.utils.SearchRoutes
-import com.metrolist.music.utils.dataStore
-import com.metrolist.music.utils.get
-import com.metrolist.music.utils.reportException
+import com.romzz.musify.constants.HideExplicitKey
+import com.romzz.musify.constants.HideVideoSongsKey
+import com.romzz.musify.constants.HideYoutubeShortsKey
+import com.romzz.musify.models.ItemsPage
+import com.romzz.musify.utils.SearchRoutes
+import com.romzz.musify.utils.dataStore
+import com.romzz.musify.utils.get
+import com.romzz.musify.utils.reportException
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.flow.MutableStateFlow

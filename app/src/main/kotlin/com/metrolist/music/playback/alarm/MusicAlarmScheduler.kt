@@ -1,11 +1,11 @@
-package com.metrolist.music.playback.alarm
+package com.romzz.musify.playback.alarm
 
 import android.app.AlarmManager
 import android.app.PendingIntent
 import android.content.Context
 import android.content.Intent
 import android.os.Build
-import com.metrolist.music.playback.MusicService
+import com.romzz.musify.playback.MusicService
 import java.util.Calendar
 
 object MusicAlarmScheduler {

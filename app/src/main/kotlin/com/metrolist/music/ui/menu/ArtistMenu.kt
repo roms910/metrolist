@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.menu
+package com.romzz.musify.ui.menu
 
 import android.content.Intent
 import android.content.res.Configuration
@@ -29,20 +29,20 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import com.metrolist.music.LocalDatabase
-import com.metrolist.music.LocalListenTogetherManager
-import com.metrolist.music.LocalPlayerConnection
-import com.metrolist.music.R
-import com.metrolist.music.constants.ArtistSongSortType
-import com.metrolist.music.db.entities.SpeedDialItem
-import com.metrolist.music.db.entities.Artist
-import com.metrolist.music.extensions.toMediaItem
-import com.metrolist.music.playback.queues.ListQueue
-import com.metrolist.music.ui.component.ArtistListItem
-import com.metrolist.music.ui.component.Material3MenuGroup
-import com.metrolist.music.ui.component.Material3MenuItemData
-import com.metrolist.music.ui.component.NewAction
-import com.metrolist.music.ui.component.NewActionGrid
+import com.romzz.musify.LocalDatabase
+import com.romzz.musify.LocalListenTogetherManager
+import com.romzz.musify.LocalPlayerConnection
+import com.romzz.musify.R
+import com.romzz.musify.constants.ArtistSongSortType
+import com.romzz.musify.db.entities.SpeedDialItem
+import com.romzz.musify.db.entities.Artist
+import com.romzz.musify.extensions.toMediaItem
+import com.romzz.musify.playback.queues.ListQueue
+import com.romzz.musify.ui.component.ArtistListItem
+import com.romzz.musify.ui.component.Material3MenuGroup
+import com.romzz.musify.ui.component.Material3MenuItemData
+import com.romzz.musify.ui.component.NewAction
+import com.romzz.musify.ui.component.NewActionGrid
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.first

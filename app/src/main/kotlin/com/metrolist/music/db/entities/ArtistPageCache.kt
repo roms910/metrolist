@@ -1,4 +1,4 @@
-package com.metrolist.music.db.entities
+package com.romzz.musify.db.entities
 
 import com.metrolist.innertube.models.ArtistItem
 import com.metrolist.innertube.models.AlbumItem

@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.screens
+package com.romzz.musify.ui.screens
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -71,31 +71,31 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.media3.exoplayer.offline.Download
 import androidx.navigation.NavController
 import coil3.compose.AsyncImage
-import com.metrolist.music.LocalDatabase
-import com.metrolist.music.LocalDownloadUtil
-import com.metrolist.music.LocalListenTogetherManager
-import com.metrolist.music.LocalPlayerAwareWindowInsets
-import com.metrolist.music.LocalPlayerConnection
-import com.metrolist.music.R
-import com.metrolist.music.constants.HideExplicitKey
-import com.metrolist.music.constants.HideVideoSongsKey
-import com.metrolist.music.db.entities.Album
-import com.metrolist.music.playback.queues.LocalAlbumRadio
-import com.metrolist.music.ui.component.ClickableArtistText
-import com.metrolist.music.ui.component.IconButton
-import com.metrolist.music.ui.component.LocalMenuState
-import com.metrolist.music.ui.component.NavigationTitle
-import com.metrolist.music.ui.component.SongListItem
-import com.metrolist.music.ui.component.YouTubeGridItem
-import com.metrolist.music.ui.menu.AlbumMenu
-import com.metrolist.music.ui.menu.SelectionSongMenu
-import com.metrolist.music.ui.menu.SongMenu
-import com.metrolist.music.ui.menu.YouTubeAlbumMenu
-import com.metrolist.music.ui.utils.backToMain
-import com.metrolist.music.ui.utils.resize
-import com.metrolist.music.utils.makeTimeString
-import com.metrolist.music.utils.rememberPreference
-import com.metrolist.music.viewmodels.AlbumViewModel
+import com.romzz.musify.LocalDatabase
+import com.romzz.musify.LocalDownloadUtil
+import com.romzz.musify.LocalListenTogetherManager
+import com.romzz.musify.LocalPlayerAwareWindowInsets
+import com.romzz.musify.LocalPlayerConnection
+import com.romzz.musify.R
+import com.romzz.musify.constants.HideExplicitKey
+import com.romzz.musify.constants.HideVideoSongsKey
+import com.romzz.musify.db.entities.Album
+import com.romzz.musify.playback.queues.LocalAlbumRadio
+import com.romzz.musify.ui.component.ClickableArtistText
+import com.romzz.musify.ui.component.IconButton
+import com.romzz.musify.ui.component.LocalMenuState
+import com.romzz.musify.ui.component.NavigationTitle
+import com.romzz.musify.ui.component.SongListItem
+import com.romzz.musify.ui.component.YouTubeGridItem
+import com.romzz.musify.ui.menu.AlbumMenu
+import com.romzz.musify.ui.menu.SelectionSongMenu
+import com.romzz.musify.ui.menu.SongMenu
+import com.romzz.musify.ui.menu.YouTubeAlbumMenu
+import com.romzz.musify.ui.utils.backToMain
+import com.romzz.musify.ui.utils.resize
+import com.romzz.musify.utils.makeTimeString
+import com.romzz.musify.utils.rememberPreference
+import com.romzz.musify.viewmodels.AlbumViewModel
 
 @OptIn(ExperimentalFoundationApi::class, ExperimentalMaterial3Api::class, ExperimentalMaterial3ExpressiveApi::class)
 @Composable

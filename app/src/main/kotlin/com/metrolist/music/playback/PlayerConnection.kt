@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.playback
+package com.romzz.musify.playback
 
 import android.content.Context
 import androidx.media3.common.MediaItem
@@ -16,24 +16,24 @@ import androidx.media3.common.Player.REPEAT_MODE_OFF
 import androidx.media3.common.Player.STATE_ENDED
 import androidx.media3.common.Timeline
 import androidx.media3.exoplayer.ExoPlayer
-import com.metrolist.music.constants.SleepTimerCustomDaysKey
-import com.metrolist.music.constants.SleepTimerDayTimesKey
-import com.metrolist.music.constants.SleepTimerDefaultKey
-import com.metrolist.music.constants.SleepTimerEnabledKey
-import com.metrolist.music.constants.SleepTimerEndTimeKey
-import com.metrolist.music.constants.SleepTimerRepeatKey
-import com.metrolist.music.constants.SleepTimerStartTimeKey
-import com.metrolist.music.db.MusicDatabase
-import com.metrolist.music.extensions.currentMetadata
-import com.metrolist.music.extensions.getCurrentQueueIndex
-import com.metrolist.music.extensions.getQueueWindows
-import com.metrolist.music.extensions.metadata
-import com.metrolist.music.extensions.togglePlayPause
-import com.metrolist.music.playback.MusicService.MusicBinder
-import com.metrolist.music.playback.queues.Queue
-import com.metrolist.music.utils.dataStore
-import com.metrolist.music.utils.get
-import com.metrolist.music.utils.reportException
+import com.romzz.musify.constants.SleepTimerCustomDaysKey
+import com.romzz.musify.constants.SleepTimerDayTimesKey
+import com.romzz.musify.constants.SleepTimerDefaultKey
+import com.romzz.musify.constants.SleepTimerEnabledKey
+import com.romzz.musify.constants.SleepTimerEndTimeKey
+import com.romzz.musify.constants.SleepTimerRepeatKey
+import com.romzz.musify.constants.SleepTimerStartTimeKey
+import com.romzz.musify.db.MusicDatabase
+import com.romzz.musify.extensions.currentMetadata
+import com.romzz.musify.extensions.getCurrentQueueIndex
+import com.romzz.musify.extensions.getQueueWindows
+import com.romzz.musify.extensions.metadata
+import com.romzz.musify.extensions.togglePlayPause
+import com.romzz.musify.playback.MusicService.MusicBinder
+import com.romzz.musify.playback.queues.Queue
+import com.romzz.musify.utils.dataStore
+import com.romzz.musify.utils.get
+import com.romzz.musify.utils.reportException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.MutableStateFlow

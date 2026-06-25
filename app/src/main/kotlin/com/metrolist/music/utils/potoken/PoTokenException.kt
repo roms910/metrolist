@@ -1,4 +1,4 @@
-package com.metrolist.music.utils.potoken
+package com.romzz.musify.utils.potoken
 
 class PoTokenException(message: String) : Exception(message)
 

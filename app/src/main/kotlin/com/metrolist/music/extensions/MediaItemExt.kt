@@ -3,17 +3,17 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.extensions
+package com.romzz.musify.extensions
 
 import android.os.Bundle
 import androidx.core.net.toUri
 import androidx.media3.common.MediaItem
 import androidx.media3.common.MediaMetadata.MEDIA_TYPE_MUSIC
 import com.metrolist.innertube.models.SongItem
-import com.metrolist.music.db.entities.Song
-import com.metrolist.music.models.MediaMetadata
-import com.metrolist.music.models.toMediaMetadata
-import com.metrolist.music.ui.utils.resize
+import com.romzz.musify.db.entities.Song
+import com.romzz.musify.models.MediaMetadata
+import com.romzz.musify.models.toMediaMetadata
+import com.romzz.musify.ui.utils.resize
 
 val MediaItem.metadata: MediaMetadata?
     get() = localConfiguration?.tag as? MediaMetadata

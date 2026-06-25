@@ -3,11 +3,11 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.utils
+package com.romzz.musify.utils
 
 import android.content.Context
 import android.content.res.Configuration
-import com.metrolist.music.R
+import com.romzz.musify.R
 import java.util.Locale
 
 fun getArtistSeparator(context: Context): String = " ${context.getString(R.string.and)} "

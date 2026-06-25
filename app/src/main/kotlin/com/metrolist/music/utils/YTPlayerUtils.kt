@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.utils
+package com.romzz.musify.utils
 
 import android.net.ConnectivityManager
 import android.net.Uri
@@ -25,15 +25,15 @@ import com.metrolist.innertube.models.YouTubeClient.Companion.WEB
 import com.metrolist.innertube.models.YouTubeClient.Companion.WEB_CREATOR
 import com.metrolist.innertube.models.YouTubeClient.Companion.WEB_REMIX
 import com.metrolist.innertube.models.response.PlayerResponse
-import com.metrolist.music.constants.AudioQuality
-import com.metrolist.music.utils.YTPlayerUtils.MAIN_CLIENT
-import com.metrolist.music.utils.YTPlayerUtils.STREAM_FALLBACK_CLIENTS
-import com.metrolist.music.utils.YTPlayerUtils.validateStatus
-import com.metrolist.music.utils.cipher.CipherDeobfuscator
-import com.metrolist.music.utils.cipher.FunctionNameExtractor
-import com.metrolist.music.utils.cipher.PlayerJsFetcher
-import com.metrolist.music.utils.potoken.PoTokenGenerator
-import com.metrolist.music.utils.potoken.PoTokenResult
+import com.romzz.musify.constants.AudioQuality
+import com.romzz.musify.utils.YTPlayerUtils.MAIN_CLIENT
+import com.romzz.musify.utils.YTPlayerUtils.STREAM_FALLBACK_CLIENTS
+import com.romzz.musify.utils.YTPlayerUtils.validateStatus
+import com.romzz.musify.utils.cipher.CipherDeobfuscator
+import com.romzz.musify.utils.cipher.FunctionNameExtractor
+import com.romzz.musify.utils.cipher.PlayerJsFetcher
+import com.romzz.musify.utils.potoken.PoTokenGenerator
+import com.romzz.musify.utils.potoken.PoTokenResult
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.SupervisorJob

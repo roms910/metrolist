@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.screens.wrapped.pages
+package com.romzz.musify.ui.screens.wrapped.pages
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.LinearEasing
@@ -50,8 +50,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.metrolist.music.R
-import com.metrolist.music.ui.theme.bbhBartle
+import com.romzz.musify.R
+import com.romzz.musify.ui.theme.bbhBartle
 import kotlinx.coroutines.delay
 
 private const val FADE_IN_DURATION = 1000

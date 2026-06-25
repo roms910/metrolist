@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.player
+package com.romzz.musify.ui.player
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.fadeIn
@@ -70,21 +70,21 @@ import androidx.media3.common.Player
 import coil3.compose.AsyncImage
 import coil3.request.CachePolicy
 import coil3.request.ImageRequest
-import com.metrolist.music.LocalListenTogetherManager
-import com.metrolist.music.LocalPlayerConnection
-import com.metrolist.music.R
-import com.metrolist.music.constants.CropAlbumArtKey
-import com.metrolist.music.constants.HidePlayerThumbnailKey
-import com.metrolist.music.constants.PlayerBackgroundStyle
-import com.metrolist.music.constants.PlayerBackgroundStyleKey
-import com.metrolist.music.constants.PlayerHorizontalPadding
-import com.metrolist.music.constants.SeekExtraSeconds
-import com.metrolist.music.constants.SwipeThumbnailKey
-import com.metrolist.music.constants.ThumbnailCornerRadius
-import com.metrolist.music.listentogether.RoomRole
-import com.metrolist.music.ui.component.CastButton
-import com.metrolist.music.utils.rememberEnumPreference
-import com.metrolist.music.utils.rememberPreference
+import com.romzz.musify.LocalListenTogetherManager
+import com.romzz.musify.LocalPlayerConnection
+import com.romzz.musify.R
+import com.romzz.musify.constants.CropAlbumArtKey
+import com.romzz.musify.constants.HidePlayerThumbnailKey
+import com.romzz.musify.constants.PlayerBackgroundStyle
+import com.romzz.musify.constants.PlayerBackgroundStyleKey
+import com.romzz.musify.constants.PlayerHorizontalPadding
+import com.romzz.musify.constants.SeekExtraSeconds
+import com.romzz.musify.constants.SwipeThumbnailKey
+import com.romzz.musify.constants.ThumbnailCornerRadius
+import com.romzz.musify.listentogether.RoomRole
+import com.romzz.musify.ui.component.CastButton
+import com.romzz.musify.utils.rememberEnumPreference
+import com.romzz.musify.utils.rememberPreference
 import kotlinx.coroutines.delay
 
 /**
@@ -495,7 +495,7 @@ private fun ThumbnailItem(
     textBackgroundColor: Color,
     layoutDirection: LayoutDirection,
     onSeek: (String, Boolean) -> Unit,
-    playerConnection: com.metrolist.music.playback.PlayerConnection,
+    playerConnection: com.romzz.musify.playback.PlayerConnection,
     context: android.content.Context,
     isLandscape: Boolean = false,
     isListenTogetherGuest: Boolean = false,

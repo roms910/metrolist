@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.screens.recognition
+package com.romzz.musify.ui.screens.recognition
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
@@ -51,16 +51,16 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import coil3.compose.AsyncImage
-import com.metrolist.music.LocalDatabase
-import com.metrolist.music.LocalPlayerAwareWindowInsets
-import com.metrolist.music.R
-import com.metrolist.music.constants.ThumbnailCornerRadius
-import com.metrolist.music.db.entities.RecognitionHistory
-import com.metrolist.music.ui.component.DefaultDialog
-import com.metrolist.music.ui.component.IconButton
-import com.metrolist.music.ui.component.LocalMenuState
-import com.metrolist.music.ui.utils.backToMain
-import com.metrolist.music.utils.SearchRoutes
+import com.romzz.musify.LocalDatabase
+import com.romzz.musify.LocalPlayerAwareWindowInsets
+import com.romzz.musify.R
+import com.romzz.musify.constants.ThumbnailCornerRadius
+import com.romzz.musify.db.entities.RecognitionHistory
+import com.romzz.musify.ui.component.DefaultDialog
+import com.romzz.musify.ui.component.IconButton
+import com.romzz.musify.ui.component.LocalMenuState
+import com.romzz.musify.ui.utils.backToMain
+import com.romzz.musify.utils.SearchRoutes
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.time.format.DateTimeFormatter

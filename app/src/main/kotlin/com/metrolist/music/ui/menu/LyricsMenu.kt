@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.menu
+package com.romzz.musify.ui.menu
 
 import android.app.SearchManager
 import android.content.ClipData
@@ -61,34 +61,34 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
-import com.metrolist.music.LocalDatabase
-import com.metrolist.music.R
-import com.metrolist.music.db.entities.LyricsEntity
-import com.metrolist.music.db.entities.SongEntity
-import com.metrolist.music.lyrics.LyricsTranslationHelper
-import com.metrolist.music.lyrics.LyricsUtils
-import com.metrolist.music.models.MediaMetadata
-import com.metrolist.music.ui.component.DefaultDialog
-import com.metrolist.music.ui.component.ListDialog
-import com.metrolist.music.ui.component.Material3MenuGroup
-import com.metrolist.music.ui.component.Material3MenuItemData
-import com.metrolist.music.ui.component.NewAction
-import com.metrolist.music.ui.component.NewActionGrid
-import com.metrolist.music.ui.component.TextFieldDialog
-import com.metrolist.music.viewmodels.LyricsMenuViewModel
-import com.metrolist.music.constants.OpenRouterApiKey
-import com.metrolist.music.constants.DeeplApiKey
-import com.metrolist.music.constants.AiProviderKey
-import com.metrolist.music.constants.TranslateLanguageKey
-import com.metrolist.music.constants.TranslateModeKey
-import com.metrolist.music.constants.RespectAgentPositioningKey
-import com.metrolist.music.constants.ShowIntervalIndicatorKey
-import com.metrolist.music.constants.OpenRouterBaseUrlKey
-import com.metrolist.music.constants.OpenRouterDefaultBaseUrl
-import com.metrolist.music.constants.OpenRouterDefaultModel
-import com.metrolist.music.constants.OpenRouterModelKey
-import com.metrolist.music.constants.DeeplFormalityKey
-import com.metrolist.music.utils.rememberPreference
+import com.romzz.musify.LocalDatabase
+import com.romzz.musify.R
+import com.romzz.musify.db.entities.LyricsEntity
+import com.romzz.musify.db.entities.SongEntity
+import com.romzz.musify.lyrics.LyricsTranslationHelper
+import com.romzz.musify.lyrics.LyricsUtils
+import com.romzz.musify.models.MediaMetadata
+import com.romzz.musify.ui.component.DefaultDialog
+import com.romzz.musify.ui.component.ListDialog
+import com.romzz.musify.ui.component.Material3MenuGroup
+import com.romzz.musify.ui.component.Material3MenuItemData
+import com.romzz.musify.ui.component.NewAction
+import com.romzz.musify.ui.component.NewActionGrid
+import com.romzz.musify.ui.component.TextFieldDialog
+import com.romzz.musify.viewmodels.LyricsMenuViewModel
+import com.romzz.musify.constants.OpenRouterApiKey
+import com.romzz.musify.constants.DeeplApiKey
+import com.romzz.musify.constants.AiProviderKey
+import com.romzz.musify.constants.TranslateLanguageKey
+import com.romzz.musify.constants.TranslateModeKey
+import com.romzz.musify.constants.RespectAgentPositioningKey
+import com.romzz.musify.constants.ShowIntervalIndicatorKey
+import com.romzz.musify.constants.OpenRouterBaseUrlKey
+import com.romzz.musify.constants.OpenRouterDefaultBaseUrl
+import com.romzz.musify.constants.OpenRouterDefaultModel
+import com.romzz.musify.constants.OpenRouterModelKey
+import com.romzz.musify.constants.DeeplFormalityKey
+import com.romzz.musify.utils.rememberPreference
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

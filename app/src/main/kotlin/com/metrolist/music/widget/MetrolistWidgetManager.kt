@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.widget
+package com.romzz.musify.widget
 
 import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
@@ -23,9 +23,9 @@ import coil3.request.ImageRequest
 import coil3.request.allowHardware
 import coil3.request.crossfade
 import coil3.toBitmap
-import com.metrolist.music.MainActivity
-import com.metrolist.music.R
-import com.metrolist.music.db.MusicDatabase
+import com.romzz.musify.MainActivity
+import com.romzz.musify.R
+import com.romzz.musify.db.MusicDatabase
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

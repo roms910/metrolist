@@ -3,17 +3,17 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.extensions
+package com.romzz.musify.extensions
 
-import com.metrolist.music.models.MediaMetadata
-import com.metrolist.music.models.PersistQueue
-import com.metrolist.music.models.QueueData
-import com.metrolist.music.models.QueueType
-import com.metrolist.music.playback.queues.ListQueue
-import com.metrolist.music.playback.queues.LocalAlbumRadio
-import com.metrolist.music.playback.queues.Queue
-import com.metrolist.music.playback.queues.YouTubeAlbumRadio
-import com.metrolist.music.playback.queues.YouTubeQueue
+import com.romzz.musify.models.MediaMetadata
+import com.romzz.musify.models.PersistQueue
+import com.romzz.musify.models.QueueData
+import com.romzz.musify.models.QueueType
+import com.romzz.musify.playback.queues.ListQueue
+import com.romzz.musify.playback.queues.LocalAlbumRadio
+import com.romzz.musify.playback.queues.Queue
+import com.romzz.musify.playback.queues.YouTubeAlbumRadio
+import com.romzz.musify.playback.queues.YouTubeQueue
 
 fun Queue.toPersistQueue(
     title: String?,

@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.screens
+package com.romzz.musify.ui.screens
 
 import android.content.Intent
 import android.os.Bundle
@@ -42,9 +42,9 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.content.FileProvider
-import com.metrolist.music.R
-import com.metrolist.music.ui.theme.MetrolistTheme
-import com.metrolist.music.utils.CrashHandler
+import com.romzz.musify.R
+import com.romzz.musify.ui.theme.MetrolistTheme
+import com.romzz.musify.utils.CrashHandler
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.Date

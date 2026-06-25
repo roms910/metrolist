@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.menu
+package com.romzz.musify.ui.menu
 
 import android.content.Intent
 import android.content.res.Configuration
@@ -56,27 +56,27 @@ import androidx.media3.exoplayer.offline.Download
 import androidx.media3.exoplayer.offline.DownloadRequest
 import androidx.media3.exoplayer.offline.DownloadService
 import coil3.compose.AsyncImage
-import com.metrolist.music.LocalNavController
+import com.romzz.musify.LocalNavController
 import com.metrolist.innertube.YouTube
-import com.metrolist.music.LocalDatabase
-import com.metrolist.music.LocalDownloadUtil
-import com.metrolist.music.LocalPlayerConnection
-import com.metrolist.music.LocalSyncUtils
-import com.metrolist.music.R
-import com.metrolist.music.constants.ListItemHeight
-import com.metrolist.music.constants.ListThumbnailSize
-import com.metrolist.music.extensions.toMediaItem
-import com.metrolist.music.models.MediaMetadata
-import com.metrolist.music.models.toMediaMetadata
-import com.metrolist.music.playback.ExoDownloadService
-import com.metrolist.music.playback.queues.YouTubeQueue
-import com.metrolist.music.ui.component.BottomSheetState
-import com.metrolist.music.ui.component.ListDialog
-import com.metrolist.music.ui.component.Material3MenuGroup
-import com.metrolist.music.ui.component.Material3MenuItemData
-import com.metrolist.music.ui.component.MediaMetadataListItem
-import com.metrolist.music.ui.component.NewAction
-import com.metrolist.music.ui.component.NewActionGrid
+import com.romzz.musify.LocalDatabase
+import com.romzz.musify.LocalDownloadUtil
+import com.romzz.musify.LocalPlayerConnection
+import com.romzz.musify.LocalSyncUtils
+import com.romzz.musify.R
+import com.romzz.musify.constants.ListItemHeight
+import com.romzz.musify.constants.ListThumbnailSize
+import com.romzz.musify.extensions.toMediaItem
+import com.romzz.musify.models.MediaMetadata
+import com.romzz.musify.models.toMediaMetadata
+import com.romzz.musify.playback.ExoDownloadService
+import com.romzz.musify.playback.queues.YouTubeQueue
+import com.romzz.musify.ui.component.BottomSheetState
+import com.romzz.musify.ui.component.ListDialog
+import com.romzz.musify.ui.component.Material3MenuGroup
+import com.romzz.musify.ui.component.Material3MenuItemData
+import com.romzz.musify.ui.component.MediaMetadataListItem
+import com.romzz.musify.ui.component.NewAction
+import com.romzz.musify.ui.component.NewActionGrid
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.coroutines.launch

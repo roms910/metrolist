@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.screens.settings
+package com.romzz.musify.ui.screens.settings
 
 import android.content.Intent
 import android.os.Build
@@ -52,48 +52,48 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.core.net.toUri
 import androidx.navigation.NavController
-import com.metrolist.music.LocalDatabase
-import com.metrolist.music.LocalPlayerAwareWindowInsets
-import com.metrolist.music.R
-import com.metrolist.music.constants.AppLanguageKey
-import com.metrolist.music.constants.ContentCountryKey
-import com.metrolist.music.constants.ContentLanguageKey
-import com.metrolist.music.constants.CountryCodeToName
-import com.metrolist.music.constants.EnableBetterLyricsKey
-import com.metrolist.music.constants.EnableKugouKey
-import com.metrolist.music.constants.EnableLrcLibKey
-import com.metrolist.music.constants.EnablePaxsenixKey
-import com.metrolist.music.constants.EnableLyricsPlus
-import com.metrolist.music.constants.HideExplicitKey
-import com.metrolist.music.constants.HideVideoSongsKey
-import com.metrolist.music.constants.HideYoutubeShortsKey
-import com.metrolist.music.constants.LanguageCodeToName
-import com.metrolist.music.constants.LyricsProviderOrderKey
-import com.metrolist.music.constants.ProxyEnabledKey
-import com.metrolist.music.constants.ProxyPasswordKey
-import com.metrolist.music.constants.ProxyTypeKey
-import com.metrolist.music.constants.ProxyUrlKey
-import com.metrolist.music.constants.ProxyUsernameKey
-import com.metrolist.music.constants.QuickPicks
-import com.metrolist.music.constants.QuickPicksKey
-import com.metrolist.music.constants.RandomizeHomeOrderKey
-import com.metrolist.music.constants.SYSTEM_DEFAULT
-import com.metrolist.music.constants.ShowArtistDescriptionKey
-import com.metrolist.music.constants.ShowMostStatsPlaylistsKey
-import com.metrolist.music.constants.ShowArtistSubscriberCountKey
-import com.metrolist.music.constants.ShowMonthlyListenersKey
-import com.metrolist.music.constants.ShowWrappedCardKey
-import com.metrolist.music.constants.TopSize
-import com.metrolist.music.ui.component.EnumDialog
-import com.metrolist.music.ui.component.IconButton
-import com.metrolist.music.ui.component.Material3SettingsGroup
-import com.metrolist.music.ui.component.Material3SettingsItem
-import com.metrolist.music.ui.component.DraggableLyricsProviderItem
-import com.metrolist.music.ui.component.DraggableLyricsProviderList
-import com.metrolist.music.lyrics.LyricsProviderRegistry
-import com.metrolist.music.ui.utils.backToMain
-import com.metrolist.music.utils.rememberEnumPreference
-import com.metrolist.music.utils.rememberPreference
+import com.romzz.musify.LocalDatabase
+import com.romzz.musify.LocalPlayerAwareWindowInsets
+import com.romzz.musify.R
+import com.romzz.musify.constants.AppLanguageKey
+import com.romzz.musify.constants.ContentCountryKey
+import com.romzz.musify.constants.ContentLanguageKey
+import com.romzz.musify.constants.CountryCodeToName
+import com.romzz.musify.constants.EnableBetterLyricsKey
+import com.romzz.musify.constants.EnableKugouKey
+import com.romzz.musify.constants.EnableLrcLibKey
+import com.romzz.musify.constants.EnablePaxsenixKey
+import com.romzz.musify.constants.EnableLyricsPlus
+import com.romzz.musify.constants.HideExplicitKey
+import com.romzz.musify.constants.HideVideoSongsKey
+import com.romzz.musify.constants.HideYoutubeShortsKey
+import com.romzz.musify.constants.LanguageCodeToName
+import com.romzz.musify.constants.LyricsProviderOrderKey
+import com.romzz.musify.constants.ProxyEnabledKey
+import com.romzz.musify.constants.ProxyPasswordKey
+import com.romzz.musify.constants.ProxyTypeKey
+import com.romzz.musify.constants.ProxyUrlKey
+import com.romzz.musify.constants.ProxyUsernameKey
+import com.romzz.musify.constants.QuickPicks
+import com.romzz.musify.constants.QuickPicksKey
+import com.romzz.musify.constants.RandomizeHomeOrderKey
+import com.romzz.musify.constants.SYSTEM_DEFAULT
+import com.romzz.musify.constants.ShowArtistDescriptionKey
+import com.romzz.musify.constants.ShowMostStatsPlaylistsKey
+import com.romzz.musify.constants.ShowArtistSubscriberCountKey
+import com.romzz.musify.constants.ShowMonthlyListenersKey
+import com.romzz.musify.constants.ShowWrappedCardKey
+import com.romzz.musify.constants.TopSize
+import com.romzz.musify.ui.component.EnumDialog
+import com.romzz.musify.ui.component.IconButton
+import com.romzz.musify.ui.component.Material3SettingsGroup
+import com.romzz.musify.ui.component.Material3SettingsItem
+import com.romzz.musify.ui.component.DraggableLyricsProviderItem
+import com.romzz.musify.ui.component.DraggableLyricsProviderList
+import com.romzz.musify.lyrics.LyricsProviderRegistry
+import com.romzz.musify.ui.utils.backToMain
+import com.romzz.musify.utils.rememberEnumPreference
+import com.romzz.musify.utils.rememberPreference
 import java.net.Proxy
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -141,17 +141,17 @@ fun ContentSettings(
     LaunchedEffect(showMostStatsPlaylists) {
         if (!showMostStatsPlaylists) {
             database.withTransaction {
-                clearPlaylist(com.metrolist.music.db.entities.PlaylistEntity.WEEKLY_MOST_PLAYLIST_ID)
-                clearPlaylist(com.metrolist.music.db.entities.PlaylistEntity.MONTHLY_MOST_PLAYLIST_ID)
+                clearPlaylist(com.romzz.musify.db.entities.PlaylistEntity.WEEKLY_MOST_PLAYLIST_ID)
+                clearPlaylist(com.romzz.musify.db.entities.PlaylistEntity.MONTHLY_MOST_PLAYLIST_ID)
                 delete(
-                    com.metrolist.music.db.entities.PlaylistEntity(
-                        id = com.metrolist.music.db.entities.PlaylistEntity.WEEKLY_MOST_PLAYLIST_ID,
+                    com.romzz.musify.db.entities.PlaylistEntity(
+                        id = com.romzz.musify.db.entities.PlaylistEntity.WEEKLY_MOST_PLAYLIST_ID,
                         name = "",
                     ),
                 )
                 delete(
-                    com.metrolist.music.db.entities.PlaylistEntity(
-                        id = com.metrolist.music.db.entities.PlaylistEntity.MONTHLY_MOST_PLAYLIST_ID,
+                    com.romzz.musify.db.entities.PlaylistEntity(
+                        id = com.romzz.musify.db.entities.PlaylistEntity.MONTHLY_MOST_PLAYLIST_ID,
                         name = "",
                     ),
                 )

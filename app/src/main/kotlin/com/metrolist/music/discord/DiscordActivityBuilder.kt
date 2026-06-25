@@ -1,6 +1,6 @@
-package com.metrolist.music.discord
+package com.romzz.musify.discord
 
-import com.metrolist.music.db.entities.Song
+import com.romzz.musify.db.entities.Song
 import timber.log.Timber
 
 object DiscordActivityBuilder {

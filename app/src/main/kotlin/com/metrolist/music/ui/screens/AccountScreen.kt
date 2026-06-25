@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.screens
+package com.romzz.musify.ui.screens
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
@@ -47,26 +47,26 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import coil3.compose.AsyncImage
-import com.metrolist.music.LocalPlayerAwareWindowInsets
-import com.metrolist.music.R
-import com.metrolist.music.constants.GridItemSize
-import com.metrolist.music.constants.GridItemsSizeKey
-import com.metrolist.music.constants.GridThumbnailHeight
-import com.metrolist.music.db.entities.PodcastEntity
-import com.metrolist.music.ui.component.ChipsRow
-import com.metrolist.music.ui.component.IconButton
-import com.metrolist.music.ui.component.LocalMenuState
-import com.metrolist.music.ui.component.YouTubeGridItem
-import com.metrolist.music.ui.component.shimmer.GridItemPlaceHolder
-import com.metrolist.music.ui.component.shimmer.ListItemPlaceHolder
-import com.metrolist.music.ui.component.shimmer.ShimmerHost
-import com.metrolist.music.ui.menu.YouTubeAlbumMenu
-import com.metrolist.music.ui.menu.YouTubeArtistMenu
-import com.metrolist.music.ui.menu.YouTubePlaylistMenu
-import com.metrolist.music.ui.utils.backToMain
-import com.metrolist.music.utils.rememberEnumPreference
-import com.metrolist.music.viewmodels.AccountContentType
-import com.metrolist.music.viewmodels.AccountViewModel
+import com.romzz.musify.LocalPlayerAwareWindowInsets
+import com.romzz.musify.R
+import com.romzz.musify.constants.GridItemSize
+import com.romzz.musify.constants.GridItemsSizeKey
+import com.romzz.musify.constants.GridThumbnailHeight
+import com.romzz.musify.db.entities.PodcastEntity
+import com.romzz.musify.ui.component.ChipsRow
+import com.romzz.musify.ui.component.IconButton
+import com.romzz.musify.ui.component.LocalMenuState
+import com.romzz.musify.ui.component.YouTubeGridItem
+import com.romzz.musify.ui.component.shimmer.GridItemPlaceHolder
+import com.romzz.musify.ui.component.shimmer.ListItemPlaceHolder
+import com.romzz.musify.ui.component.shimmer.ShimmerHost
+import com.romzz.musify.ui.menu.YouTubeAlbumMenu
+import com.romzz.musify.ui.menu.YouTubeArtistMenu
+import com.romzz.musify.ui.menu.YouTubePlaylistMenu
+import com.romzz.musify.ui.utils.backToMain
+import com.romzz.musify.utils.rememberEnumPreference
+import com.romzz.musify.viewmodels.AccountContentType
+import com.romzz.musify.viewmodels.AccountViewModel
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 @Composable

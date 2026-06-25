@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.viewmodels
+package com.romzz.musify.viewmodels
 
 import android.content.Context
 import androidx.datastore.preferences.core.edit
@@ -25,28 +25,28 @@ import com.metrolist.innertube.models.filterYoutubeShorts
 import com.metrolist.innertube.pages.ExplorePage
 import com.metrolist.innertube.pages.HomePage
 import com.metrolist.innertube.utils.completed
-import com.metrolist.music.constants.HideExplicitKey
-import com.metrolist.music.constants.HideVideoSongsKey
-import com.metrolist.music.constants.HideYoutubeShortsKey
-import com.metrolist.music.constants.InnerTubeCookieKey
-import com.metrolist.music.constants.QuickPicks
-import com.metrolist.music.constants.QuickPicksKey
-import com.metrolist.music.constants.ShowWrappedCardKey
-import com.metrolist.music.constants.WrappedSeenKey
-import com.metrolist.music.db.MusicDatabase
-import com.metrolist.music.db.entities.Album
-import com.metrolist.music.db.entities.LocalItem
-import com.metrolist.music.db.entities.Song
-import com.metrolist.music.db.entities.SpeedDialItem
-import com.metrolist.music.extensions.filterVideoSongs
-import com.metrolist.music.extensions.toEnum
-import com.metrolist.music.models.SimilarRecommendation
-import com.metrolist.music.ui.screens.wrapped.WrappedAudioService
-import com.metrolist.music.ui.screens.wrapped.WrappedManager
-import com.metrolist.music.utils.SyncUtils
-import com.metrolist.music.utils.dataStore
-import com.metrolist.music.utils.get
-import com.metrolist.music.utils.reportException
+import com.romzz.musify.constants.HideExplicitKey
+import com.romzz.musify.constants.HideVideoSongsKey
+import com.romzz.musify.constants.HideYoutubeShortsKey
+import com.romzz.musify.constants.InnerTubeCookieKey
+import com.romzz.musify.constants.QuickPicks
+import com.romzz.musify.constants.QuickPicksKey
+import com.romzz.musify.constants.ShowWrappedCardKey
+import com.romzz.musify.constants.WrappedSeenKey
+import com.romzz.musify.db.MusicDatabase
+import com.romzz.musify.db.entities.Album
+import com.romzz.musify.db.entities.LocalItem
+import com.romzz.musify.db.entities.Song
+import com.romzz.musify.db.entities.SpeedDialItem
+import com.romzz.musify.extensions.filterVideoSongs
+import com.romzz.musify.extensions.toEnum
+import com.romzz.musify.models.SimilarRecommendation
+import com.romzz.musify.ui.screens.wrapped.WrappedAudioService
+import com.romzz.musify.ui.screens.wrapped.WrappedManager
+import com.romzz.musify.utils.SyncUtils
+import com.romzz.musify.utils.dataStore
+import com.romzz.musify.utils.get
+import com.romzz.musify.utils.reportException
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
@@ -148,7 +148,7 @@ class HomeViewModel @Inject constructor(
                                 year = item.album.year,
                                 thumbnail = item.thumbnailUrl ?: ""
                             )
-                            is com.metrolist.music.db.entities.Artist -> ArtistItem(
+                            is com.romzz.musify.db.entities.Artist -> ArtistItem(
                                 id = item.id,
                                 title = item.title,
                                 thumbnail = item.thumbnailUrl,
@@ -223,7 +223,7 @@ class HomeViewModel @Inject constructor(
                             year = item.album.year,
                             thumbnail = item.thumbnailUrl ?: ""
                         ))
-                        is com.metrolist.music.db.entities.Artist -> otherSources.add(ArtistItem(
+                        is com.romzz.musify.db.entities.Artist -> otherSources.add(ArtistItem(
                             id = item.id,
                             title = item.title,
                             thumbnail = item.thumbnailUrl,

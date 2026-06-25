@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.playback
+package com.romzz.musify.playback
 
 import android.content.Context
 import android.net.ConnectivityManager
@@ -18,15 +18,15 @@ import androidx.media3.exoplayer.offline.Download
 import androidx.media3.exoplayer.offline.DownloadManager
 import androidx.media3.exoplayer.offline.DownloadNotificationHelper
 import com.metrolist.innertube.YouTube
-import com.metrolist.music.constants.AudioQuality
-import com.metrolist.music.constants.AudioQualityKey
-import com.metrolist.music.db.MusicDatabase
-import com.metrolist.music.db.entities.FormatEntity
-import com.metrolist.music.db.entities.SongEntity
-import com.metrolist.music.di.DownloadCache
-import com.metrolist.music.di.PlayerCache
-import com.metrolist.music.utils.YTPlayerUtils
-import com.metrolist.music.utils.enumPreference
+import com.romzz.musify.constants.AudioQuality
+import com.romzz.musify.constants.AudioQualityKey
+import com.romzz.musify.db.MusicDatabase
+import com.romzz.musify.db.entities.FormatEntity
+import com.romzz.musify.db.entities.SongEntity
+import com.romzz.musify.di.DownloadCache
+import com.romzz.musify.di.PlayerCache
+import com.romzz.musify.utils.YTPlayerUtils
+import com.romzz.musify.utils.enumPreference
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.DelicateCoroutinesApi

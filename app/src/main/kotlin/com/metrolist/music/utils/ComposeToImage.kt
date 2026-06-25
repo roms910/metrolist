@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.utils
+package com.romzz.musify.utils
 
 import android.content.ContentValues
 import android.content.Context
@@ -35,8 +35,8 @@ import coil3.ImageLoader
 import coil3.request.ImageRequest
 import coil3.request.allowHardware
 import coil3.toBitmap
-import com.metrolist.music.R
-import com.metrolist.music.ui.component.LyricsBackgroundStyle
+import com.romzz.musify.R
+import com.romzz.musify.ui.component.LyricsBackgroundStyle
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 import java.io.File

@@ -1,4 +1,4 @@
-package com.metrolist.music.discord
+package com.romzz.musify.discord
 
 import android.app.Activity
 import android.content.Context
@@ -674,5 +674,5 @@ object DiscordRpcManager {
 }
 
 private object BuildConfigProvider {
-    val appId: String = com.metrolist.music.BuildConfig.DISCORD_APP_ID.toString()
+    val appId: String = com.romzz.musify.BuildConfig.DISCORD_APP_ID.toString()
 }

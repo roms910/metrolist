@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.playback
+package com.romzz.musify.playback
 
 import android.app.Notification
 import android.app.PendingIntent
@@ -18,7 +18,7 @@ import androidx.media3.exoplayer.offline.DownloadNotificationHelper
 import androidx.media3.exoplayer.offline.DownloadService
 import androidx.media3.exoplayer.scheduler.PlatformScheduler
 import androidx.media3.exoplayer.scheduler.Scheduler
-import com.metrolist.music.R
+import com.romzz.musify.R
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 

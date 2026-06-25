@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.viewmodels
+package com.romzz.musify.viewmodels
 
 import android.content.Context
 import androidx.compose.runtime.getValue
@@ -22,20 +22,20 @@ import com.metrolist.innertube.models.filterExplicit
 import com.metrolist.innertube.models.filterVideoSongs
 import com.metrolist.innertube.models.filterYoutubeShorts
 import com.metrolist.innertube.pages.ArtistPage
-import com.metrolist.music.constants.HideExplicitKey
-import com.metrolist.music.constants.HideVideoSongsKey
-import com.metrolist.music.constants.HideYoutubeShortsKey
-import com.metrolist.music.db.MusicDatabase
-import com.metrolist.music.db.entities.ArtistEntity
-import com.metrolist.music.db.entities.deserializeArtistPage
-import com.metrolist.music.db.entities.serializeArtistPage
-import com.metrolist.music.db.entities.toArtistPage
-import com.metrolist.music.extensions.filterExplicit
-import com.metrolist.music.extensions.filterExplicitAlbums
-import com.metrolist.music.utils.SyncUtils
-import com.metrolist.music.utils.dataStore
-import com.metrolist.music.utils.get
-import com.metrolist.music.utils.reportException
+import com.romzz.musify.constants.HideExplicitKey
+import com.romzz.musify.constants.HideVideoSongsKey
+import com.romzz.musify.constants.HideYoutubeShortsKey
+import com.romzz.musify.db.MusicDatabase
+import com.romzz.musify.db.entities.ArtistEntity
+import com.romzz.musify.db.entities.deserializeArtistPage
+import com.romzz.musify.db.entities.serializeArtistPage
+import com.romzz.musify.db.entities.toArtistPage
+import com.romzz.musify.extensions.filterExplicit
+import com.romzz.musify.extensions.filterExplicitAlbums
+import com.romzz.musify.utils.SyncUtils
+import com.romzz.musify.utils.dataStore
+import com.romzz.musify.utils.get
+import com.romzz.musify.utils.reportException
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
@@ -52,7 +52,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import timber.log.Timber
 import javax.inject.Inject
-import com.metrolist.music.extensions.filterVideoSongs as filterVideoSongsLocal
+import com.romzz.musify.extensions.filterVideoSongs as filterVideoSongsLocal
 
 @OptIn(ExperimentalCoroutinesApi::class)
 @HiltViewModel

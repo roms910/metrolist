@@ -1,7 +1,7 @@
-package com.metrolist.music.utils.potoken
+package com.romzz.musify.utils.potoken
 
 import android.webkit.CookieManager
-import com.metrolist.music.utils.cipher.CipherDeobfuscator
+import com.romzz.musify.utils.cipher.CipherDeobfuscator
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.TimeoutCancellationException
 import kotlinx.coroutines.runBlocking

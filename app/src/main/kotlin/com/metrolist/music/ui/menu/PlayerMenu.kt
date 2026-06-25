@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.menu
+package com.romzz.musify.ui.menu
 
 import android.content.Context
 import android.content.Intent
@@ -79,28 +79,28 @@ import androidx.media3.exoplayer.offline.Download
 import androidx.media3.exoplayer.offline.DownloadRequest
 import androidx.media3.exoplayer.offline.DownloadService
 import com.metrolist.innertube.YouTube
-import com.metrolist.music.LocalNavController
-import com.metrolist.music.LocalDatabase
-import com.metrolist.music.LocalDownloadUtil
-import com.metrolist.music.LocalListenTogetherManager
-import com.metrolist.music.LocalPlayerConnection
-import com.metrolist.music.R
-import com.metrolist.music.constants.ListItemHeight
-import com.metrolist.music.constants.VarispeedKey
-import com.metrolist.music.listentogether.ConnectionState
-import com.metrolist.music.listentogether.ListenTogetherEvent
-import com.metrolist.music.models.MediaMetadata
-import com.metrolist.music.playback.ExoDownloadService
-import com.metrolist.music.db.entities.Song
-import com.metrolist.music.db.entities.SpeedDialItem
-import com.metrolist.music.ui.component.BottomSheetState
-import com.metrolist.music.ui.component.ListDialog
-import com.metrolist.music.ui.component.Material3MenuGroup
-import com.metrolist.music.ui.component.Material3MenuItemData
-import com.metrolist.music.ui.component.NewAction
-import com.metrolist.music.ui.component.NewActionGrid
-import com.metrolist.music.ui.component.VolumeSlider
-import com.metrolist.music.utils.rememberPreference
+import com.romzz.musify.LocalNavController
+import com.romzz.musify.LocalDatabase
+import com.romzz.musify.LocalDownloadUtil
+import com.romzz.musify.LocalListenTogetherManager
+import com.romzz.musify.LocalPlayerConnection
+import com.romzz.musify.R
+import com.romzz.musify.constants.ListItemHeight
+import com.romzz.musify.constants.VarispeedKey
+import com.romzz.musify.listentogether.ConnectionState
+import com.romzz.musify.listentogether.ListenTogetherEvent
+import com.romzz.musify.models.MediaMetadata
+import com.romzz.musify.playback.ExoDownloadService
+import com.romzz.musify.db.entities.Song
+import com.romzz.musify.db.entities.SpeedDialItem
+import com.romzz.musify.ui.component.BottomSheetState
+import com.romzz.musify.ui.component.ListDialog
+import com.romzz.musify.ui.component.Material3MenuGroup
+import com.romzz.musify.ui.component.Material3MenuItemData
+import com.romzz.musify.ui.component.NewAction
+import com.romzz.musify.ui.component.NewActionGrid
+import com.romzz.musify.ui.component.VolumeSlider
+import com.romzz.musify.utils.rememberPreference
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlin.math.log2
@@ -160,8 +160,8 @@ fun PlayerMenu(
     }
 
     val listenTogetherManager = LocalListenTogetherManager.current
-    val listenTogetherRoleState = listenTogetherManager?.role?.collectAsStateWithLifecycle(initialValue = com.metrolist.music.listentogether.RoomRole.NONE)
-    val isListenTogetherGuest = listenTogetherRoleState?.value == com.metrolist.music.listentogether.RoomRole.GUEST
+    val listenTogetherRoleState = listenTogetherManager?.role?.collectAsStateWithLifecycle(initialValue = com.romzz.musify.listentogether.RoomRole.NONE)
+    val isListenTogetherGuest = listenTogetherRoleState?.value == com.romzz.musify.listentogether.RoomRole.GUEST
     val pendingSuggestions by listenTogetherManager?.pendingSuggestions?.collectAsStateWithLifecycle(initialValue = emptyList())
         ?: remember { mutableStateOf(emptyList()) }
 
@@ -791,7 +791,7 @@ fun TempoPitchDialog(onDismiss: () -> Unit) {
         playerConnection.player.playbackParameters =
             PlaybackParameters(tempo, 2f.pow(transposeValue.toFloat() / 12))
     }
-    val listenTogetherManager = com.metrolist.music.LocalListenTogetherManager.current
+    val listenTogetherManager = com.romzz.musify.LocalListenTogetherManager.current
     val isInRoom = listenTogetherManager?.isInRoom ?: false
 
     AlertDialog(
@@ -858,7 +858,7 @@ fun SpeedDialog(onDismiss: () -> Unit) {
         playerConnection.player.playbackParameters =
             PlaybackParameters(speed, speed)
     }
-    val listenTogetherManager = com.metrolist.music.LocalListenTogetherManager.current
+    val listenTogetherManager = com.romzz.musify.LocalListenTogetherManager.current
 
     AlertDialog(
         properties = DialogProperties(usePlatformDefaultWidth = false),
@@ -962,7 +962,7 @@ fun ListenTogetherDialog(
     if (!visible) return
 
     val context = LocalContext.current
-    val listenTogetherManager = com.metrolist.music.LocalListenTogetherManager.current
+    val listenTogetherManager = com.romzz.musify.LocalListenTogetherManager.current
     val joiningRoomTemplate = stringResource(R.string.joining_room)
 
     // Handle case where manager is not available
@@ -1019,7 +1019,7 @@ fun ListenTogetherDialog(
     val pendingSuggestions by listenTogetherManager.pendingSuggestions.collectAsStateWithLifecycle()
 
     // Load saved username
-    var savedUsername by rememberPreference(com.metrolist.music.constants.ListenTogetherUsernameKey, "")
+    var savedUsername by rememberPreference(com.romzz.musify.constants.ListenTogetherUsernameKey, "")
     var roomCodeInput by rememberSaveable { mutableStateOf("") }
     var usernameInput by rememberSaveable { mutableStateOf(savedUsername) }
 

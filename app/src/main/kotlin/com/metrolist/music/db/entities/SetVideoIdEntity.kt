@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.db.entities
+package com.romzz.musify.db.entities
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

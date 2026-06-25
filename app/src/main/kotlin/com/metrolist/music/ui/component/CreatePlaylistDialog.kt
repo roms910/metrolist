@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.component
+package com.romzz.musify.ui.component
 
 import android.widget.Toast
 import androidx.compose.foundation.layout.Arrangement
@@ -28,12 +28,12 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
 import com.metrolist.innertube.YouTube
-import com.metrolist.music.LocalDatabase
-import com.metrolist.music.R
-import com.metrolist.music.constants.InnerTubeCookieKey
-import com.metrolist.music.db.entities.PlaylistEntity
-import com.metrolist.music.extensions.isSyncEnabled
-import com.metrolist.music.utils.rememberPreference
+import com.romzz.musify.LocalDatabase
+import com.romzz.musify.R
+import com.romzz.musify.constants.InnerTubeCookieKey
+import com.romzz.musify.db.entities.PlaylistEntity
+import com.romzz.musify.extensions.isSyncEnabled
+import com.romzz.musify.utils.rememberPreference
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext

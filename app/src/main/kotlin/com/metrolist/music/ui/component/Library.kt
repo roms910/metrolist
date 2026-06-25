@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.component
+package com.romzz.musify.ui.component
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.clickable
@@ -14,16 +14,16 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
 import com.metrolist.innertube.models.PlaylistItem
-import com.metrolist.music.LocalNavController
+import com.romzz.musify.LocalNavController
 import com.metrolist.innertube.models.WatchEndpoint
-import com.metrolist.music.R
-import com.metrolist.music.db.entities.Album
-import com.metrolist.music.db.entities.Artist
-import com.metrolist.music.db.entities.Playlist
-import com.metrolist.music.ui.menu.AlbumMenu
-import com.metrolist.music.ui.menu.ArtistMenu
-import com.metrolist.music.ui.menu.PlaylistMenu
-import com.metrolist.music.ui.menu.YouTubePlaylistMenu
+import com.romzz.musify.R
+import com.romzz.musify.db.entities.Album
+import com.romzz.musify.db.entities.Artist
+import com.romzz.musify.db.entities.Playlist
+import com.romzz.musify.ui.menu.AlbumMenu
+import com.romzz.musify.ui.menu.ArtistMenu
+import com.romzz.musify.ui.menu.PlaylistMenu
+import com.romzz.musify.ui.menu.YouTubePlaylistMenu
 import kotlinx.coroutines.CoroutineScope
 
 @Composable

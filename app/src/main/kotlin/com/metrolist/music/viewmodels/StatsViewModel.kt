@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.viewmodels
+package com.romzz.musify.viewmodels
 
 import android.content.Context
 import androidx.compose.runtime.mutableStateListOf
@@ -12,19 +12,19 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.metrolist.innertube.YouTube
 import com.metrolist.innertube.models.Artist
-import com.metrolist.music.constants.HideVideoSongsKey
-import com.metrolist.music.constants.LastMonthlyMostPlaylistSyncKey
-import com.metrolist.music.constants.LastWeeklyMostPlaylistSyncKey
-import com.metrolist.music.constants.ShowMostStatsPlaylistsKey
-import com.metrolist.music.constants.StatPeriod
-import com.metrolist.music.constants.statToPeriod
-import com.metrolist.music.db.MusicDatabase
-import com.metrolist.music.db.entities.PlaylistEntity
-import com.metrolist.music.ui.screens.OptionStats
-import com.metrolist.music.utils.dataStore
-import com.metrolist.music.utils.reportException
+import com.romzz.musify.constants.HideVideoSongsKey
+import com.romzz.musify.constants.LastMonthlyMostPlaylistSyncKey
+import com.romzz.musify.constants.LastWeeklyMostPlaylistSyncKey
+import com.romzz.musify.constants.ShowMostStatsPlaylistsKey
+import com.romzz.musify.constants.StatPeriod
+import com.romzz.musify.constants.statToPeriod
+import com.romzz.musify.db.MusicDatabase
+import com.romzz.musify.db.entities.PlaylistEntity
+import com.romzz.musify.ui.screens.OptionStats
+import com.romzz.musify.utils.dataStore
+import com.romzz.musify.utils.reportException
 import androidx.datastore.preferences.core.edit
-import com.metrolist.music.R
+import com.romzz.musify.R
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers

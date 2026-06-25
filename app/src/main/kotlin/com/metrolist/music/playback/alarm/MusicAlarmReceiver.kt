@@ -1,10 +1,10 @@
-package com.metrolist.music.playback.alarm
+package com.romzz.musify.playback.alarm
 
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import androidx.core.content.ContextCompat
-import com.metrolist.music.playback.MusicService
+import com.romzz.musify.playback.MusicService
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -32,6 +32,6 @@ class MusicAlarmReceiver : BroadcastReceiver() {
     }
 
     companion object {
-        const val ACTION_TRIGGER_ALARM = "com.metrolist.music.action.TRIGGER_ALARM"
+        const val ACTION_TRIGGER_ALARM = "com.romzz.musify.action.TRIGGER_ALARM"
     }
 }

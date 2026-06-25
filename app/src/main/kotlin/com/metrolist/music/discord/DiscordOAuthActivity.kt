@@ -1,4 +1,4 @@
-package com.metrolist.music.discord
+package com.romzz.musify.discord
 
 import android.app.Activity
 import android.content.Intent

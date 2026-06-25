@@ -1,4 +1,4 @@
-package com.metrolist.music.quicksettings
+package com.romzz.musify.quicksettings
 
 import android.app.PendingIntent
 import android.content.Intent
@@ -6,8 +6,8 @@ import android.graphics.drawable.Icon
 import android.os.Build
 import android.service.quicksettings.Tile
 import android.service.quicksettings.TileService
-import com.metrolist.music.R
-import com.metrolist.music.recognition.RecognitionLaunchActivity
+import com.romzz.musify.R
+import com.romzz.musify.recognition.RecognitionLaunchActivity
 
 class MusicRecognizerTileService : TileService() {
     override fun onStartListening() {

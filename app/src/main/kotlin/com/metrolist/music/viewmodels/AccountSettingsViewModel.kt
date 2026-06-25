@@ -3,21 +3,21 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.viewmodels
+package com.romzz.musify.viewmodels
 
 import android.content.Context
 import android.content.Intent
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.metrolist.music.App
-import com.metrolist.music.constants.AccountChannelHandleKey
-import com.metrolist.music.constants.AccountEmailKey
-import com.metrolist.music.constants.AccountNameKey
-import com.metrolist.music.constants.DataSyncIdKey
-import com.metrolist.music.constants.InnerTubeCookieKey
-import com.metrolist.music.constants.VisitorDataKey
-import com.metrolist.music.utils.SyncUtils
-import com.metrolist.music.utils.dataStore
+import com.romzz.musify.App
+import com.romzz.musify.constants.AccountChannelHandleKey
+import com.romzz.musify.constants.AccountEmailKey
+import com.romzz.musify.constants.AccountNameKey
+import com.romzz.musify.constants.DataSyncIdKey
+import com.romzz.musify.constants.InnerTubeCookieKey
+import com.romzz.musify.constants.VisitorDataKey
+import com.romzz.musify.utils.SyncUtils
+import com.romzz.musify.utils.dataStore
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

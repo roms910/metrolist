@@ -1,4 +1,4 @@
-package com.metrolist.music.discord
+package com.romzz.musify.discord
 
 data class DiscordActivity(
     val activityType: Int = 2,

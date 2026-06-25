@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.viewmodels
+package com.romzz.musify.viewmodels
 
 import android.content.Context
 import android.content.Intent
@@ -15,7 +15,7 @@ import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 import com.metrolist.innertube.utils.parseCookieString
 import com.metrolist.innertube.utils.sha1
-import com.metrolist.music.R
+import com.romzz.musify.R
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.jsonArray
 import kotlinx.serialization.json.jsonObject
@@ -24,23 +24,23 @@ import okhttp3.MediaType.Companion.toMediaType
 import okhttp3.OkHttpClient
 import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody
-import com.metrolist.music.constants.DataSyncIdKey
-import com.metrolist.music.constants.InnerTubeCookieKey
-import com.metrolist.music.constants.VisitorDataKey
-import com.metrolist.music.db.InternalDatabase
-import com.metrolist.music.db.MusicDatabase
-import com.metrolist.music.db.entities.ArtistEntity
-import com.metrolist.music.db.entities.Song
-import com.metrolist.music.db.entities.SongEntity
-import com.metrolist.music.extensions.div
-import com.metrolist.music.extensions.tryOrNull
-import com.metrolist.music.extensions.zipInputStream
-import com.metrolist.music.extensions.zipOutputStream
-import com.metrolist.music.playback.MusicService
-import com.metrolist.music.playback.MusicService.Companion.PERSISTENT_AUTOMIX_FILE
-import com.metrolist.music.playback.MusicService.Companion.PERSISTENT_PLAYER_STATE_FILE
-import com.metrolist.music.playback.MusicService.Companion.PERSISTENT_QUEUE_FILE
-import com.metrolist.music.utils.reportException
+import com.romzz.musify.constants.DataSyncIdKey
+import com.romzz.musify.constants.InnerTubeCookieKey
+import com.romzz.musify.constants.VisitorDataKey
+import com.romzz.musify.db.InternalDatabase
+import com.romzz.musify.db.MusicDatabase
+import com.romzz.musify.db.entities.ArtistEntity
+import com.romzz.musify.db.entities.Song
+import com.romzz.musify.db.entities.SongEntity
+import com.romzz.musify.extensions.div
+import com.romzz.musify.extensions.tryOrNull
+import com.romzz.musify.extensions.zipInputStream
+import com.romzz.musify.extensions.zipOutputStream
+import com.romzz.musify.playback.MusicService
+import com.romzz.musify.playback.MusicService.Companion.PERSISTENT_AUTOMIX_FILE
+import com.romzz.musify.playback.MusicService.Companion.PERSISTENT_PLAYER_STATE_FILE
+import com.romzz.musify.playback.MusicService.Companion.PERSISTENT_QUEUE_FILE
+import com.romzz.musify.utils.reportException
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.runBlocking

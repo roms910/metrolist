@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.menu
+package com.romzz.musify.ui.menu
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
@@ -32,23 +32,23 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import com.metrolist.innertube.YouTube
 import com.metrolist.innertube.utils.parseCookieString
-import com.metrolist.music.LocalDatabase
-import com.metrolist.music.R
-import com.metrolist.music.constants.AddToPlaylistSortDescendingKey
-import com.metrolist.music.constants.AddToPlaylistSortTypeKey
-import com.metrolist.music.constants.InnerTubeCookieKey
-import com.metrolist.music.constants.ListThumbnailSize
-import com.metrolist.music.constants.PlaylistSortType
-import com.metrolist.music.db.entities.Playlist
-import com.metrolist.music.ui.component.CreatePlaylistDialog
-import com.metrolist.music.ui.component.DefaultDialog
-import com.metrolist.music.ui.component.ListDialog
-import com.metrolist.music.ui.component.ListItem
-import com.metrolist.music.ui.component.PlaylistListItem
-import com.metrolist.music.ui.component.SortHeader
-import com.metrolist.music.utils.rememberEnumPreference
-import com.metrolist.music.utils.rememberPreference
-import com.metrolist.music.viewmodels.PlaylistsViewModel
+import com.romzz.musify.LocalDatabase
+import com.romzz.musify.R
+import com.romzz.musify.constants.AddToPlaylistSortDescendingKey
+import com.romzz.musify.constants.AddToPlaylistSortTypeKey
+import com.romzz.musify.constants.InnerTubeCookieKey
+import com.romzz.musify.constants.ListThumbnailSize
+import com.romzz.musify.constants.PlaylistSortType
+import com.romzz.musify.db.entities.Playlist
+import com.romzz.musify.ui.component.CreatePlaylistDialog
+import com.romzz.musify.ui.component.DefaultDialog
+import com.romzz.musify.ui.component.ListDialog
+import com.romzz.musify.ui.component.ListItem
+import com.romzz.musify.ui.component.PlaylistListItem
+import com.romzz.musify.ui.component.SortHeader
+import com.romzz.musify.utils.rememberEnumPreference
+import com.romzz.musify.utils.rememberPreference
+import com.romzz.musify.viewmodels.PlaylistsViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import androidx.compose.foundation.background
@@ -74,7 +74,7 @@ import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.material3.FilterChip
 import androidx.compose.ui.graphics.graphicsLayer
 import androidx.compose.material3.FilterChipDefaults
-import com.metrolist.music.LocalSyncUtils
+import com.romzz.musify.LocalSyncUtils
 
 @Composable
 fun AddToPlaylistDialog(

@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.db
+package com.romzz.musify.db
 
 import androidx.room.TypeConverter
 import java.time.Instant

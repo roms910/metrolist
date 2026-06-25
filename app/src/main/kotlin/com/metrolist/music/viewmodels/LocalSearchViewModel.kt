@@ -3,19 +3,19 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.viewmodels
+package com.romzz.musify.viewmodels
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.metrolist.music.constants.HideVideoSongsKey
-import com.metrolist.music.db.MusicDatabase
-import com.metrolist.music.db.entities.Album
-import com.metrolist.music.db.entities.Artist
-import com.metrolist.music.db.entities.LocalItem
-import com.metrolist.music.db.entities.Playlist
-import com.metrolist.music.db.entities.Song
-import com.metrolist.music.utils.dataStore
+import com.romzz.musify.constants.HideVideoSongsKey
+import com.romzz.musify.db.MusicDatabase
+import com.romzz.musify.db.entities.Album
+import com.romzz.musify.db.entities.Artist
+import com.romzz.musify.db.entities.LocalItem
+import com.romzz.musify.db.entities.Playlist
+import com.romzz.musify.db.entities.Song
+import com.romzz.musify.utils.dataStore
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.ExperimentalCoroutinesApi

@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.screens
+package com.romzz.musify.ui.screens
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -64,36 +64,36 @@ import androidx.navigation.NavController
 import com.metrolist.innertube.models.Artist
 import com.metrolist.innertube.models.WatchEndpoint
 import com.metrolist.innertube.utils.parseCookieString
-import com.metrolist.music.LocalPlayerAwareWindowInsets
-import com.metrolist.music.LocalPlayerConnection
-import com.metrolist.music.R
-import com.metrolist.music.constants.CONTENT_TYPE_ARTIST
-import com.metrolist.music.constants.InnerTubeCookieKey
-import com.metrolist.music.constants.StatPeriod
-import com.metrolist.music.extensions.toMediaItem
-import com.metrolist.music.models.toMediaMetadata
-import com.metrolist.music.playback.queues.ListQueue
-import com.metrolist.music.playback.queues.YouTubeQueue
-import com.metrolist.music.ui.component.ArtistListItem
-import com.metrolist.music.ui.component.ChoiceChipsRow
-import com.metrolist.music.ui.component.EmptyPlaceholder
-import com.metrolist.music.ui.component.HideOnScrollFAB
-import com.metrolist.music.ui.component.IconButton
-import com.metrolist.music.ui.component.LocalAlbumsGrid
-import com.metrolist.music.ui.component.LocalArtistsGrid
-import com.metrolist.music.ui.component.LocalMenuState
-import com.metrolist.music.ui.component.LocalSongsGrid
-import com.metrolist.music.ui.component.NavigationTitle
-import com.metrolist.music.ui.component.PlaylistGridItem
-import com.metrolist.music.ui.component.TimeTransfer
-import com.metrolist.music.ui.menu.AlbumMenu
-import com.metrolist.music.ui.menu.ArtistMenu
-import com.metrolist.music.ui.menu.SongMenu
-import com.metrolist.music.ui.utils.backToMain
-import com.metrolist.music.utils.joinByBullet
-import com.metrolist.music.utils.makeTimeString
-import com.metrolist.music.utils.rememberPreference
-import com.metrolist.music.viewmodels.StatsViewModel
+import com.romzz.musify.LocalPlayerAwareWindowInsets
+import com.romzz.musify.LocalPlayerConnection
+import com.romzz.musify.R
+import com.romzz.musify.constants.CONTENT_TYPE_ARTIST
+import com.romzz.musify.constants.InnerTubeCookieKey
+import com.romzz.musify.constants.StatPeriod
+import com.romzz.musify.extensions.toMediaItem
+import com.romzz.musify.models.toMediaMetadata
+import com.romzz.musify.playback.queues.ListQueue
+import com.romzz.musify.playback.queues.YouTubeQueue
+import com.romzz.musify.ui.component.ArtistListItem
+import com.romzz.musify.ui.component.ChoiceChipsRow
+import com.romzz.musify.ui.component.EmptyPlaceholder
+import com.romzz.musify.ui.component.HideOnScrollFAB
+import com.romzz.musify.ui.component.IconButton
+import com.romzz.musify.ui.component.LocalAlbumsGrid
+import com.romzz.musify.ui.component.LocalArtistsGrid
+import com.romzz.musify.ui.component.LocalMenuState
+import com.romzz.musify.ui.component.LocalSongsGrid
+import com.romzz.musify.ui.component.NavigationTitle
+import com.romzz.musify.ui.component.PlaylistGridItem
+import com.romzz.musify.ui.component.TimeTransfer
+import com.romzz.musify.ui.menu.AlbumMenu
+import com.romzz.musify.ui.menu.ArtistMenu
+import com.romzz.musify.ui.menu.SongMenu
+import com.romzz.musify.ui.utils.backToMain
+import com.romzz.musify.utils.joinByBullet
+import com.romzz.musify.utils.makeTimeString
+import com.romzz.musify.utils.rememberPreference
+import com.romzz.musify.viewmodels.StatsViewModel
 import java.time.LocalDateTime
 import java.time.format.DateTimeFormatter
 

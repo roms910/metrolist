@@ -3,15 +3,15 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.models
+package com.romzz.musify.models
 
 import androidx.compose.runtime.Immutable
 import com.metrolist.innertube.models.EpisodeItem
 import com.metrolist.innertube.models.SongItem
 import com.metrolist.innertube.models.WatchEndpoint.WatchEndpointMusicSupportedConfigs.WatchEndpointMusicConfig.Companion.MUSIC_VIDEO_TYPE_ATV
-import com.metrolist.music.db.entities.Song
-import com.metrolist.music.db.entities.SongEntity
-import com.metrolist.music.ui.utils.resize
+import com.romzz.musify.db.entities.Song
+import com.romzz.musify.db.entities.SongEntity
+import com.romzz.musify.ui.utils.resize
 import java.io.Serializable
 import java.time.LocalDateTime
 

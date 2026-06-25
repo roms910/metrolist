@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.screens.wrapped
+package com.romzz.musify.ui.screens.wrapped
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -39,22 +39,22 @@ import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.compose.LocalLifecycleOwner
-import com.metrolist.music.LocalNavController
-import com.metrolist.music.R
-import com.metrolist.music.ui.screens.wrapped.pages.ConclusionPage
-import com.metrolist.music.ui.screens.wrapped.pages.PlaylistPage
-import com.metrolist.music.ui.screens.wrapped.pages.WrappedIntro
-import com.metrolist.music.ui.screens.wrapped.pages.WrappedMinutesScreen
-import com.metrolist.music.ui.screens.wrapped.pages.WrappedMinutesTease
-import com.metrolist.music.ui.screens.wrapped.pages.WrappedTop5AlbumsScreen
-import com.metrolist.music.ui.screens.wrapped.pages.WrappedTop5ArtistsScreen
-import com.metrolist.music.ui.screens.wrapped.pages.WrappedTop5SongsScreen
-import com.metrolist.music.ui.screens.wrapped.pages.WrappedTopAlbumScreen
-import com.metrolist.music.ui.screens.wrapped.pages.WrappedTopArtistScreen
-import com.metrolist.music.ui.screens.wrapped.pages.WrappedTopSongScreen
-import com.metrolist.music.ui.screens.wrapped.pages.WrappedTotalAlbumsScreen
-import com.metrolist.music.ui.screens.wrapped.pages.WrappedTotalArtistsScreen
-import com.metrolist.music.ui.screens.wrapped.pages.WrappedTotalSongsScreen
+import com.romzz.musify.LocalNavController
+import com.romzz.musify.R
+import com.romzz.musify.ui.screens.wrapped.pages.ConclusionPage
+import com.romzz.musify.ui.screens.wrapped.pages.PlaylistPage
+import com.romzz.musify.ui.screens.wrapped.pages.WrappedIntro
+import com.romzz.musify.ui.screens.wrapped.pages.WrappedMinutesScreen
+import com.romzz.musify.ui.screens.wrapped.pages.WrappedMinutesTease
+import com.romzz.musify.ui.screens.wrapped.pages.WrappedTop5AlbumsScreen
+import com.romzz.musify.ui.screens.wrapped.pages.WrappedTop5ArtistsScreen
+import com.romzz.musify.ui.screens.wrapped.pages.WrappedTop5SongsScreen
+import com.romzz.musify.ui.screens.wrapped.pages.WrappedTopAlbumScreen
+import com.romzz.musify.ui.screens.wrapped.pages.WrappedTopArtistScreen
+import com.romzz.musify.ui.screens.wrapped.pages.WrappedTopSongScreen
+import com.romzz.musify.ui.screens.wrapped.pages.WrappedTotalAlbumsScreen
+import com.romzz.musify.ui.screens.wrapped.pages.WrappedTotalArtistsScreen
+import com.romzz.musify.ui.screens.wrapped.pages.WrappedTotalSongsScreen
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.launch
 

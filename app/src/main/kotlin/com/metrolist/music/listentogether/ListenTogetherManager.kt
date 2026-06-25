@@ -3,26 +3,26 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.listentogether
+package com.romzz.musify.listentogether
 
 import android.content.Context
 import androidx.media3.common.MediaItem
 import androidx.media3.common.Player
 import com.metrolist.innertube.YouTube
 import com.metrolist.innertube.models.WatchEndpoint
-import com.metrolist.music.constants.ListenTogetherSyncVolumeKey
-import com.metrolist.music.extensions.currentMetadata
-import com.metrolist.music.extensions.metadata
-import com.metrolist.music.extensions.toMediaItem
-import com.metrolist.music.models.MediaMetadata
-import com.metrolist.music.models.MediaMetadata.Album
-import com.metrolist.music.models.MediaMetadata.Artist
-import com.metrolist.music.models.toMediaMetadata
-import com.metrolist.music.playback.PlayerConnection
-import com.metrolist.music.playback.queues.YouTubeQueue
-import com.metrolist.music.utils.dataStore
-import com.metrolist.music.utils.getArtistSeparator
-import com.metrolist.music.utils.joinToArtistString
+import com.romzz.musify.constants.ListenTogetherSyncVolumeKey
+import com.romzz.musify.extensions.currentMetadata
+import com.romzz.musify.extensions.metadata
+import com.romzz.musify.extensions.toMediaItem
+import com.romzz.musify.models.MediaMetadata
+import com.romzz.musify.models.MediaMetadata.Album
+import com.romzz.musify.models.MediaMetadata.Artist
+import com.romzz.musify.models.toMediaMetadata
+import com.romzz.musify.playback.PlayerConnection
+import com.romzz.musify.playback.queues.YouTubeQueue
+import com.romzz.musify.utils.dataStore
+import com.romzz.musify.utils.getArtistSeparator
+import com.romzz.musify.utils.joinToArtistString
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

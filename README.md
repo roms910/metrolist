@@ -137,7 +137,7 @@
       </a>
     </td>
     <td align="center">
-      <a href="https://apt.izzysoft.de/fdroid/index/apk/com.metrolist.music">
+      <a href="https://apt.izzysoft.de/fdroid/index/apk/com.romzz.musify">
         <img src="https://gitlab.com/IzzyOnDroid/repo/-/raw/master/assets/IzzyOnDroid.png" alt="Download from IzzyOnDroid" height="60">
       </a>
     </td>
@@ -148,7 +148,7 @@
   </tr>
   <tr>
     <td align="center">
-      <a href="https://www.openapk.net/metrolist/com.metrolist.music/">
+      <a href="https://www.openapk.net/metrolist/com.romzz.musify/">
         <img src="https://www.openapk.net/images/openapk-badge.png" alt="Download from OpenAPK" height="60">
       </a>
     </td>

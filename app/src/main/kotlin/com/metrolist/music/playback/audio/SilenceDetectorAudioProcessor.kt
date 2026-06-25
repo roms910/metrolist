@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.playback.audio
+package com.romzz.musify.playback.audio
 
 import androidx.media3.common.C
 import androidx.media3.common.audio.AudioProcessor

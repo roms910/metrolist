@@ -3,11 +3,11 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.viewmodels
+package com.romzz.musify.viewmodels
 
 import androidx.lifecycle.ViewModel
-import com.metrolist.music.ui.screens.settings.DarkMode
-import com.metrolist.music.ui.theme.DefaultThemeColor
+import com.romzz.musify.ui.screens.settings.DarkMode
+import com.romzz.musify.ui.theme.DefaultThemeColor
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow

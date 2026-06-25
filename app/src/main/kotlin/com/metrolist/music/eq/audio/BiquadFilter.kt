@@ -1,6 +1,6 @@
-package com.metrolist.music.eq.audio
+package com.romzz.musify.eq.audio
 
-import com.metrolist.music.eq.data.FilterType
+import com.romzz.musify.eq.data.FilterType
 import kotlin.math.PI
 import kotlin.math.cos
 import kotlin.math.pow

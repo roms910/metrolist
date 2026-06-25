@@ -3,13 +3,13 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.playback.queues
+package com.romzz.musify.playback.queues
 
 import androidx.media3.common.MediaItem
 import com.metrolist.innertube.YouTube
 import com.metrolist.innertube.models.WatchEndpoint
-import com.metrolist.music.extensions.toMediaItem
-import com.metrolist.music.models.MediaMetadata
+import com.romzz.musify.extensions.toMediaItem
+import com.romzz.musify.models.MediaMetadata
 import kotlinx.coroutines.Dispatchers.IO
 import kotlinx.coroutines.withContext
 

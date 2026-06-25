@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.screens.settings
+package com.romzz.musify.ui.screens.settings
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
@@ -54,26 +54,26 @@ import androidx.navigation.NavController
 import coil3.compose.AsyncImage
 import com.metrolist.innertube.YouTube
 import com.metrolist.innertube.utils.parseCookieString
-import com.metrolist.music.BuildConfig
-import com.metrolist.music.R
-import com.metrolist.music.constants.AccountChannelHandleKey
-import com.metrolist.music.constants.AccountEmailKey
-import com.metrolist.music.constants.AccountNameKey
-import com.metrolist.music.constants.DataSyncIdKey
-import com.metrolist.music.constants.InnerTubeCookieKey
-import com.metrolist.music.constants.UseLoginForBrowse
-import com.metrolist.music.constants.VisitorDataKey
-import com.metrolist.music.constants.YtmSyncKey
-import com.metrolist.music.ui.component.DefaultDialog
-import com.metrolist.music.ui.component.InfoLabel
-import com.metrolist.music.ui.component.Material3SettingsGroup
-import com.metrolist.music.ui.component.Material3SettingsItem
-import com.metrolist.music.ui.component.PreferenceEntry
-import com.metrolist.music.ui.component.TextFieldDialog
-import com.metrolist.music.utils.Updater
-import com.metrolist.music.utils.rememberPreference
-import com.metrolist.music.viewmodels.AccountSettingsViewModel
-import com.metrolist.music.viewmodels.HomeViewModel
+import com.romzz.musify.BuildConfig
+import com.romzz.musify.R
+import com.romzz.musify.constants.AccountChannelHandleKey
+import com.romzz.musify.constants.AccountEmailKey
+import com.romzz.musify.constants.AccountNameKey
+import com.romzz.musify.constants.DataSyncIdKey
+import com.romzz.musify.constants.InnerTubeCookieKey
+import com.romzz.musify.constants.UseLoginForBrowse
+import com.romzz.musify.constants.VisitorDataKey
+import com.romzz.musify.constants.YtmSyncKey
+import com.romzz.musify.ui.component.DefaultDialog
+import com.romzz.musify.ui.component.InfoLabel
+import com.romzz.musify.ui.component.Material3SettingsGroup
+import com.romzz.musify.ui.component.Material3SettingsItem
+import com.romzz.musify.ui.component.PreferenceEntry
+import com.romzz.musify.ui.component.TextFieldDialog
+import com.romzz.musify.utils.Updater
+import com.romzz.musify.utils.rememberPreference
+import com.romzz.musify.viewmodels.AccountSettingsViewModel
+import com.romzz.musify.viewmodels.HomeViewModel
 
 @Composable
 fun AccountSettings(

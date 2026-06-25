@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.component
+package com.romzz.musify.ui.component
 
 import android.annotation.SuppressLint
 import androidx.compose.foundation.Image
@@ -52,8 +52,8 @@ import androidx.compose.ui.unit.sp
 import coil3.compose.rememberAsyncImagePainter
 import coil3.request.ImageRequest
 import coil3.request.crossfade
-import com.metrolist.music.R
-import com.metrolist.music.models.MediaMetadata
+import com.romzz.musify.R
+import com.romzz.musify.models.MediaMetadata
 
 import androidx.compose.ui.draw.blur
 import androidx.compose.ui.graphics.Brush

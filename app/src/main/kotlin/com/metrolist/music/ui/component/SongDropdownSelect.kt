@@ -1,4 +1,4 @@
-package com.metrolist.music.ui.component
+package com.romzz.musify.ui.component
 
 import androidx.compose.foundation.horizontalScroll
 import androidx.compose.foundation.layout.Box
@@ -29,8 +29,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.PopupProperties
-import com.metrolist.music.R
-import com.metrolist.music.db.entities.SongWithStats
+import com.romzz.musify.R
+import com.romzz.musify.db.entities.SongWithStats
 
 
 @Composable

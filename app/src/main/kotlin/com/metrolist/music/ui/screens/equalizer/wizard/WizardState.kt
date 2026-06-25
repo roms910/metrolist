@@ -1,4 +1,4 @@
-package com.metrolist.music.ui.screens.equalizer.wizard
+package com.romzz.musify.ui.screens.equalizer.wizard
 
 /**
  * UI State for Wizard Screen

@@ -1,4 +1,4 @@
-package com.metrolist.music.utils.cipher
+package com.romzz.musify.utils.cipher
 
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.JsonObject

@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.component
+package com.romzz.musify.ui.component
 
 import androidx.annotation.DrawableRes
 import androidx.annotation.StringRes
@@ -37,8 +37,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.media3.exoplayer.offline.Download
-import com.metrolist.music.R
-import com.metrolist.music.utils.makeTimeString
+import com.romzz.musify.R
+import com.romzz.musify.utils.makeTimeString
 
 val GridMenuItemHeight = 108.dp
 

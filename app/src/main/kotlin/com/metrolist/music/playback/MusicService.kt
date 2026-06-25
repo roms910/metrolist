@@ -5,7 +5,7 @@
 
 @file:Suppress("DEPRECATION")
 
-package com.metrolist.music.playback
+package com.romzz.musify.playback
 
 import android.app.ForegroundServiceStartNotAllowedException
 import android.app.Notification
@@ -24,7 +24,7 @@ import android.media.AudioDeviceInfo
 import android.media.AudioFocusRequest
 import android.media.AudioManager
 import android.media.audiofx.AudioEffect
-import com.metrolist.music.playback.audio.VolumeNormalizationAudioProcessor
+import com.romzz.musify.playback.audio.VolumeNormalizationAudioProcessor
 import android.net.ConnectivityManager
 import android.os.Binder
 import android.os.Build
@@ -89,133 +89,133 @@ import com.metrolist.innertube.YouTube
 import com.metrolist.innertube.models.SongItem
 import com.metrolist.innertube.models.WatchEndpoint
 import com.metrolist.lastfm.LastFM
-import com.metrolist.music.MainActivity
-import com.metrolist.music.R
-import com.metrolist.music.constants.AndroidAutoTargetPlaylistKey
-import com.metrolist.music.constants.AudioNormalizationKey
-import com.metrolist.music.constants.AudioOffload
-import com.metrolist.music.constants.AudioQualityKey
-import com.metrolist.music.constants.AudioTrackPlaybackParamsKey
-import com.metrolist.music.constants.AutoDownloadOnLikeKey
-import com.metrolist.music.constants.AutoLoadMoreKey
-import com.metrolist.music.constants.AutoSkipNextOnErrorKey
-import com.metrolist.music.constants.StreamSourceAndroidCreatorKey
-import com.metrolist.music.constants.StreamSourceAndroidVRKey
-import com.metrolist.music.constants.StreamSourceIOSKey
-import com.metrolist.music.constants.StreamSourceTVHTML5Key
-import com.metrolist.music.constants.StreamSourceVisionOSKey
-import com.metrolist.music.constants.StreamSourceWebCreatorKey
-import com.metrolist.music.constants.StreamSourceWebRemixKey
-import com.metrolist.music.constants.AutoplayKey
-import com.metrolist.music.constants.CrossfadeDurationKey
-import com.metrolist.music.constants.CrossfadeEnabledKey
-import com.metrolist.music.constants.CrossfadeGaplessKey
-import com.metrolist.music.constants.DisableLoadMoreWhenRepeatAllKey
-import com.metrolist.music.constants.DiscordActivityNameKey
-import com.metrolist.music.constants.DiscordActivityTypeKey
-import com.metrolist.music.constants.DiscordAdvancedModeKey
-import com.metrolist.music.constants.DiscordButton1EnabledKey
-import com.metrolist.music.constants.DiscordButton1LabelKey
-import com.metrolist.music.constants.DiscordButton1UrlKey
-import com.metrolist.music.constants.DiscordButton2EnabledKey
-import com.metrolist.music.constants.DiscordButton2LabelKey
-import com.metrolist.music.constants.DiscordButton2UrlKey
-import com.metrolist.music.constants.DiscordDetailsTemplateKey
-import com.metrolist.music.constants.DiscordStateTemplateKey
-import com.metrolist.music.constants.DiscordUserStatusKey
-import com.metrolist.music.constants.EnableDiscordRPCKey
-import com.metrolist.music.discord.DiscordActivity
-import com.metrolist.music.discord.DiscordDefaults
-import com.metrolist.music.discord.DiscordRpcManager
-import com.metrolist.music.discord.DiscordActivityBuilder
-import com.metrolist.music.discord.DiscordTemplateRenderer
-import com.metrolist.music.discord.PresenceStatus
-import com.metrolist.music.constants.EnableLastFMScrobblingKey
-import com.metrolist.music.constants.EnableSongCacheKey
-import com.metrolist.music.constants.HideExplicitKey
-import com.metrolist.music.constants.HideVideoSongsKey
-import com.metrolist.music.constants.HistoryDuration
-import com.metrolist.music.constants.LastFMUseNowPlaying
-import com.metrolist.music.constants.MediaSessionConstants
-import com.metrolist.music.constants.MediaSessionConstants.CommandAddToTargetPlaylist
-import com.metrolist.music.constants.MediaSessionConstants.CommandToggleLike
-import com.metrolist.music.constants.MediaSessionConstants.CommandToggleRepeatMode
-import com.metrolist.music.constants.MediaSessionConstants.CommandToggleShuffle
-import com.metrolist.music.constants.MediaSessionConstants.CommandToggleStartRadio
-import com.metrolist.music.constants.PauseListenHistoryKey
-import com.metrolist.music.constants.PauseOnMute
-import com.metrolist.music.constants.PersistentQueueKey
-import com.metrolist.music.constants.PersistentShuffleAcrossQueuesKey
-import com.metrolist.music.constants.PlayerVolumeKey
-import com.metrolist.music.constants.PreventDuplicateTracksInQueueKey
-import com.metrolist.music.constants.RememberShuffleAndRepeatKey
-import com.metrolist.music.constants.RepeatModeKey
-import com.metrolist.music.constants.ResumeOnBluetoothConnectKey
-import com.metrolist.music.constants.ScrobbleDelayPercentKey
-import com.metrolist.music.constants.ScrobbleDelaySecondsKey
-import com.metrolist.music.constants.ScrobbleMinSongDurationKey
-import com.metrolist.music.constants.ShowLyricsKey
-import com.metrolist.music.constants.ShuffleModeKey
-import com.metrolist.music.constants.ShufflePlaylistFirstKey
-import com.metrolist.music.constants.SimilarContent
-import com.metrolist.music.constants.SkipSilenceInstantKey
-import com.metrolist.music.constants.SkipSilenceKey
-import com.metrolist.music.constants.StopMusicOnTaskClearKey
-import com.metrolist.music.db.MusicDatabase
-import com.metrolist.music.db.entities.Event
-import com.metrolist.music.db.entities.FormatEntity
-import com.metrolist.music.db.entities.LyricsEntity
-import com.metrolist.music.db.entities.PlaylistEntity
-import com.metrolist.music.db.entities.RelatedSongMap
-import com.metrolist.music.db.entities.Song
-import com.metrolist.music.di.DownloadCache
-import com.metrolist.music.di.PlayerCache
-import com.metrolist.music.eq.EqualizerService
-import com.metrolist.music.eq.audio.CustomEqualizerAudioProcessor
-import com.metrolist.music.eq.data.EQProfileRepository
-import com.metrolist.music.extensions.SilentHandler
-import com.metrolist.music.extensions.collect
-import com.metrolist.music.extensions.collectLatest
-import com.metrolist.music.extensions.currentMetadata
-import com.metrolist.music.extensions.findNextMediaItemById
-import com.metrolist.music.extensions.mediaItems
-import com.metrolist.music.extensions.metadata
-import com.metrolist.music.extensions.setOffloadEnabled
-import com.metrolist.music.extensions.toEnum
-import com.metrolist.music.extensions.toMediaItem
-import com.metrolist.music.extensions.toPersistQueue
-import com.metrolist.music.extensions.toQueue
-import com.metrolist.music.lyrics.LyricsHelper
-import com.metrolist.music.models.PersistPlayerState
-import com.metrolist.music.models.PersistQueue
-import com.metrolist.music.models.toMediaMetadata
-import com.metrolist.music.playback.alarm.MusicAlarmScheduler
-import com.metrolist.music.playback.alarm.MusicAlarmStore
-import com.metrolist.music.playback.audio.SilenceDetectorAudioProcessor
-import com.metrolist.music.playback.queues.EmptyQueue
-import com.metrolist.music.playback.queues.ListQueue
-import com.metrolist.music.playback.queues.Queue
-import com.metrolist.music.playback.queues.YouTubeQueue
-import com.metrolist.music.playback.queues.YouTubePlaylistQueue
-import com.metrolist.music.playback.queues.filterExplicit
-import com.metrolist.music.playback.queues.filterVideoSongs
-import com.metrolist.music.constants.LoudnessLevel
-import com.metrolist.music.constants.LoudnessLevelKey
-import com.metrolist.music.utils.CoilBitmapLoader
-import com.metrolist.music.utils.NetworkConnectivityObserver
-import com.metrolist.music.utils.ScrobbleManager
-import com.metrolist.music.utils.SyncUtils
-import com.metrolist.music.utils.getArtistSeparator
-import com.metrolist.music.utils.joinToArtistString
-import com.metrolist.music.utils.YTPlayerUtils
-import com.metrolist.music.utils.cipher.CipherDeobfuscator
-import com.metrolist.music.utils.dataStore
-import com.metrolist.music.utils.get
-import com.metrolist.music.utils.reportException
-import com.metrolist.music.widget.MetrolistWidgetManager
-import com.metrolist.music.widget.MusicWidgetReceiver
-import com.metrolist.music.widget.PlaylistWidgetReceiver
-import com.metrolist.music.ui.utils.resize
+import com.romzz.musify.MainActivity
+import com.romzz.musify.R
+import com.romzz.musify.constants.AndroidAutoTargetPlaylistKey
+import com.romzz.musify.constants.AudioNormalizationKey
+import com.romzz.musify.constants.AudioOffload
+import com.romzz.musify.constants.AudioQualityKey
+import com.romzz.musify.constants.AudioTrackPlaybackParamsKey
+import com.romzz.musify.constants.AutoDownloadOnLikeKey
+import com.romzz.musify.constants.AutoLoadMoreKey
+import com.romzz.musify.constants.AutoSkipNextOnErrorKey
+import com.romzz.musify.constants.StreamSourceAndroidCreatorKey
+import com.romzz.musify.constants.StreamSourceAndroidVRKey
+import com.romzz.musify.constants.StreamSourceIOSKey
+import com.romzz.musify.constants.StreamSourceTVHTML5Key
+import com.romzz.musify.constants.StreamSourceVisionOSKey
+import com.romzz.musify.constants.StreamSourceWebCreatorKey
+import com.romzz.musify.constants.StreamSourceWebRemixKey
+import com.romzz.musify.constants.AutoplayKey
+import com.romzz.musify.constants.CrossfadeDurationKey
+import com.romzz.musify.constants.CrossfadeEnabledKey
+import com.romzz.musify.constants.CrossfadeGaplessKey
+import com.romzz.musify.constants.DisableLoadMoreWhenRepeatAllKey
+import com.romzz.musify.constants.DiscordActivityNameKey
+import com.romzz.musify.constants.DiscordActivityTypeKey
+import com.romzz.musify.constants.DiscordAdvancedModeKey
+import com.romzz.musify.constants.DiscordButton1EnabledKey
+import com.romzz.musify.constants.DiscordButton1LabelKey
+import com.romzz.musify.constants.DiscordButton1UrlKey
+import com.romzz.musify.constants.DiscordButton2EnabledKey
+import com.romzz.musify.constants.DiscordButton2LabelKey
+import com.romzz.musify.constants.DiscordButton2UrlKey
+import com.romzz.musify.constants.DiscordDetailsTemplateKey
+import com.romzz.musify.constants.DiscordStateTemplateKey
+import com.romzz.musify.constants.DiscordUserStatusKey
+import com.romzz.musify.constants.EnableDiscordRPCKey
+import com.romzz.musify.discord.DiscordActivity
+import com.romzz.musify.discord.DiscordDefaults
+import com.romzz.musify.discord.DiscordRpcManager
+import com.romzz.musify.discord.DiscordActivityBuilder
+import com.romzz.musify.discord.DiscordTemplateRenderer
+import com.romzz.musify.discord.PresenceStatus
+import com.romzz.musify.constants.EnableLastFMScrobblingKey
+import com.romzz.musify.constants.EnableSongCacheKey
+import com.romzz.musify.constants.HideExplicitKey
+import com.romzz.musify.constants.HideVideoSongsKey
+import com.romzz.musify.constants.HistoryDuration
+import com.romzz.musify.constants.LastFMUseNowPlaying
+import com.romzz.musify.constants.MediaSessionConstants
+import com.romzz.musify.constants.MediaSessionConstants.CommandAddToTargetPlaylist
+import com.romzz.musify.constants.MediaSessionConstants.CommandToggleLike
+import com.romzz.musify.constants.MediaSessionConstants.CommandToggleRepeatMode
+import com.romzz.musify.constants.MediaSessionConstants.CommandToggleShuffle
+import com.romzz.musify.constants.MediaSessionConstants.CommandToggleStartRadio
+import com.romzz.musify.constants.PauseListenHistoryKey
+import com.romzz.musify.constants.PauseOnMute
+import com.romzz.musify.constants.PersistentQueueKey
+import com.romzz.musify.constants.PersistentShuffleAcrossQueuesKey
+import com.romzz.musify.constants.PlayerVolumeKey
+import com.romzz.musify.constants.PreventDuplicateTracksInQueueKey
+import com.romzz.musify.constants.RememberShuffleAndRepeatKey
+import com.romzz.musify.constants.RepeatModeKey
+import com.romzz.musify.constants.ResumeOnBluetoothConnectKey
+import com.romzz.musify.constants.ScrobbleDelayPercentKey
+import com.romzz.musify.constants.ScrobbleDelaySecondsKey
+import com.romzz.musify.constants.ScrobbleMinSongDurationKey
+import com.romzz.musify.constants.ShowLyricsKey
+import com.romzz.musify.constants.ShuffleModeKey
+import com.romzz.musify.constants.ShufflePlaylistFirstKey
+import com.romzz.musify.constants.SimilarContent
+import com.romzz.musify.constants.SkipSilenceInstantKey
+import com.romzz.musify.constants.SkipSilenceKey
+import com.romzz.musify.constants.StopMusicOnTaskClearKey
+import com.romzz.musify.db.MusicDatabase
+import com.romzz.musify.db.entities.Event
+import com.romzz.musify.db.entities.FormatEntity
+import com.romzz.musify.db.entities.LyricsEntity
+import com.romzz.musify.db.entities.PlaylistEntity
+import com.romzz.musify.db.entities.RelatedSongMap
+import com.romzz.musify.db.entities.Song
+import com.romzz.musify.di.DownloadCache
+import com.romzz.musify.di.PlayerCache
+import com.romzz.musify.eq.EqualizerService
+import com.romzz.musify.eq.audio.CustomEqualizerAudioProcessor
+import com.romzz.musify.eq.data.EQProfileRepository
+import com.romzz.musify.extensions.SilentHandler
+import com.romzz.musify.extensions.collect
+import com.romzz.musify.extensions.collectLatest
+import com.romzz.musify.extensions.currentMetadata
+import com.romzz.musify.extensions.findNextMediaItemById
+import com.romzz.musify.extensions.mediaItems
+import com.romzz.musify.extensions.metadata
+import com.romzz.musify.extensions.setOffloadEnabled
+import com.romzz.musify.extensions.toEnum
+import com.romzz.musify.extensions.toMediaItem
+import com.romzz.musify.extensions.toPersistQueue
+import com.romzz.musify.extensions.toQueue
+import com.romzz.musify.lyrics.LyricsHelper
+import com.romzz.musify.models.PersistPlayerState
+import com.romzz.musify.models.PersistQueue
+import com.romzz.musify.models.toMediaMetadata
+import com.romzz.musify.playback.alarm.MusicAlarmScheduler
+import com.romzz.musify.playback.alarm.MusicAlarmStore
+import com.romzz.musify.playback.audio.SilenceDetectorAudioProcessor
+import com.romzz.musify.playback.queues.EmptyQueue
+import com.romzz.musify.playback.queues.ListQueue
+import com.romzz.musify.playback.queues.Queue
+import com.romzz.musify.playback.queues.YouTubeQueue
+import com.romzz.musify.playback.queues.YouTubePlaylistQueue
+import com.romzz.musify.playback.queues.filterExplicit
+import com.romzz.musify.playback.queues.filterVideoSongs
+import com.romzz.musify.constants.LoudnessLevel
+import com.romzz.musify.constants.LoudnessLevelKey
+import com.romzz.musify.utils.CoilBitmapLoader
+import com.romzz.musify.utils.NetworkConnectivityObserver
+import com.romzz.musify.utils.ScrobbleManager
+import com.romzz.musify.utils.SyncUtils
+import com.romzz.musify.utils.getArtistSeparator
+import com.romzz.musify.utils.joinToArtistString
+import com.romzz.musify.utils.YTPlayerUtils
+import com.romzz.musify.utils.cipher.CipherDeobfuscator
+import com.romzz.musify.utils.dataStore
+import com.romzz.musify.utils.get
+import com.romzz.musify.utils.reportException
+import com.romzz.musify.widget.MetrolistWidgetManager
+import com.romzz.musify.widget.MusicWidgetReceiver
+import com.romzz.musify.widget.PlaylistWidgetReceiver
+import com.romzz.musify.ui.utils.resize
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CancellationException
 import kotlin.coroutines.coroutineContext
@@ -285,7 +285,7 @@ class MusicService :
     lateinit var widgetManager: MetrolistWidgetManager
 
     @Inject
-    lateinit var listenTogetherManager: com.metrolist.music.listentogether.ListenTogetherManager
+    lateinit var listenTogetherManager: com.romzz.musify.listentogether.ListenTogetherManager
 
     private lateinit var audioManager: AudioManager
     private var audioFocusRequest: AudioFocusRequest? = null
@@ -326,12 +326,12 @@ class MusicService :
     private val isNetworkConnected = MutableStateFlow(false)
     val currentStreamClient = MutableStateFlow<String?>(null)
 
-    private lateinit var audioQuality: com.metrolist.music.constants.AudioQuality
+    private lateinit var audioQuality: com.romzz.musify.constants.AudioQuality
 
     private var currentQueue: Queue = EmptyQueue
     var queueTitle: String? = null
 
-    val currentMediaMetadata = MutableStateFlow<com.metrolist.music.models.MediaMetadata?>(null)
+    val currentMediaMetadata = MutableStateFlow<com.romzz.musify.models.MediaMetadata?>(null)
     private val currentSong =
         currentMediaMetadata
             .flatMapLatest { mediaMetadata ->
@@ -733,9 +733,9 @@ class MusicService :
         audioManager.registerAudioDeviceCallback(audioDeviceCallback, null)
 
         audioQuality = startupPrefs!![AudioQualityKey]?.let { value ->
-            if (value == "VERY_HIGH") com.metrolist.music.constants.AudioQuality.HIGH
-            else com.metrolist.music.constants.AudioQuality.entries.find { it.name == value }
-        } ?: com.metrolist.music.constants.AudioQuality.AUTO
+            if (value == "VERY_HIGH") com.romzz.musify.constants.AudioQuality.HIGH
+            else com.romzz.musify.constants.AudioQuality.entries.find { it.name == value }
+        } ?: com.romzz.musify.constants.AudioQuality.AUTO
         playerVolume = MutableStateFlow((startupPrefs!![PlayerVolumeKey] ?: 1f).coerceIn(0f, 1f))
 
         initializeCast()
@@ -780,9 +780,9 @@ class MusicService :
             dataStore.data
                 .map {
                     it[AudioQualityKey]?.let { value ->
-                        if (value == "VERY_HIGH") com.metrolist.music.constants.AudioQuality.HIGH
-                        else com.metrolist.music.constants.AudioQuality.entries.find { it.name == value }
-                    } ?: com.metrolist.music.constants.AudioQuality.AUTO
+                        if (value == "VERY_HIGH") com.romzz.musify.constants.AudioQuality.HIGH
+                        else com.romzz.musify.constants.AudioQuality.entries.find { it.name == value }
+                    } ?: com.romzz.musify.constants.AudioQuality.AUTO
                 }.distinctUntilChanged()
                 .collect { newQuality ->
                     val oldQuality = audioQuality
@@ -2233,7 +2233,7 @@ class MusicService :
         }
     }
 
-    private suspend fun toggleEpisodeSaveForLater(songEntity: com.metrolist.music.db.entities.SongEntity) {
+    private suspend fun toggleEpisodeSaveForLater(songEntity: com.romzz.musify.db.entities.SongEntity) {
         val isCurrentlySaved = songEntity.inLibrary != null
         val shouldBeSaved = !isCurrentlySaved
 
@@ -4512,7 +4512,7 @@ class MusicService :
      * Initialize Google Cast support
      */
     private fun initializeCast() {
-        if (dataStore.get(com.metrolist.music.constants.EnableGoogleCastKey, true)) {
+        if (dataStore.get(com.romzz.musify.constants.EnableGoogleCastKey, true)) {
             try {
                 castConnectionHandler = CastConnectionHandler(this, scope, this)
                 castConnectionHandler?.initialize()
@@ -4729,7 +4729,7 @@ class MusicService :
     }
 
     companion object {
-        const val ACTION_ALARM_TRIGGER = "com.metrolist.music.action.ALARM_TRIGGER"
+        const val ACTION_ALARM_TRIGGER = "com.romzz.musify.action.ALARM_TRIGGER"
         const val EXTRA_ALARM_ID = "extra_alarm_id"
         const val EXTRA_ALARM_PLAYLIST_ID = "extra_alarm_playlist_id"
         const val EXTRA_ALARM_RANDOM_SONG = "extra_alarm_random_song"

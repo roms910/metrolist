@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.screens.settings
+package com.romzz.musify.ui.screens.settings
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -42,24 +42,24 @@ import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.metrolist.music.LocalPlayerAwareWindowInsets
-import com.metrolist.music.R
-import com.metrolist.music.constants.AiProviderKey
-import com.metrolist.music.constants.AiSystemPromptKey
-import com.metrolist.music.constants.DEFAULT_AI_SYSTEM_PROMPT
-import com.metrolist.music.constants.DeeplApiKey
-import com.metrolist.music.constants.DeeplFormalityKey
-import com.metrolist.music.constants.LanguageCodeToName
-import com.metrolist.music.constants.OpenRouterApiKey
-import com.metrolist.music.constants.OpenRouterBaseUrlKey
-import com.metrolist.music.constants.OpenRouterModelKey
-import com.metrolist.music.constants.TranslateLanguageKey
-import com.metrolist.music.constants.TranslateModeKey
-import com.metrolist.music.ui.component.EnumDialog
-import com.metrolist.music.ui.component.Material3SettingsGroup
-import com.metrolist.music.ui.component.Material3SettingsItem
-import com.metrolist.music.ui.component.TextFieldDialog
-import com.metrolist.music.utils.rememberPreference
+import com.romzz.musify.LocalPlayerAwareWindowInsets
+import com.romzz.musify.R
+import com.romzz.musify.constants.AiProviderKey
+import com.romzz.musify.constants.AiSystemPromptKey
+import com.romzz.musify.constants.DEFAULT_AI_SYSTEM_PROMPT
+import com.romzz.musify.constants.DeeplApiKey
+import com.romzz.musify.constants.DeeplFormalityKey
+import com.romzz.musify.constants.LanguageCodeToName
+import com.romzz.musify.constants.OpenRouterApiKey
+import com.romzz.musify.constants.OpenRouterBaseUrlKey
+import com.romzz.musify.constants.OpenRouterModelKey
+import com.romzz.musify.constants.TranslateLanguageKey
+import com.romzz.musify.constants.TranslateModeKey
+import com.romzz.musify.ui.component.EnumDialog
+import com.romzz.musify.ui.component.Material3SettingsGroup
+import com.romzz.musify.ui.component.Material3SettingsItem
+import com.romzz.musify.ui.component.TextFieldDialog
+import com.romzz.musify.utils.rememberPreference
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

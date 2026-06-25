@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.screens
+package com.romzz.musify.ui.screens
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -31,18 +31,18 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.navigation.NavController
 import com.metrolist.innertube.YouTube
-import com.metrolist.music.LocalPlayerAwareWindowInsets
-import com.metrolist.music.R
-import com.metrolist.music.constants.AccountChannelHandleKey
-import com.metrolist.music.constants.AccountEmailKey
-import com.metrolist.music.constants.AccountNameKey
-import com.metrolist.music.constants.DataSyncIdKey
-import com.metrolist.music.constants.InnerTubeCookieKey
-import com.metrolist.music.constants.VisitorDataKey
-import com.metrolist.music.ui.component.IconButton
-import com.metrolist.music.ui.utils.backToMain
-import com.metrolist.music.utils.rememberPreference
-import com.metrolist.music.utils.reportException
+import com.romzz.musify.LocalPlayerAwareWindowInsets
+import com.romzz.musify.R
+import com.romzz.musify.constants.AccountChannelHandleKey
+import com.romzz.musify.constants.AccountEmailKey
+import com.romzz.musify.constants.AccountNameKey
+import com.romzz.musify.constants.DataSyncIdKey
+import com.romzz.musify.constants.InnerTubeCookieKey
+import com.romzz.musify.constants.VisitorDataKey
+import com.romzz.musify.ui.component.IconButton
+import com.romzz.musify.ui.utils.backToMain
+import com.romzz.musify.utils.rememberPreference
+import com.romzz.musify.utils.reportException
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import timber.log.Timber

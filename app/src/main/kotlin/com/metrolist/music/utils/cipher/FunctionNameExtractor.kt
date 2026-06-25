@@ -1,4 +1,4 @@
-package com.metrolist.music.utils.cipher
+package com.romzz.musify.utils.cipher
 
 import timber.log.Timber
 import java.security.MessageDigest

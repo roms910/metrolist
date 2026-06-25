@@ -1,16 +1,16 @@
-package com.metrolist.music.playback.alarm
+package com.romzz.musify.playback.alarm
 
 import android.content.Context
 import android.os.Build
 import androidx.datastore.preferences.core.edit
-import com.metrolist.music.constants.AlarmEnabledKey
-import com.metrolist.music.constants.AlarmEntriesKey
-import com.metrolist.music.constants.AlarmHourKey
-import com.metrolist.music.constants.AlarmMinuteKey
-import com.metrolist.music.constants.AlarmNextTriggerAtKey
-import com.metrolist.music.constants.AlarmPlaylistIdKey
-import com.metrolist.music.constants.AlarmRandomSongKey
-import com.metrolist.music.utils.dataStore
+import com.romzz.musify.constants.AlarmEnabledKey
+import com.romzz.musify.constants.AlarmEntriesKey
+import com.romzz.musify.constants.AlarmHourKey
+import com.romzz.musify.constants.AlarmMinuteKey
+import com.romzz.musify.constants.AlarmNextTriggerAtKey
+import com.romzz.musify.constants.AlarmPlaylistIdKey
+import com.romzz.musify.constants.AlarmRandomSongKey
+import com.romzz.musify.utils.dataStore
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 import org.json.JSONArray

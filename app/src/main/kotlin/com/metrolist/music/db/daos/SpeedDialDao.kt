@@ -1,10 +1,10 @@
-package com.metrolist.music.db.daos
+package com.romzz.musify.db.daos
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.metrolist.music.db.entities.SpeedDialItem
+import com.romzz.musify.db.entities.SpeedDialItem
 import kotlinx.coroutines.flow.Flow
 
 @Dao

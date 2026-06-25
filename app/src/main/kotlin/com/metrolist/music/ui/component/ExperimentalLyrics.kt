@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.component
+package com.romzz.musify.ui.component
 
 import android.annotation.SuppressLint
 import android.app.Activity
@@ -84,44 +84,44 @@ import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
 import androidx.lifecycle.compose.LocalLifecycleOwner
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
-import com.metrolist.music.LocalDatabase
-import com.metrolist.music.LocalListenTogetherManager
-import com.metrolist.music.LocalPlayerConnection
-import com.metrolist.music.R
-import com.metrolist.music.constants.AiProviderKey
-import com.metrolist.music.constants.AiSystemPromptKey
-import com.metrolist.music.constants.DeeplApiKey
-import com.metrolist.music.constants.DeeplFormalityKey
-import com.metrolist.music.constants.LyricsClickKey
-import com.metrolist.music.constants.LyricsRomanizeAsMainKey
-import com.metrolist.music.constants.LyricsRomanizeCyrillicByLineKey
-import com.metrolist.music.constants.LyricsRomanizeList
-import com.metrolist.music.constants.LyricsTextPositionKey
-import com.metrolist.music.constants.OpenRouterApiKey
-import com.metrolist.music.constants.OpenRouterBaseUrlKey
-import com.metrolist.music.constants.OpenRouterDefaultBaseUrl
-import com.metrolist.music.constants.OpenRouterDefaultModel
-import com.metrolist.music.constants.OpenRouterModelKey
-import com.metrolist.music.constants.PlayerBackgroundStyle
-import com.metrolist.music.constants.PlayerBackgroundStyleKey
-import com.metrolist.music.constants.RespectAgentPositioningKey
-import com.metrolist.music.constants.ShowIntervalIndicatorKey
-import com.metrolist.music.constants.TranslateLanguageKey
-import com.metrolist.music.constants.TranslateModeKey
-import com.metrolist.music.db.entities.LyricsEntity.Companion.LYRICS_NOT_FOUND
-import com.metrolist.music.lyrics.LyricsResyncHelper
-import com.metrolist.music.lyrics.LyricsTranslationHelper
-import com.metrolist.music.lyrics.LyricsUtils.findActiveLineIndices
-import com.metrolist.music.lyrics.lyricsTextLooksSynced
-import com.metrolist.music.ui.component.shimmer.ShimmerHost
-import com.metrolist.music.ui.component.shimmer.TextPlaceholder
-import com.metrolist.music.ui.screens.settings.LyricsPosition
-import com.metrolist.music.ui.screens.settings.defaultList
-import com.metrolist.music.ui.utils.fadingEdge
-import com.metrolist.music.utils.ComposeToImage
-import com.metrolist.music.utils.rememberEnumPreference
-import com.metrolist.music.utils.rememberPreference
-import com.metrolist.music.viewmodels.LyricsViewModel
+import com.romzz.musify.LocalDatabase
+import com.romzz.musify.LocalListenTogetherManager
+import com.romzz.musify.LocalPlayerConnection
+import com.romzz.musify.R
+import com.romzz.musify.constants.AiProviderKey
+import com.romzz.musify.constants.AiSystemPromptKey
+import com.romzz.musify.constants.DeeplApiKey
+import com.romzz.musify.constants.DeeplFormalityKey
+import com.romzz.musify.constants.LyricsClickKey
+import com.romzz.musify.constants.LyricsRomanizeAsMainKey
+import com.romzz.musify.constants.LyricsRomanizeCyrillicByLineKey
+import com.romzz.musify.constants.LyricsRomanizeList
+import com.romzz.musify.constants.LyricsTextPositionKey
+import com.romzz.musify.constants.OpenRouterApiKey
+import com.romzz.musify.constants.OpenRouterBaseUrlKey
+import com.romzz.musify.constants.OpenRouterDefaultBaseUrl
+import com.romzz.musify.constants.OpenRouterDefaultModel
+import com.romzz.musify.constants.OpenRouterModelKey
+import com.romzz.musify.constants.PlayerBackgroundStyle
+import com.romzz.musify.constants.PlayerBackgroundStyleKey
+import com.romzz.musify.constants.RespectAgentPositioningKey
+import com.romzz.musify.constants.ShowIntervalIndicatorKey
+import com.romzz.musify.constants.TranslateLanguageKey
+import com.romzz.musify.constants.TranslateModeKey
+import com.romzz.musify.db.entities.LyricsEntity.Companion.LYRICS_NOT_FOUND
+import com.romzz.musify.lyrics.LyricsResyncHelper
+import com.romzz.musify.lyrics.LyricsTranslationHelper
+import com.romzz.musify.lyrics.LyricsUtils.findActiveLineIndices
+import com.romzz.musify.lyrics.lyricsTextLooksSynced
+import com.romzz.musify.ui.component.shimmer.ShimmerHost
+import com.romzz.musify.ui.component.shimmer.TextPlaceholder
+import com.romzz.musify.ui.screens.settings.LyricsPosition
+import com.romzz.musify.ui.screens.settings.defaultList
+import com.romzz.musify.ui.utils.fadingEdge
+import com.romzz.musify.utils.ComposeToImage
+import com.romzz.musify.utils.rememberEnumPreference
+import com.romzz.musify.utils.rememberPreference
+import com.romzz.musify.viewmodels.LyricsViewModel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.collectLatest
@@ -184,7 +184,7 @@ fun ExperimentalLyrics(
     val mediaMetadata by playerConnection.mediaMetadata.collectAsStateWithLifecycle()
     val translationStatus by LyricsTranslationHelper.status.collectAsStateWithLifecycle()
     val currentLyricsEntity by playerConnection.currentLyrics.collectAsStateWithLifecycle(initialValue = null)
-    var lastValidLyricsEntity by remember { mutableStateOf<com.metrolist.music.db.entities.LyricsEntity?>(null) }
+    var lastValidLyricsEntity by remember { mutableStateOf<com.romzz.musify.db.entities.LyricsEntity?>(null) }
     
     LaunchedEffect(currentLyricsEntity) {
         if (currentLyricsEntity != null) {

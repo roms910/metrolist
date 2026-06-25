@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.screens.settings
+package com.romzz.musify.ui.screens.settings
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -32,18 +32,18 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.metrolist.music.LocalDatabase
-import com.metrolist.music.LocalPlayerAwareWindowInsets
-import com.metrolist.music.R
-import com.metrolist.music.constants.DisableScreenshotKey
-import com.metrolist.music.constants.PauseListenHistoryKey
-import com.metrolist.music.constants.PauseSearchHistoryKey
-import com.metrolist.music.ui.component.DefaultDialog
-import com.metrolist.music.ui.component.IconButton
-import com.metrolist.music.ui.component.Material3SettingsGroup
-import com.metrolist.music.ui.component.Material3SettingsItem
-import com.metrolist.music.ui.utils.backToMain
-import com.metrolist.music.utils.rememberPreference
+import com.romzz.musify.LocalDatabase
+import com.romzz.musify.LocalPlayerAwareWindowInsets
+import com.romzz.musify.R
+import com.romzz.musify.constants.DisableScreenshotKey
+import com.romzz.musify.constants.PauseListenHistoryKey
+import com.romzz.musify.constants.PauseSearchHistoryKey
+import com.romzz.musify.ui.component.DefaultDialog
+import com.romzz.musify.ui.component.IconButton
+import com.romzz.musify.ui.component.Material3SettingsGroup
+import com.romzz.musify.ui.component.Material3SettingsItem
+import com.romzz.musify.ui.utils.backToMain
+import com.romzz.musify.utils.rememberPreference
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

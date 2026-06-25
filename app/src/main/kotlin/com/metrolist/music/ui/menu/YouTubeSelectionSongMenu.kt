@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.menu
+package com.romzz.musify.ui.menu
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.WindowInsets
@@ -38,18 +38,18 @@ import androidx.media3.exoplayer.offline.DownloadRequest
 import androidx.media3.exoplayer.offline.DownloadService
 import com.metrolist.innertube.YouTube
 import com.metrolist.innertube.models.SongItem
-import com.metrolist.music.LocalDatabase
-import com.metrolist.music.LocalDownloadUtil
-import com.metrolist.music.LocalPlayerConnection
-import com.metrolist.music.LocalSyncUtils
-import com.metrolist.music.R
-import com.metrolist.music.extensions.toMediaItem
-import com.metrolist.music.models.toMediaMetadata
-import com.metrolist.music.playback.ExoDownloadService
-import com.metrolist.music.playback.queues.ListQueue
-import com.metrolist.music.ui.component.DefaultDialog
-import com.metrolist.music.ui.component.Material3MenuGroup
-import com.metrolist.music.ui.component.Material3MenuItemData
+import com.romzz.musify.LocalDatabase
+import com.romzz.musify.LocalDownloadUtil
+import com.romzz.musify.LocalPlayerConnection
+import com.romzz.musify.LocalSyncUtils
+import com.romzz.musify.R
+import com.romzz.musify.extensions.toMediaItem
+import com.romzz.musify.models.toMediaMetadata
+import com.romzz.musify.playback.ExoDownloadService
+import com.romzz.musify.playback.queues.ListQueue
+import com.romzz.musify.ui.component.DefaultDialog
+import com.romzz.musify.ui.component.Material3MenuGroup
+import com.romzz.musify.ui.component.Material3MenuItemData
 import kotlinx.coroutines.launch
 import java.time.LocalDateTime
 
@@ -70,7 +70,7 @@ fun YouTubeSelectionSongMenu(
         mutableStateOf(false)
     }
 
-    val listenTogetherManager = com.metrolist.music.LocalListenTogetherManager.current
+    val listenTogetherManager = com.romzz.musify.LocalListenTogetherManager.current
     val isGuest = listenTogetherManager?.isInRoom == true && listenTogetherManager.isHost == false
 
     var downloadState by remember {
@@ -130,9 +130,9 @@ fun YouTubeSelectionSongMenu(
                     .map { song ->
                         // Convert SongItem to Song entity
                         val metadata = song.toMediaMetadata()
-                        com.metrolist.music.db.entities.Song(
+                        com.romzz.musify.db.entities.Song(
                             song =
-                                com.metrolist.music.db.entities.SongEntity(
+                                com.romzz.musify.db.entities.SongEntity(
                                     id = metadata.id,
                                     title = metadata.title,
                                     duration = metadata.duration,
@@ -148,14 +148,14 @@ fun YouTubeSelectionSongMenu(
                                 ),
                             artists =
                                 metadata.artists.map { artist ->
-                                    com.metrolist.music.db.entities.ArtistEntity(
+                                    com.romzz.musify.db.entities.ArtistEntity(
                                         id = artist.id ?: "",
                                         name = artist.name,
                                     )
                                 },
                             album =
                                 metadata.album?.let { album ->
-                                    com.metrolist.music.db.entities.AlbumEntity(
+                                    com.romzz.musify.db.entities.AlbumEntity(
                                         id = album.id,
                                         title = album.title,
                                         thumbnailUrl = metadata.thumbnailUrl, // Use song's thumbnail as album thumbnail
@@ -425,7 +425,7 @@ fun YouTubeSelectionSongMenu(
                                         insert(metadata)
                                         // Create SongEntity with toggled like status
                                         val songEntity =
-                                            com.metrolist.music.db.entities.SongEntity(
+                                            com.romzz.musify.db.entities.SongEntity(
                                                 id = metadata.id,
                                                 title = metadata.title,
                                                 duration = metadata.duration,

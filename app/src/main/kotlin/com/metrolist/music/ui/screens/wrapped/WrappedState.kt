@@ -3,12 +3,12 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.screens.wrapped
+package com.romzz.musify.ui.screens.wrapped
 
 import com.metrolist.innertube.models.AccountInfo
-import com.metrolist.music.db.entities.Album
-import com.metrolist.music.db.entities.Artist
-import com.metrolist.music.db.entities.SongWithStats
+import com.romzz.musify.db.entities.Album
+import com.romzz.musify.db.entities.Artist
+import com.romzz.musify.db.entities.SongWithStats
 
 data class WrappedState(
     val accountInfo: AccountInfo? = null,

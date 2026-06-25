@@ -1,6 +1,6 @@
-package com.metrolist.music.betterlyrics
+package com.romzz.musify.betterlyrics
 
-import com.metrolist.music.betterlyrics.models.TTMLResponse
+import com.romzz.musify.betterlyrics.models.TTMLResponse
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.engine.cio.CIO

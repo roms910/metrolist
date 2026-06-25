@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.screens.settings
+package com.romzz.musify.ui.screens.settings
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
@@ -36,17 +36,17 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.metrolist.music.BuildConfig
-import com.metrolist.music.LocalPlayerAwareWindowInsets
-import com.metrolist.music.R
-import com.metrolist.music.constants.CheckForUpdatesKey
-import com.metrolist.music.constants.UpdateNotificationsEnabledKey
-import com.metrolist.music.ui.component.IconButton
-import com.metrolist.music.ui.component.Material3SettingsGroup
-import com.metrolist.music.ui.component.Material3SettingsItem
-import com.metrolist.music.ui.utils.backToMain
-import com.metrolist.music.utils.Updater
-import com.metrolist.music.utils.rememberPreference
+import com.romzz.musify.BuildConfig
+import com.romzz.musify.LocalPlayerAwareWindowInsets
+import com.romzz.musify.R
+import com.romzz.musify.constants.CheckForUpdatesKey
+import com.romzz.musify.constants.UpdateNotificationsEnabledKey
+import com.romzz.musify.ui.component.IconButton
+import com.romzz.musify.ui.component.Material3SettingsGroup
+import com.romzz.musify.ui.component.Material3SettingsItem
+import com.romzz.musify.ui.utils.backToMain
+import com.romzz.musify.utils.Updater
+import com.romzz.musify.utils.rememberPreference
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext

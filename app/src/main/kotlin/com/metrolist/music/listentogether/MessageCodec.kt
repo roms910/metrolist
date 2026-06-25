@@ -3,10 +3,10 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.listentogether
+package com.romzz.musify.listentogether
 
 import com.google.protobuf.MessageLite
-import com.metrolist.music.listentogether.proto.Listentogether
+import com.romzz.musify.listentogether.proto.Listentogether
 import timber.log.Timber
 import java.io.ByteArrayInputStream
 import java.io.ByteArrayOutputStream

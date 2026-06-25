@@ -1,4 +1,4 @@
-package com.metrolist.music.ui.component
+package com.romzz.musify.ui.component
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -18,9 +18,9 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
-import com.metrolist.music.R
-import com.metrolist.music.db.entities.SongWithStats
-import com.metrolist.music.viewmodels.StatsViewModel
+import com.romzz.musify.R
+import com.romzz.musify.db.entities.SongWithStats
+import com.romzz.musify.viewmodels.StatsViewModel
 import java.util.Locale
 import java.util.concurrent.TimeUnit
 

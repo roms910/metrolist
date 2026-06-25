@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.models
+package com.romzz.musify.models
 
 import com.metrolist.innertube.models.YTItem
 

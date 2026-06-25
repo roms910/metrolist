@@ -3,14 +3,14 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.viewmodels
+package com.romzz.musify.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.metrolist.music.db.entities.LyricsEntity.Companion.LYRICS_NOT_FOUND
-import com.metrolist.music.lyrics.LyricsEntry
-import com.metrolist.music.lyrics.LyricsUtils
-import com.metrolist.music.ui.component.LyricsListItem
+import com.romzz.musify.db.entities.LyricsEntity.Companion.LYRICS_NOT_FOUND
+import com.romzz.musify.lyrics.LyricsEntry
+import com.romzz.musify.lyrics.LyricsUtils
+import com.romzz.musify.ui.component.LyricsListItem
 import dagger.hilt.android.lifecycle.HiltViewModel
 import javax.inject.Inject
 import kotlinx.coroutines.Dispatchers

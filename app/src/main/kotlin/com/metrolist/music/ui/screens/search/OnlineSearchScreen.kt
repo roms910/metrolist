@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.screens.search
+package com.romzz.musify.ui.screens.search
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
@@ -53,30 +53,30 @@ import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
-import com.metrolist.music.LocalNavController
+import com.romzz.musify.LocalNavController
 import com.metrolist.innertube.models.AlbumItem
 import com.metrolist.innertube.models.ArtistItem
 import com.metrolist.innertube.models.EpisodeItem
 import com.metrolist.innertube.models.PlaylistItem
 import com.metrolist.innertube.models.PodcastItem
 import com.metrolist.innertube.models.SongItem
-import com.metrolist.music.LocalDatabase
-import com.metrolist.music.LocalPlayerConnection
-import com.metrolist.music.R
-import com.metrolist.music.constants.AutoRadioQueueKey
-import com.metrolist.music.constants.SuggestionItemHeight
-import com.metrolist.music.extensions.toMediaItem
-import com.metrolist.music.models.toMediaMetadata
-import com.metrolist.music.playback.queues.ListQueue
-import com.metrolist.music.playback.queues.YouTubeQueue
-import com.metrolist.music.ui.component.LocalMenuState
-import com.metrolist.music.ui.component.YouTubeListItem
-import com.metrolist.music.ui.menu.YouTubeAlbumMenu
-import com.metrolist.music.ui.menu.YouTubeArtistMenu
-import com.metrolist.music.ui.menu.YouTubePlaylistMenu
-import com.metrolist.music.ui.menu.YouTubeSongMenu
-import com.metrolist.music.utils.rememberPreference
-import com.metrolist.music.viewmodels.OnlineSearchSuggestionViewModel
+import com.romzz.musify.LocalDatabase
+import com.romzz.musify.LocalPlayerConnection
+import com.romzz.musify.R
+import com.romzz.musify.constants.AutoRadioQueueKey
+import com.romzz.musify.constants.SuggestionItemHeight
+import com.romzz.musify.extensions.toMediaItem
+import com.romzz.musify.models.toMediaMetadata
+import com.romzz.musify.playback.queues.ListQueue
+import com.romzz.musify.playback.queues.YouTubeQueue
+import com.romzz.musify.ui.component.LocalMenuState
+import com.romzz.musify.ui.component.YouTubeListItem
+import com.romzz.musify.ui.menu.YouTubeAlbumMenu
+import com.romzz.musify.ui.menu.YouTubeArtistMenu
+import com.romzz.musify.ui.menu.YouTubePlaylistMenu
+import com.romzz.musify.ui.menu.YouTubeSongMenu
+import com.romzz.musify.utils.rememberPreference
+import com.romzz.musify.viewmodels.OnlineSearchSuggestionViewModel
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.flow.debounce

@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music
+package com.romzz.musify
 
 import android.Manifest
 import android.annotation.SuppressLint
@@ -128,80 +128,80 @@ import coil3.toBitmap
 import com.metrolist.innertube.YouTube
 import com.metrolist.innertube.models.SongItem
 import com.metrolist.innertube.models.WatchEndpoint
-import com.metrolist.music.constants.AppBarHeight
-import com.metrolist.music.constants.AppLanguageKey
-import com.metrolist.music.constants.CheckForUpdatesKey
-import com.metrolist.music.constants.DarkModeKey
-import com.metrolist.music.constants.DefaultOpenTabKey
-import com.metrolist.music.constants.DisableScreenshotKey
-import com.metrolist.music.constants.DynamicThemeKey
-import com.metrolist.music.constants.EnableHighRefreshRateKey
-import com.metrolist.music.constants.EnableLandscapeScalingKey
-import com.metrolist.music.constants.ExperimentalLyricsKey
-import com.metrolist.music.constants.LastSeenVersionKey
-import com.metrolist.music.constants.ListenTogetherInTopBarKey
-import com.metrolist.music.constants.ListenTogetherUsernameKey
-import com.metrolist.music.constants.LyricsProviderOrderKey
-import com.metrolist.music.constants.MiniPlayerBottomSpacing
-import com.metrolist.music.constants.MiniPlayerHeight
-import com.metrolist.music.constants.NavigationBarAnimationSpec
-import com.metrolist.music.constants.NavigationBarHeight
-import com.metrolist.music.constants.PauseListenHistoryKey
-import com.metrolist.music.constants.PauseSearchHistoryKey
-import com.metrolist.music.constants.PreferredLyricsProvider
-import com.metrolist.music.constants.PreferredLyricsProviderKey
-import com.metrolist.music.constants.PureBlackKey
-import com.metrolist.music.constants.SYSTEM_DEFAULT
-import com.metrolist.music.constants.SelectedThemeColorKey
-import com.metrolist.music.constants.SimpMusicMigrationDoneKey
-import com.metrolist.music.constants.SlimNavBarHeight
-import com.metrolist.music.constants.SlimNavBarKey
-import com.metrolist.music.constants.StopMusicOnTaskClearKey
-import com.metrolist.music.constants.UpdateNotificationsEnabledKey
-import com.metrolist.music.constants.UseNewMiniPlayerDesignKey
-import com.metrolist.music.db.MusicDatabase
-import com.metrolist.music.db.entities.SearchHistory
-import com.metrolist.music.extensions.toEnum
-import com.metrolist.music.lyrics.LyricsProviderRegistry
-import com.metrolist.music.models.toMediaMetadata
-import com.metrolist.music.playback.DownloadUtil
-import com.metrolist.music.playback.MusicService
-import com.metrolist.music.playback.MusicService.MusicBinder
-import com.metrolist.music.playback.PlayerConnection
-import com.metrolist.music.playback.queues.YouTubeQueue
-import com.metrolist.music.ui.component.AccountSettingsDialog
-import com.metrolist.music.ui.component.AppNavigationBar
-import com.metrolist.music.ui.component.AppNavigationRail
-import com.metrolist.music.ui.component.BottomSheetMenu
-import com.metrolist.music.ui.component.BottomSheetPage
-import com.metrolist.music.ui.component.LocalBottomSheetPageState
-import com.metrolist.music.ui.component.LocalMenuState
-import com.metrolist.music.ui.component.rememberBottomSheetState
-import com.metrolist.music.ui.component.shimmer.ShimmerTheme
-import com.metrolist.music.ui.menu.YouTubeSongMenu
-import com.metrolist.music.ui.player.BottomSheetPlayer
-import com.metrolist.music.ui.screens.Screens
-import com.metrolist.music.ui.screens.navigationBuilder
-import com.metrolist.music.ui.screens.settings.ChangelogScreen
-import com.metrolist.music.ui.screens.settings.DarkMode
-import com.metrolist.music.ui.screens.settings.NavigationTab
-import com.metrolist.music.ui.theme.ColorSaver
-import com.metrolist.music.ui.theme.DefaultThemeColor
-import com.metrolist.music.ui.theme.MetrolistTheme
-import com.metrolist.music.ui.theme.extractThemeColor
-import com.metrolist.music.ui.utils.appBarScrollBehavior
-import com.metrolist.music.ui.utils.resetHeightOffset
-import com.metrolist.music.utils.SearchRoutes
-import com.metrolist.music.utils.SyncUtils
-import com.metrolist.music.utils.Updater
-import com.metrolist.music.utils.dataStore
-import com.metrolist.music.utils.get
-import com.metrolist.music.utils.rememberEnumPreference
-import com.metrolist.music.utils.rememberPreference
-import com.metrolist.music.utils.reportException
-import com.metrolist.music.utils.setAppLocale
-import com.metrolist.music.viewmodels.HomeViewModel
-import com.metrolist.music.widget.PlaylistWidgetReceiver
+import com.romzz.musify.constants.AppBarHeight
+import com.romzz.musify.constants.AppLanguageKey
+import com.romzz.musify.constants.CheckForUpdatesKey
+import com.romzz.musify.constants.DarkModeKey
+import com.romzz.musify.constants.DefaultOpenTabKey
+import com.romzz.musify.constants.DisableScreenshotKey
+import com.romzz.musify.constants.DynamicThemeKey
+import com.romzz.musify.constants.EnableHighRefreshRateKey
+import com.romzz.musify.constants.EnableLandscapeScalingKey
+import com.romzz.musify.constants.ExperimentalLyricsKey
+import com.romzz.musify.constants.LastSeenVersionKey
+import com.romzz.musify.constants.ListenTogetherInTopBarKey
+import com.romzz.musify.constants.ListenTogetherUsernameKey
+import com.romzz.musify.constants.LyricsProviderOrderKey
+import com.romzz.musify.constants.MiniPlayerBottomSpacing
+import com.romzz.musify.constants.MiniPlayerHeight
+import com.romzz.musify.constants.NavigationBarAnimationSpec
+import com.romzz.musify.constants.NavigationBarHeight
+import com.romzz.musify.constants.PauseListenHistoryKey
+import com.romzz.musify.constants.PauseSearchHistoryKey
+import com.romzz.musify.constants.PreferredLyricsProvider
+import com.romzz.musify.constants.PreferredLyricsProviderKey
+import com.romzz.musify.constants.PureBlackKey
+import com.romzz.musify.constants.SYSTEM_DEFAULT
+import com.romzz.musify.constants.SelectedThemeColorKey
+import com.romzz.musify.constants.SimpMusicMigrationDoneKey
+import com.romzz.musify.constants.SlimNavBarHeight
+import com.romzz.musify.constants.SlimNavBarKey
+import com.romzz.musify.constants.StopMusicOnTaskClearKey
+import com.romzz.musify.constants.UpdateNotificationsEnabledKey
+import com.romzz.musify.constants.UseNewMiniPlayerDesignKey
+import com.romzz.musify.db.MusicDatabase
+import com.romzz.musify.db.entities.SearchHistory
+import com.romzz.musify.extensions.toEnum
+import com.romzz.musify.lyrics.LyricsProviderRegistry
+import com.romzz.musify.models.toMediaMetadata
+import com.romzz.musify.playback.DownloadUtil
+import com.romzz.musify.playback.MusicService
+import com.romzz.musify.playback.MusicService.MusicBinder
+import com.romzz.musify.playback.PlayerConnection
+import com.romzz.musify.playback.queues.YouTubeQueue
+import com.romzz.musify.ui.component.AccountSettingsDialog
+import com.romzz.musify.ui.component.AppNavigationBar
+import com.romzz.musify.ui.component.AppNavigationRail
+import com.romzz.musify.ui.component.BottomSheetMenu
+import com.romzz.musify.ui.component.BottomSheetPage
+import com.romzz.musify.ui.component.LocalBottomSheetPageState
+import com.romzz.musify.ui.component.LocalMenuState
+import com.romzz.musify.ui.component.rememberBottomSheetState
+import com.romzz.musify.ui.component.shimmer.ShimmerTheme
+import com.romzz.musify.ui.menu.YouTubeSongMenu
+import com.romzz.musify.ui.player.BottomSheetPlayer
+import com.romzz.musify.ui.screens.Screens
+import com.romzz.musify.ui.screens.navigationBuilder
+import com.romzz.musify.ui.screens.settings.ChangelogScreen
+import com.romzz.musify.ui.screens.settings.DarkMode
+import com.romzz.musify.ui.screens.settings.NavigationTab
+import com.romzz.musify.ui.theme.ColorSaver
+import com.romzz.musify.ui.theme.DefaultThemeColor
+import com.romzz.musify.ui.theme.MetrolistTheme
+import com.romzz.musify.ui.theme.extractThemeColor
+import com.romzz.musify.ui.utils.appBarScrollBehavior
+import com.romzz.musify.ui.utils.resetHeightOffset
+import com.romzz.musify.utils.SearchRoutes
+import com.romzz.musify.utils.SyncUtils
+import com.romzz.musify.utils.Updater
+import com.romzz.musify.utils.dataStore
+import com.romzz.musify.utils.get
+import com.romzz.musify.utils.rememberEnumPreference
+import com.romzz.musify.utils.rememberPreference
+import com.romzz.musify.utils.reportException
+import com.romzz.musify.utils.setAppLocale
+import com.romzz.musify.viewmodels.HomeViewModel
+import com.romzz.musify.widget.PlaylistWidgetReceiver
 import com.valentinilk.shimmer.LocalShimmerTheme
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.Dispatchers
@@ -219,10 +219,10 @@ import javax.inject.Inject
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     companion object {
-        private const val ACTION_SEARCH = "com.metrolist.music.action.SEARCH"
-        private const val ACTION_LIBRARY = "com.metrolist.music.action.LIBRARY"
-        const val ACTION_RECOGNITION = "com.metrolist.music.action.RECOGNITION"
-        const val ACTION_OPEN_WIDGET_TARGET = "com.metrolist.music.action.OPEN_WIDGET_TARGET"
+        private const val ACTION_SEARCH = "com.romzz.musify.action.SEARCH"
+        private const val ACTION_LIBRARY = "com.romzz.musify.action.LIBRARY"
+        const val ACTION_RECOGNITION = "com.romzz.musify.action.RECOGNITION"
+        const val ACTION_OPEN_WIDGET_TARGET = "com.romzz.musify.action.OPEN_WIDGET_TARGET"
         const val EXTRA_AUTO_START_RECOGNITION = "auto_start_recognition"
         const val EXTRA_WIDGET_TARGET_TYPE = "widget_target_type"
         const val EXTRA_WIDGET_TARGET_ID = "widget_target_id"
@@ -238,7 +238,7 @@ class MainActivity : ComponentActivity() {
     lateinit var syncUtils: SyncUtils
 
     @Inject
-    lateinit var listenTogetherManager: com.metrolist.music.listentogether.ListenTogetherManager
+    lateinit var listenTogetherManager: com.romzz.musify.listentogether.ListenTogetherManager
 
     private lateinit var navController: NavHostController
     private var pendingIntent: Intent? = null
@@ -1575,6 +1575,6 @@ val LocalPlayerConnection = staticCompositionLocalOf<PlayerConnection?> { error(
 val LocalPlayerAwareWindowInsets = compositionLocalOf<WindowInsets> { error("No WindowInsets provided") }
 val LocalDownloadUtil = staticCompositionLocalOf<DownloadUtil> { error("No DownloadUtil provided") }
 val LocalSyncUtils = staticCompositionLocalOf<SyncUtils> { error("No SyncUtils provided") }
-val LocalListenTogetherManager = staticCompositionLocalOf<com.metrolist.music.listentogether.ListenTogetherManager?> { null }
+val LocalListenTogetherManager = staticCompositionLocalOf<com.romzz.musify.listentogether.ListenTogetherManager?> { null }
 val LocalChangelogState = staticCompositionLocalOf<MutableState<Boolean>> { error("No LocalChangelogState provided") }
 val LocalIsPlayerExpanded = compositionLocalOf { false }

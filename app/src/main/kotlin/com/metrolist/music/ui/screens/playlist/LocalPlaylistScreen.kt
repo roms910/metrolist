@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.screens.playlist
+package com.romzz.musify.ui.screens.playlist
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -106,49 +106,49 @@ import com.metrolist.innertube.YouTube
 import com.metrolist.innertube.models.PlaylistItem
 import com.metrolist.innertube.models.SongItem
 import com.metrolist.innertube.utils.completed
-import com.metrolist.music.LocalDatabase
-import com.metrolist.music.LocalDownloadUtil
-import com.metrolist.music.LocalNavController
-import com.metrolist.music.LocalPlayerAwareWindowInsets
-import com.metrolist.music.LocalPlayerConnection
-import com.metrolist.music.LocalSyncUtils
-import com.metrolist.music.R
-import com.metrolist.music.constants.DarkModeKey
-import com.metrolist.music.constants.PlaylistEditLockKey
-import com.metrolist.music.constants.PlaylistSongSortDescendingKey
-import com.metrolist.music.constants.PlaylistSongSortType
-import com.metrolist.music.constants.PlaylistSongSortTypeKey
-import com.metrolist.music.constants.SwipeToRemoveSongKey
-import com.metrolist.music.db.entities.Playlist
-import com.metrolist.music.db.entities.PlaylistSong
-import com.metrolist.music.db.entities.PlaylistSongMap
-import com.metrolist.music.extensions.move
-import com.metrolist.music.extensions.toMediaItem
-import com.metrolist.music.models.toMediaMetadata
-import com.metrolist.music.playback.ExoDownloadService
-import com.metrolist.music.playback.queues.ListQueue
-import com.metrolist.music.ui.component.ActionPromptDialog
-import com.metrolist.music.ui.component.DefaultDialog
-import com.metrolist.music.ui.component.DraggableScrollbar
-import com.metrolist.music.ui.component.EmptyPlaceholder
-import com.metrolist.music.ui.component.ExpandableText
-import com.metrolist.music.ui.component.IconButton
-import com.metrolist.music.ui.component.LocalMenuState
-import com.metrolist.music.ui.component.OverlayEditButton
-import com.metrolist.music.ui.component.SongListItem
-import com.metrolist.music.ui.component.SortHeader
-import com.metrolist.music.ui.component.TextFieldDialog
-import com.metrolist.music.ui.menu.CustomThumbnailMenu
-import com.metrolist.music.ui.menu.LocalPlaylistMenu
-import com.metrolist.music.ui.menu.SelectionSongMenu
-import com.metrolist.music.ui.menu.SongMenu
-import com.metrolist.music.ui.screens.settings.DarkMode
-import com.metrolist.music.ui.utils.backToMain
-import com.metrolist.music.utils.makeTimeString
-import com.metrolist.music.utils.rememberEnumPreference
-import com.metrolist.music.utils.rememberPreference
-import com.metrolist.music.utils.reportException
-import com.metrolist.music.viewmodels.LocalPlaylistViewModel
+import com.romzz.musify.LocalDatabase
+import com.romzz.musify.LocalDownloadUtil
+import com.romzz.musify.LocalNavController
+import com.romzz.musify.LocalPlayerAwareWindowInsets
+import com.romzz.musify.LocalPlayerConnection
+import com.romzz.musify.LocalSyncUtils
+import com.romzz.musify.R
+import com.romzz.musify.constants.DarkModeKey
+import com.romzz.musify.constants.PlaylistEditLockKey
+import com.romzz.musify.constants.PlaylistSongSortDescendingKey
+import com.romzz.musify.constants.PlaylistSongSortType
+import com.romzz.musify.constants.PlaylistSongSortTypeKey
+import com.romzz.musify.constants.SwipeToRemoveSongKey
+import com.romzz.musify.db.entities.Playlist
+import com.romzz.musify.db.entities.PlaylistSong
+import com.romzz.musify.db.entities.PlaylistSongMap
+import com.romzz.musify.extensions.move
+import com.romzz.musify.extensions.toMediaItem
+import com.romzz.musify.models.toMediaMetadata
+import com.romzz.musify.playback.ExoDownloadService
+import com.romzz.musify.playback.queues.ListQueue
+import com.romzz.musify.ui.component.ActionPromptDialog
+import com.romzz.musify.ui.component.DefaultDialog
+import com.romzz.musify.ui.component.DraggableScrollbar
+import com.romzz.musify.ui.component.EmptyPlaceholder
+import com.romzz.musify.ui.component.ExpandableText
+import com.romzz.musify.ui.component.IconButton
+import com.romzz.musify.ui.component.LocalMenuState
+import com.romzz.musify.ui.component.OverlayEditButton
+import com.romzz.musify.ui.component.SongListItem
+import com.romzz.musify.ui.component.SortHeader
+import com.romzz.musify.ui.component.TextFieldDialog
+import com.romzz.musify.ui.menu.CustomThumbnailMenu
+import com.romzz.musify.ui.menu.LocalPlaylistMenu
+import com.romzz.musify.ui.menu.SelectionSongMenu
+import com.romzz.musify.ui.menu.SongMenu
+import com.romzz.musify.ui.screens.settings.DarkMode
+import com.romzz.musify.ui.utils.backToMain
+import com.romzz.musify.utils.makeTimeString
+import com.romzz.musify.utils.rememberEnumPreference
+import com.romzz.musify.utils.rememberPreference
+import com.romzz.musify.utils.reportException
+import com.romzz.musify.viewmodels.LocalPlaylistViewModel
 import com.yalantis.ucrop.UCrop
 import io.ktor.client.plugins.ClientRequestException
 import kotlinx.coroutines.Dispatchers
@@ -907,7 +907,7 @@ fun LocalPlaylistHeader(
     val overrideThumbnail = remember { mutableStateOf<String?>(null) }
     var isCustomThumbnail: Boolean =
         playlist.thumbnails.firstOrNull()?.let {
-            it.contains("studio_square_thumbnail") || it.contains("content://com.metrolist.music")
+            it.contains("studio_square_thumbnail") || it.contains("content://com.romzz.musify")
         } ?: false
 
     val result = remember { mutableStateOf<Uri?>(null) }

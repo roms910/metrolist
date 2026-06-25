@@ -1,4 +1,4 @@
-package com.metrolist.music.recognition
+package com.romzz.musify.recognition
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ensureActive

@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.screens.settings.integrations
+package com.romzz.musify.ui.screens.settings.integrations
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -52,24 +52,24 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.DialogProperties
 import androidx.navigation.NavController
 import com.metrolist.lastfm.LastFM
-import com.metrolist.music.LocalPlayerAwareWindowInsets
-import com.metrolist.music.R
-import com.metrolist.music.constants.EnableLastFMScrobblingKey
-import com.metrolist.music.constants.LastFMSessionKey
-import com.metrolist.music.constants.LastFMUseNowPlaying
-import com.metrolist.music.constants.LastFMUseSendLikes
-import com.metrolist.music.constants.LastFMUsernameKey
-import com.metrolist.music.constants.ScrobbleDelayPercentKey
-import com.metrolist.music.constants.ScrobbleDelaySecondsKey
-import com.metrolist.music.constants.ScrobbleMinSongDurationKey
-import com.metrolist.music.ui.component.DefaultDialog
-import com.metrolist.music.ui.component.IconButton
-import com.metrolist.music.ui.component.Material3SettingsGroup
-import com.metrolist.music.ui.component.Material3SettingsItem
-import com.metrolist.music.ui.utils.backToMain
-import com.metrolist.music.utils.makeTimeString
-import com.metrolist.music.utils.rememberPreference
-import com.metrolist.music.utils.reportException
+import com.romzz.musify.LocalPlayerAwareWindowInsets
+import com.romzz.musify.R
+import com.romzz.musify.constants.EnableLastFMScrobblingKey
+import com.romzz.musify.constants.LastFMSessionKey
+import com.romzz.musify.constants.LastFMUseNowPlaying
+import com.romzz.musify.constants.LastFMUseSendLikes
+import com.romzz.musify.constants.LastFMUsernameKey
+import com.romzz.musify.constants.ScrobbleDelayPercentKey
+import com.romzz.musify.constants.ScrobbleDelaySecondsKey
+import com.romzz.musify.constants.ScrobbleMinSongDurationKey
+import com.romzz.musify.ui.component.DefaultDialog
+import com.romzz.musify.ui.component.IconButton
+import com.romzz.musify.ui.component.Material3SettingsGroup
+import com.romzz.musify.ui.component.Material3SettingsItem
+import com.romzz.musify.ui.utils.backToMain
+import com.romzz.musify.utils.makeTimeString
+import com.romzz.musify.utils.rememberPreference
+import com.romzz.musify.utils.reportException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlin.math.roundToInt

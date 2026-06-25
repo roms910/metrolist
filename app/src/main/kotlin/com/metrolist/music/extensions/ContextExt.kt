@@ -3,16 +3,16 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.extensions
+package com.romzz.musify.extensions
 
 import android.content.Context
 import android.net.ConnectivityManager
 import android.net.NetworkCapabilities
 import com.metrolist.innertube.utils.parseCookieString
-import com.metrolist.music.constants.InnerTubeCookieKey
-import com.metrolist.music.constants.YtmSyncKey
-import com.metrolist.music.utils.dataStore
-import com.metrolist.music.utils.get
+import com.romzz.musify.constants.InnerTubeCookieKey
+import com.romzz.musify.constants.YtmSyncKey
+import com.romzz.musify.utils.dataStore
+import com.romzz.musify.utils.get
 import kotlinx.coroutines.runBlocking
 
 fun Context.isSyncEnabled(): Boolean {

@@ -4,7 +4,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.utils
+package com.romzz.musify.utils
 
 import android.content.Context
 import androidx.datastore.preferences.core.edit
@@ -17,21 +17,21 @@ import com.metrolist.innertube.models.SongItem
 import com.metrolist.innertube.utils.completed
 import com.metrolist.innertube.utils.parseCookieString
 import com.metrolist.lastfm.LastFM
-import com.metrolist.music.constants.InnerTubeCookieKey
-import com.metrolist.music.constants.LastFMUseSendLikes
-import com.metrolist.music.constants.LastFullSyncKey
-import com.metrolist.music.constants.SYNC_COOLDOWN
-import com.metrolist.music.db.MusicDatabase
-import com.metrolist.music.db.entities.ArtistEntity
-import com.metrolist.music.db.entities.PlaylistEntity
-import com.metrolist.music.db.entities.PlaylistSongMap
-import com.metrolist.music.db.entities.PodcastEntity
-import com.metrolist.music.db.entities.SetVideoIdEntity
-import com.metrolist.music.db.entities.SongEntity
-import com.metrolist.music.extensions.collectLatest
-import com.metrolist.music.extensions.isInternetConnected
-import com.metrolist.music.extensions.isSyncEnabled
-import com.metrolist.music.models.toMediaMetadata
+import com.romzz.musify.constants.InnerTubeCookieKey
+import com.romzz.musify.constants.LastFMUseSendLikes
+import com.romzz.musify.constants.LastFullSyncKey
+import com.romzz.musify.constants.SYNC_COOLDOWN
+import com.romzz.musify.db.MusicDatabase
+import com.romzz.musify.db.entities.ArtistEntity
+import com.romzz.musify.db.entities.PlaylistEntity
+import com.romzz.musify.db.entities.PlaylistSongMap
+import com.romzz.musify.db.entities.PodcastEntity
+import com.romzz.musify.db.entities.SetVideoIdEntity
+import com.romzz.musify.db.entities.SongEntity
+import com.romzz.musify.extensions.collectLatest
+import com.romzz.musify.extensions.isInternetConnected
+import com.romzz.musify.extensions.isSyncEnabled
+import com.romzz.musify.models.toMediaMetadata
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineExceptionHandler

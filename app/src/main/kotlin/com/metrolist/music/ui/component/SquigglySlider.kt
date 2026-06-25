@@ -6,7 +6,7 @@
  * https://github.com/marlboro-advance/mpvEx
  */
 
-package com.metrolist.music.ui.component
+package com.romzz.musify.ui.component
 
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.LinearEasing

@@ -1,4 +1,4 @@
-package com.metrolist.music.recognition
+package com.romzz.musify.recognition
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -13,8 +13,8 @@ import android.os.IBinder
 import timber.log.Timber
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
-import com.metrolist.music.MainActivity
-import com.metrolist.music.R
+import com.romzz.musify.MainActivity
+import com.romzz.musify.R
 import com.metrolist.shazamkit.models.RecognitionResult
 import com.metrolist.shazamkit.models.RecognitionStatus
 import kotlinx.coroutines.CoroutineScope

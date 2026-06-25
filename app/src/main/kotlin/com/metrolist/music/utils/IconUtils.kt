@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.utils
+package com.romzz.musify.utils
 
 import android.content.ComponentName
 import android.content.Context
@@ -12,8 +12,8 @@ import android.content.pm.PackageManager
 object IconUtils {
     fun setIcon(context: Context, enabled: Boolean) {
         val pm = context.packageManager
-        val dynamic = ComponentName(context, "com.metrolist.music.MainActivityAlias")
-        val static = ComponentName(context, "com.metrolist.music.MainActivityStatic")
+        val dynamic = ComponentName(context, "com.romzz.musify.MainActivityAlias")
+        val static = ComponentName(context, "com.romzz.musify.MainActivityStatic")
 
         pm.setComponentEnabledSetting(
             dynamic,

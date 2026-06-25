@@ -3,19 +3,19 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.viewmodels
+package com.romzz.musify.viewmodels
 
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.metrolist.music.db.MusicDatabase
-import com.metrolist.music.db.entities.LyricsEntity
-import com.metrolist.music.db.entities.Song
-import com.metrolist.music.lyrics.LyricsHelper
-import com.metrolist.music.lyrics.LyricsResult
-import com.metrolist.music.models.MediaMetadata
-import com.metrolist.music.utils.NetworkConnectivityObserver
+import com.romzz.musify.db.MusicDatabase
+import com.romzz.musify.db.entities.LyricsEntity
+import com.romzz.musify.db.entities.Song
+import com.romzz.musify.lyrics.LyricsHelper
+import com.romzz.musify.lyrics.LyricsResult
+import com.romzz.musify.models.MediaMetadata
+import com.romzz.musify.utils.NetworkConnectivityObserver
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job

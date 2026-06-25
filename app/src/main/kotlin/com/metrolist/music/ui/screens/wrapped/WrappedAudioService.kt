@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.screens.wrapped
+package com.romzz.musify.ui.screens.wrapped
 
 import android.content.Context
 import android.net.ConnectivityManager
@@ -12,11 +12,11 @@ import androidx.core.net.toUri
 import androidx.media3.common.MediaItem
 import androidx.media3.common.Player
 import androidx.media3.exoplayer.ExoPlayer
-import com.metrolist.music.R
-import com.metrolist.music.constants.AudioQuality
-import com.metrolist.music.utils.YTPlayerUtils
-import com.metrolist.music.utils.dataStore
-import com.metrolist.music.utils.get
+import com.romzz.musify.R
+import com.romzz.musify.constants.AudioQuality
+import com.romzz.musify.utils.YTPlayerUtils
+import com.romzz.musify.utils.dataStore
+import com.romzz.musify.utils.get
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -103,7 +103,7 @@ class WrappedAudioService(
         }
 
         return try {
-            val audioQuality = context.dataStore.get(com.metrolist.music.constants.AudioQualityKey).let { value ->
+            val audioQuality = context.dataStore.get(com.romzz.musify.constants.AudioQualityKey).let { value ->
                 if (value == "VERY_HIGH") AudioQuality.HIGH
                 else AudioQuality.entries.find { it.name == value } ?: AudioQuality.AUTO
             }

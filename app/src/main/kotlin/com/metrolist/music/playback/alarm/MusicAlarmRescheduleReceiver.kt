@@ -1,4 +1,4 @@
-package com.metrolist.music.playback.alarm
+package com.romzz.musify.playback.alarm
 
 import android.content.BroadcastReceiver
 import android.content.Context

@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.screens.library
+package com.romzz.musify.ui.screens.library
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Box
@@ -48,31 +48,31 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
-import com.metrolist.music.LocalPlayerAwareWindowInsets
-import com.metrolist.music.R
-import com.metrolist.music.constants.ArtistFilter
-import com.metrolist.music.constants.ArtistFilterKey
-import com.metrolist.music.constants.ArtistSortDescendingKey
-import com.metrolist.music.constants.ArtistSortType
-import com.metrolist.music.constants.ArtistSortTypeKey
-import com.metrolist.music.constants.ArtistViewTypeKey
-import com.metrolist.music.constants.CONTENT_TYPE_ARTIST
-import com.metrolist.music.constants.CONTENT_TYPE_HEADER
-import com.metrolist.music.constants.GridItemSize
-import com.metrolist.music.constants.GridItemsSizeKey
-import com.metrolist.music.constants.GridThumbnailHeight
-import com.metrolist.music.constants.LibraryViewType
-import com.metrolist.music.constants.YtmSyncKey
-import com.metrolist.music.ui.component.ChipsRow
-import com.metrolist.music.ui.component.LibraryArtistGridItem
-import com.metrolist.music.ui.component.LibraryArtistListItem
-import com.metrolist.music.ui.component.LibrarySearchEmptyPlaceholder
-import com.metrolist.music.ui.component.LibrarySearchHeader
-import com.metrolist.music.ui.component.LocalMenuState
-import com.metrolist.music.ui.component.SortHeader
-import com.metrolist.music.utils.rememberEnumPreference
-import com.metrolist.music.utils.rememberPreference
-import com.metrolist.music.viewmodels.LibraryArtistsViewModel
+import com.romzz.musify.LocalPlayerAwareWindowInsets
+import com.romzz.musify.R
+import com.romzz.musify.constants.ArtistFilter
+import com.romzz.musify.constants.ArtistFilterKey
+import com.romzz.musify.constants.ArtistSortDescendingKey
+import com.romzz.musify.constants.ArtistSortType
+import com.romzz.musify.constants.ArtistSortTypeKey
+import com.romzz.musify.constants.ArtistViewTypeKey
+import com.romzz.musify.constants.CONTENT_TYPE_ARTIST
+import com.romzz.musify.constants.CONTENT_TYPE_HEADER
+import com.romzz.musify.constants.GridItemSize
+import com.romzz.musify.constants.GridItemsSizeKey
+import com.romzz.musify.constants.GridThumbnailHeight
+import com.romzz.musify.constants.LibraryViewType
+import com.romzz.musify.constants.YtmSyncKey
+import com.romzz.musify.ui.component.ChipsRow
+import com.romzz.musify.ui.component.LibraryArtistGridItem
+import com.romzz.musify.ui.component.LibraryArtistListItem
+import com.romzz.musify.ui.component.LibrarySearchEmptyPlaceholder
+import com.romzz.musify.ui.component.LibrarySearchHeader
+import com.romzz.musify.ui.component.LocalMenuState
+import com.romzz.musify.ui.component.SortHeader
+import com.romzz.musify.utils.rememberEnumPreference
+import com.romzz.musify.utils.rememberPreference
+import com.romzz.musify.viewmodels.LibraryArtistsViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 

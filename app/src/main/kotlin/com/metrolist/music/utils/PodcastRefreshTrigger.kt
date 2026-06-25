@@ -1,4 +1,4 @@
-package com.metrolist.music.utils
+package com.romzz.musify.utils
 
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.asSharedFlow

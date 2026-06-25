@@ -1,4 +1,4 @@
-package com.metrolist.music.viewmodels
+package com.romzz.musify.viewmodels
 
 import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
@@ -6,10 +6,10 @@ import androidx.lifecycle.viewModelScope
 import com.metrolist.innertube.YouTube
 import com.metrolist.innertube.models.EpisodeItem
 import com.metrolist.innertube.models.PodcastItem
-import com.metrolist.music.db.MusicDatabase
-import com.metrolist.music.db.entities.PodcastEntity
-import com.metrolist.music.utils.SyncUtils
-import com.metrolist.music.utils.reportException
+import com.romzz.musify.db.MusicDatabase
+import com.romzz.musify.db.entities.PodcastEntity
+import com.romzz.musify.utils.SyncUtils
+import com.romzz.musify.utils.reportException
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi

@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.screens.settings.integrations
+package com.romzz.musify.ui.screens.settings.integrations
 
 import android.widget.Toast
 import androidx.compose.animation.animateContentSize
@@ -75,27 +75,27 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
-import com.metrolist.music.LocalPlayerAwareWindowInsets
-import com.metrolist.music.R
-import com.metrolist.music.constants.ListenTogetherAutoApprovalKey
-import com.metrolist.music.constants.ListenTogetherAutoApproveSuggestionsKey
-import com.metrolist.music.constants.ListenTogetherServerUrlKey
-import com.metrolist.music.constants.ListenTogetherSyncVolumeKey
-import com.metrolist.music.constants.ListenTogetherUsernameKey
-import com.metrolist.music.listentogether.ConnectionState
-import com.metrolist.music.listentogether.ListenTogetherEvent
-import com.metrolist.music.listentogether.ListenTogetherServer
-import com.metrolist.music.listentogether.ListenTogetherServers
-import com.metrolist.music.listentogether.LogEntry
-import com.metrolist.music.listentogether.LogLevel
-import com.metrolist.music.listentogether.RoomRole
-import com.metrolist.music.ui.component.DefaultDialog
-import com.metrolist.music.ui.component.IconButton
-import com.metrolist.music.ui.component.IntegrationCard
-import com.metrolist.music.ui.component.IntegrationCardItem
-import com.metrolist.music.ui.utils.backToMain
-import com.metrolist.music.utils.rememberPreference
-import com.metrolist.music.viewmodels.ListenTogetherViewModel
+import com.romzz.musify.LocalPlayerAwareWindowInsets
+import com.romzz.musify.R
+import com.romzz.musify.constants.ListenTogetherAutoApprovalKey
+import com.romzz.musify.constants.ListenTogetherAutoApproveSuggestionsKey
+import com.romzz.musify.constants.ListenTogetherServerUrlKey
+import com.romzz.musify.constants.ListenTogetherSyncVolumeKey
+import com.romzz.musify.constants.ListenTogetherUsernameKey
+import com.romzz.musify.listentogether.ConnectionState
+import com.romzz.musify.listentogether.ListenTogetherEvent
+import com.romzz.musify.listentogether.ListenTogetherServer
+import com.romzz.musify.listentogether.ListenTogetherServers
+import com.romzz.musify.listentogether.LogEntry
+import com.romzz.musify.listentogether.LogLevel
+import com.romzz.musify.listentogether.RoomRole
+import com.romzz.musify.ui.component.DefaultDialog
+import com.romzz.musify.ui.component.IconButton
+import com.romzz.musify.ui.component.IntegrationCard
+import com.romzz.musify.ui.component.IntegrationCardItem
+import com.romzz.musify.ui.utils.backToMain
+import com.romzz.musify.utils.rememberPreference
+import com.romzz.musify.viewmodels.ListenTogetherViewModel
 import kotlinx.coroutines.flow.collectLatest
 
 @OptIn(ExperimentalMaterial3Api::class)

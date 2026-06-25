@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.player
+package com.romzz.musify.ui.player
 
 import android.annotation.SuppressLint
 import androidx.activity.compose.BackHandler
@@ -99,32 +99,32 @@ import androidx.datastore.preferences.core.edit
 import androidx.media3.common.Player
 import androidx.media3.common.Timeline
 import androidx.media3.exoplayer.source.ShuffleOrder.DefaultShuffleOrder
-import com.metrolist.music.LocalNavController
-import com.metrolist.music.LocalListenTogetherManager
-import com.metrolist.music.LocalPlayerConnection
-import com.metrolist.music.R
-import com.metrolist.music.constants.ListItemHeight
-import com.metrolist.music.constants.PlayerBackgroundStyle
-import com.metrolist.music.constants.QueueEditLockKey
-import com.metrolist.music.constants.UseNewPlayerDesignKey
-import com.metrolist.music.extensions.metadata
-import com.metrolist.music.extensions.move
-import com.metrolist.music.extensions.toggleRepeatMode
-import com.metrolist.music.listentogether.RoomRole
-import com.metrolist.music.models.MediaMetadata
-import com.metrolist.music.ui.component.ActionPromptDialog
-import com.metrolist.music.ui.component.BottomSheet
-import com.metrolist.music.ui.component.BottomSheetState
-import com.metrolist.music.ui.component.LocalBottomSheetPageState
-import com.metrolist.music.ui.component.LocalMenuState
-import com.metrolist.music.ui.component.MediaMetadataListItem
-import com.metrolist.music.ui.menu.PlayerMenu
-import com.metrolist.music.ui.menu.QueueMenu
-import com.metrolist.music.ui.menu.SelectionMediaMetadataMenu
-import com.metrolist.music.ui.utils.ShowMediaInfo
-import com.metrolist.music.utils.dataStore
-import com.metrolist.music.utils.makeTimeString
-import com.metrolist.music.utils.rememberPreference
+import com.romzz.musify.LocalNavController
+import com.romzz.musify.LocalListenTogetherManager
+import com.romzz.musify.LocalPlayerConnection
+import com.romzz.musify.R
+import com.romzz.musify.constants.ListItemHeight
+import com.romzz.musify.constants.PlayerBackgroundStyle
+import com.romzz.musify.constants.QueueEditLockKey
+import com.romzz.musify.constants.UseNewPlayerDesignKey
+import com.romzz.musify.extensions.metadata
+import com.romzz.musify.extensions.move
+import com.romzz.musify.extensions.toggleRepeatMode
+import com.romzz.musify.listentogether.RoomRole
+import com.romzz.musify.models.MediaMetadata
+import com.romzz.musify.ui.component.ActionPromptDialog
+import com.romzz.musify.ui.component.BottomSheet
+import com.romzz.musify.ui.component.BottomSheetState
+import com.romzz.musify.ui.component.LocalBottomSheetPageState
+import com.romzz.musify.ui.component.LocalMenuState
+import com.romzz.musify.ui.component.MediaMetadataListItem
+import com.romzz.musify.ui.menu.PlayerMenu
+import com.romzz.musify.ui.menu.QueueMenu
+import com.romzz.musify.ui.menu.SelectionMediaMetadataMenu
+import com.romzz.musify.ui.utils.ShowMediaInfo
+import com.romzz.musify.utils.dataStore
+import com.romzz.musify.utils.makeTimeString
+import com.romzz.musify.utils.rememberPreference
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.isActive
@@ -132,13 +132,13 @@ import kotlinx.coroutines.launch
 import sh.calvin.reorderable.ReorderableItem
 import sh.calvin.reorderable.rememberReorderableLazyListState
 import kotlin.math.roundToInt
-import com.metrolist.music.constants.SleepTimerDefaultKey
-import com.metrolist.music.utils.dataStore
+import com.romzz.musify.constants.SleepTimerDefaultKey
+import com.romzz.musify.utils.dataStore
 import androidx.datastore.preferences.core.edit
 import android.widget.Toast
 import androidx.compose.runtime.derivedStateOf
-import com.metrolist.music.constants.SleepTimerFadeOutKey
-import com.metrolist.music.constants.SleepTimerStopAfterCurrentSongKey
+import com.romzz.musify.constants.SleepTimerFadeOutKey
+import com.romzz.musify.constants.SleepTimerStopAfterCurrentSongKey
 import androidx.compose.runtime.derivedStateOf
 import androidx.compose.material3.Button
 
@@ -170,7 +170,7 @@ fun Queue(
 
     // Listen Together state (reactive)
     val listenTogetherManager = LocalListenTogetherManager.current
-    val listenTogetherRoleState = listenTogetherManager?.role?.collectAsStateWithLifecycle(initialValue = com.metrolist.music.listentogether.RoomRole.NONE)
+    val listenTogetherRoleState = listenTogetherManager?.role?.collectAsStateWithLifecycle(initialValue = com.romzz.musify.listentogether.RoomRole.NONE)
     val isListenTogetherGuest = listenTogetherRoleState?.value == RoomRole.GUEST
 
     val playerConnection = LocalPlayerConnection.current ?: return

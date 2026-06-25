@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.player
+package com.romzz.musify.ui.player
 
 import androidx.activity.compose.BackHandler
 import android.content.ClipData
@@ -127,62 +127,62 @@ import androidx.media3.common.Player
 import androidx.media3.common.Player.STATE_ENDED
 import androidx.navigation.NavController
 import androidx.palette.graphics.Palette
-import com.metrolist.music.LocalNavController
+import com.romzz.musify.LocalNavController
 import coil3.compose.AsyncImage
 import coil3.imageLoader
 import coil3.request.ImageRequest
 import coil3.request.allowHardware
 import coil3.toBitmap
-import com.metrolist.music.LocalDatabase
-import com.metrolist.music.LocalDownloadUtil
-import com.metrolist.music.LocalListenTogetherManager
-import com.metrolist.music.LocalPlayerConnection
-import com.metrolist.music.R
-import com.metrolist.music.constants.CropAlbumArtKey
-import com.metrolist.music.constants.DarkModeKey
-import com.metrolist.music.constants.HidePlayerThumbnailKey
-import com.metrolist.music.constants.HideStatusBarOnFullscreenKey
-import com.metrolist.music.constants.KeepScreenOn
-import com.metrolist.music.constants.PlayerBackgroundStyle
-import com.metrolist.music.constants.PlayerBackgroundStyleKey
-import com.metrolist.music.constants.PlayerButtonsStyle
-import com.metrolist.music.constants.PlayerButtonsStyleKey
-import com.metrolist.music.constants.PlayerHorizontalPadding
-import com.metrolist.music.constants.QueuePeekHeight
-import com.metrolist.music.constants.SleepTimerDefaultKey
-import com.metrolist.music.constants.SleepTimerFadeOutKey
-import com.metrolist.music.constants.SleepTimerStopAfterCurrentSongKey
-import com.metrolist.music.constants.SliderStyle
-import com.metrolist.music.constants.SliderStyleKey
-import com.metrolist.music.constants.SquigglySliderKey
-import com.metrolist.music.constants.ThumbnailCornerRadius
-import com.metrolist.music.constants.UseNewPlayerDesignKey
-import com.metrolist.music.db.entities.LyricsEntity
-import com.metrolist.music.extensions.metadata
-import com.metrolist.music.extensions.togglePlayPause
-import com.metrolist.music.extensions.toggleRepeatMode
-import com.metrolist.music.listentogether.RoomRole
-import com.metrolist.music.models.MediaMetadata
-import com.metrolist.music.ui.component.BottomSheet
-import com.metrolist.music.ui.component.BottomSheetState
-import com.metrolist.music.ui.component.LocalBottomSheetPageState
-import com.metrolist.music.ui.component.LocalMenuState
-import com.metrolist.music.ui.component.Lyrics
-import com.metrolist.music.ui.component.PlayerSliderTrack
-import com.metrolist.music.ui.component.ResizableIconButton
-import com.metrolist.music.ui.component.SquigglySlider
-import com.metrolist.music.ui.component.WavySlider
-import com.metrolist.music.ui.component.rememberBottomSheetState
-import com.metrolist.music.ui.menu.PlayerMenu
-import com.metrolist.music.ui.screens.settings.DarkMode
-import com.metrolist.music.ui.theme.PlayerColorExtractor
-import com.metrolist.music.ui.theme.PlayerSliderColors
-import com.metrolist.music.ui.utils.ShowMediaInfo
-import com.metrolist.music.ui.utils.ShowOffsetDialog
-import com.metrolist.music.utils.dataStore
-import com.metrolist.music.utils.makeTimeString
-import com.metrolist.music.utils.rememberEnumPreference
-import com.metrolist.music.utils.rememberPreference
+import com.romzz.musify.LocalDatabase
+import com.romzz.musify.LocalDownloadUtil
+import com.romzz.musify.LocalListenTogetherManager
+import com.romzz.musify.LocalPlayerConnection
+import com.romzz.musify.R
+import com.romzz.musify.constants.CropAlbumArtKey
+import com.romzz.musify.constants.DarkModeKey
+import com.romzz.musify.constants.HidePlayerThumbnailKey
+import com.romzz.musify.constants.HideStatusBarOnFullscreenKey
+import com.romzz.musify.constants.KeepScreenOn
+import com.romzz.musify.constants.PlayerBackgroundStyle
+import com.romzz.musify.constants.PlayerBackgroundStyleKey
+import com.romzz.musify.constants.PlayerButtonsStyle
+import com.romzz.musify.constants.PlayerButtonsStyleKey
+import com.romzz.musify.constants.PlayerHorizontalPadding
+import com.romzz.musify.constants.QueuePeekHeight
+import com.romzz.musify.constants.SleepTimerDefaultKey
+import com.romzz.musify.constants.SleepTimerFadeOutKey
+import com.romzz.musify.constants.SleepTimerStopAfterCurrentSongKey
+import com.romzz.musify.constants.SliderStyle
+import com.romzz.musify.constants.SliderStyleKey
+import com.romzz.musify.constants.SquigglySliderKey
+import com.romzz.musify.constants.ThumbnailCornerRadius
+import com.romzz.musify.constants.UseNewPlayerDesignKey
+import com.romzz.musify.db.entities.LyricsEntity
+import com.romzz.musify.extensions.metadata
+import com.romzz.musify.extensions.togglePlayPause
+import com.romzz.musify.extensions.toggleRepeatMode
+import com.romzz.musify.listentogether.RoomRole
+import com.romzz.musify.models.MediaMetadata
+import com.romzz.musify.ui.component.BottomSheet
+import com.romzz.musify.ui.component.BottomSheetState
+import com.romzz.musify.ui.component.LocalBottomSheetPageState
+import com.romzz.musify.ui.component.LocalMenuState
+import com.romzz.musify.ui.component.Lyrics
+import com.romzz.musify.ui.component.PlayerSliderTrack
+import com.romzz.musify.ui.component.ResizableIconButton
+import com.romzz.musify.ui.component.SquigglySlider
+import com.romzz.musify.ui.component.WavySlider
+import com.romzz.musify.ui.component.rememberBottomSheetState
+import com.romzz.musify.ui.menu.PlayerMenu
+import com.romzz.musify.ui.screens.settings.DarkMode
+import com.romzz.musify.ui.theme.PlayerColorExtractor
+import com.romzz.musify.ui.theme.PlayerSliderColors
+import com.romzz.musify.ui.utils.ShowMediaInfo
+import com.romzz.musify.ui.utils.ShowOffsetDialog
+import com.romzz.musify.utils.dataStore
+import com.romzz.musify.utils.makeTimeString
+import com.romzz.musify.utils.rememberEnumPreference
+import com.romzz.musify.utils.rememberPreference
 import dagger.hilt.android.EntryPointAccessors
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -192,12 +192,12 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import kotlin.math.max
 import kotlin.math.roundToInt
-import com.metrolist.music.ui.component.Icon as MIcon
-import com.metrolist.music.constants.SleepTimerDefaultKey
-import com.metrolist.music.utils.dataStore
+import com.romzz.musify.ui.component.Icon as MIcon
+import com.romzz.musify.constants.SleepTimerDefaultKey
+import com.romzz.musify.utils.dataStore
 import androidx.datastore.preferences.core.edit
-import com.metrolist.music.constants.SleepTimerFadeOutKey
-import com.metrolist.music.constants.SleepTimerStopAfterCurrentSongKey
+import com.romzz.musify.constants.SleepTimerFadeOutKey
+import com.romzz.musify.constants.SleepTimerStopAfterCurrentSongKey
 
 
 @OptIn(ExperimentalMaterial3Api::class)
@@ -1203,7 +1203,7 @@ fun BottomSheetPlayer(
                                 FilledIconButton(
                                     onClick = {
                                         menuState.show {
-                                            com.metrolist.music.ui.menu.LyricsMenu(
+                                            com.romzz.musify.ui.menu.LyricsMenu(
                                                 lyricsProvider = { currentLyrics },
                                                 songProvider = { currentSong?.song },
                                                 mediaMetadataProvider = { mediaMetadata },
@@ -1329,7 +1329,7 @@ fun BottomSheetPlayer(
                                         .background(textButtonColor)
                                         .clickable {
                                             menuState.show {
-                                                com.metrolist.music.ui.menu.LyricsMenu(
+                                                com.romzz.musify.ui.menu.LyricsMenu(
                                                     lyricsProvider = { currentLyrics },
                                                     songProvider = { currentSong?.song },
                                                     mediaMetadataProvider = { mediaMetadata },
@@ -2037,7 +2037,7 @@ fun InlineLyricsView(
                     val entryPoint =
                         EntryPointAccessors.fromApplication(
                             context.applicationContext,
-                            com.metrolist.music.di.LyricsHelperEntryPoint::class.java,
+                            com.romzz.musify.di.LyricsHelperEntryPoint::class.java,
                         )
                     val lyricsHelper = entryPoint.lyricsHelper()
                     val fetchedLyricsWithProvider = lyricsHelper.getLyrics(mediaMetadata)
@@ -2077,7 +2077,7 @@ fun InlineLyricsView(
                 val entryPoint =
                     EntryPointAccessors.fromApplication(
                         context.applicationContext,
-                        com.metrolist.music.di.LyricsHelperEntryPoint::class.java,
+                        com.romzz.musify.di.LyricsHelperEntryPoint::class.java,
                     )
                 val lyricsHelper = entryPoint.lyricsHelper()
                 val fetched = lyricsHelper.getLyrics(nextMetadata)

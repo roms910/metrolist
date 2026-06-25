@@ -1,4 +1,4 @@
-package com.metrolist.music.ui.component
+package com.romzz.musify.ui.component
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -26,9 +26,9 @@ import androidx.compose.ui.unit.dp
 import com.metrolist.innertube.models.ArtistItem
 import com.metrolist.innertube.models.SongItem
 import com.metrolist.innertube.models.YTItem
-import com.metrolist.music.R
-import com.metrolist.music.constants.ThumbnailCornerRadius
-import com.metrolist.music.ui.utils.resize
+import com.romzz.musify.R
+import com.romzz.musify.constants.ThumbnailCornerRadius
+import com.romzz.musify.ui.utils.resize
 
 @Composable
 fun SpeedDialGridItem(

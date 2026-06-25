@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.api
+package com.romzz.musify.api
 
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

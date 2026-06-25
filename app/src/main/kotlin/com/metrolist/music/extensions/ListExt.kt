@@ -3,11 +3,11 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.extensions
+package com.romzz.musify.extensions
 
-import com.metrolist.music.db.entities.Album
-import com.metrolist.music.db.entities.Playlist
-import com.metrolist.music.db.entities.Song
+import com.romzz.musify.db.entities.Album
+import com.romzz.musify.db.entities.Playlist
+import com.romzz.musify.db.entities.Song
 
 fun <T> List<T>.reversed(reversed: Boolean) = if (reversed) asReversed() else this
 

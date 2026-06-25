@@ -5,18 +5,18 @@
 
 @file:OptIn(ExperimentalCoroutinesApi::class)
 
-package com.metrolist.music.viewmodels
+package com.romzz.musify.viewmodels
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.metrolist.music.constants.AddToPlaylistSortDescendingKey
-import com.metrolist.music.constants.AddToPlaylistSortTypeKey
-import com.metrolist.music.constants.PlaylistSortType
-import com.metrolist.music.db.MusicDatabase
-import com.metrolist.music.extensions.toEnum
-import com.metrolist.music.utils.SyncUtils
-import com.metrolist.music.utils.dataStore
+import com.romzz.musify.constants.AddToPlaylistSortDescendingKey
+import com.romzz.musify.constants.AddToPlaylistSortTypeKey
+import com.romzz.musify.constants.PlaylistSortType
+import com.romzz.musify.db.MusicDatabase
+import com.romzz.musify.extensions.toEnum
+import com.romzz.musify.utils.SyncUtils
+import com.romzz.musify.utils.dataStore
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.ExperimentalCoroutinesApi

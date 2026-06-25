@@ -1,4 +1,4 @@
-package com.metrolist.music.utils
+package com.romzz.musify.utils
 
 import android.content.ContentValues
 import android.content.Context
@@ -8,7 +8,7 @@ import android.os.Environment
 import android.provider.MediaStore
 import androidx.core.content.FileProvider
 import com.metrolist.innertube.models.SongItem
-import com.metrolist.music.db.entities.PlaylistSong
+import com.romzz.musify.db.entities.PlaylistSong
 import java.io.File
 import java.io.FileWriter
 import java.io.IOException

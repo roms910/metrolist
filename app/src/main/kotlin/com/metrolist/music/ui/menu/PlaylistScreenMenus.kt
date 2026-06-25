@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.menu
+package com.romzz.musify.ui.menu
 
 import android.content.Context
 import android.content.Intent
@@ -32,17 +32,17 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.media3.exoplayer.offline.Download
-import com.metrolist.music.LocalListenTogetherManager
-import com.metrolist.music.R
-import com.metrolist.music.db.entities.Playlist
-import com.metrolist.music.db.entities.PlaylistSong
-import com.metrolist.music.db.entities.Song
-import com.metrolist.music.ui.component.DefaultDialog
-import com.metrolist.music.ui.component.Material3MenuGroup
-import com.metrolist.music.ui.component.Material3MenuItemData
-import com.metrolist.music.utils.PlaylistExporter
-import com.metrolist.music.utils.getExportFileUri
-import com.metrolist.music.utils.saveToPublicDocuments
+import com.romzz.musify.LocalListenTogetherManager
+import com.romzz.musify.R
+import com.romzz.musify.db.entities.Playlist
+import com.romzz.musify.db.entities.PlaylistSong
+import com.romzz.musify.db.entities.Song
+import com.romzz.musify.ui.component.DefaultDialog
+import com.romzz.musify.ui.component.Material3MenuGroup
+import com.romzz.musify.ui.component.Material3MenuItemData
+import com.romzz.musify.utils.PlaylistExporter
+import com.romzz.musify.utils.getExportFileUri
+import com.romzz.musify.utils.saveToPublicDocuments
 import kotlinx.coroutines.launch
 
 /**
@@ -426,7 +426,7 @@ fun AutoPlaylistMenu(
             songs.map { song ->
                 PlaylistSong(
                     map =
-                        com.metrolist.music.db.entities.PlaylistSongMap(
+                        com.romzz.musify.db.entities.PlaylistSongMap(
                             songId = song.id,
                             playlistId = "auto_playlist",
                             position = 0,

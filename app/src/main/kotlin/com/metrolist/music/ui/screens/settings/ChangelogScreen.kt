@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.screens.settings
+package com.romzz.musify.ui.screens.settings
 
 import androidx.compose.animation.*
 import androidx.compose.foundation.layout.*
@@ -30,10 +30,10 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.withStyle
 import androidx.compose.ui.unit.dp
-import com.metrolist.music.R
-import com.metrolist.music.BuildConfig
-import com.metrolist.music.utils.ReleaseInfo
-import com.metrolist.music.utils.Updater
+import com.romzz.musify.R
+import com.romzz.musify.BuildConfig
+import com.romzz.musify.utils.ReleaseInfo
+import com.romzz.musify.utils.Updater
 
 private val markdownLinkRegex = Regex("(@[a-zA-Z0-9_-]+)|(https?://[\\w-]+(\\.[\\w-]+)+[\\w.,@?^=%&:/~+#-]*[\\w@?^=%&/~+#-])")
 

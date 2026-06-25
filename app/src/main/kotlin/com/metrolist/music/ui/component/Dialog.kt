@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.component
+package com.romzz.musify.ui.component
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.detectTapGestures
@@ -57,9 +57,9 @@ import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
-import com.metrolist.music.LocalNavController
-import com.metrolist.music.R
-import com.metrolist.music.ui.screens.settings.AccountSettings
+import com.romzz.musify.LocalNavController
+import com.romzz.musify.R
+import com.romzz.musify.ui.screens.settings.AccountSettings
 import kotlinx.coroutines.delay
 
 @Composable

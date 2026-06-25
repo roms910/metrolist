@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.component.shimmer
+package com.romzz.musify.ui.component.shimmer
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
@@ -21,12 +21,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.unit.dp
-import com.metrolist.music.constants.GridItemSize
-import com.metrolist.music.constants.GridItemsSizeKey
-import com.metrolist.music.constants.GridThumbnailHeight
-import com.metrolist.music.constants.SmallGridThumbnailHeight
-import com.metrolist.music.constants.ThumbnailCornerRadius
-import com.metrolist.music.utils.rememberEnumPreference
+import com.romzz.musify.constants.GridItemSize
+import com.romzz.musify.constants.GridItemsSizeKey
+import com.romzz.musify.constants.GridThumbnailHeight
+import com.romzz.musify.constants.SmallGridThumbnailHeight
+import com.romzz.musify.constants.ThumbnailCornerRadius
+import com.romzz.musify.utils.rememberEnumPreference
 
 @Composable
 fun GridItemPlaceHolder(

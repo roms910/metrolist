@@ -5,7 +5,7 @@
  * Performance optimized MiniPlayer - prevents unnecessary recomposition
  */
 
-package com.metrolist.music.ui.player
+package com.romzz.musify.ui.player
 
 import android.content.res.Configuration
 import androidx.compose.animation.AnimatedVisibility
@@ -82,35 +82,35 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.media3.common.Player
 import coil3.compose.AsyncImage
-import com.metrolist.music.LocalDatabase
-import com.metrolist.music.LocalListenTogetherManager
-import com.metrolist.music.LocalPlayerConnection
-import com.metrolist.music.R
-import com.metrolist.music.constants.CropAlbumArtKey
-import com.metrolist.music.constants.DarkModeKey
-import com.metrolist.music.constants.MiniPlayerHeight
-import com.metrolist.music.constants.PureBlackMiniPlayerKey
-import com.metrolist.music.constants.SwipeSensitivityKey
-import com.metrolist.music.constants.SwipeThumbnailKey
-import com.metrolist.music.constants.ThumbnailCornerRadius
-import com.metrolist.music.constants.UseNewMiniPlayerDesignKey
-import com.metrolist.music.db.entities.ArtistEntity
-import com.metrolist.music.listentogether.ListenTogetherManager
-import com.metrolist.music.models.MediaMetadata
-import com.metrolist.music.playback.CastConnectionHandler
-import com.metrolist.music.playback.PlayerConnection
-import com.metrolist.music.ui.screens.settings.DarkMode
-import com.metrolist.music.ui.utils.resize
-import com.metrolist.music.utils.joinToArtistString
-import com.metrolist.music.utils.rememberEnumPreference
-import com.metrolist.music.utils.rememberPreference
+import com.romzz.musify.LocalDatabase
+import com.romzz.musify.LocalListenTogetherManager
+import com.romzz.musify.LocalPlayerConnection
+import com.romzz.musify.R
+import com.romzz.musify.constants.CropAlbumArtKey
+import com.romzz.musify.constants.DarkModeKey
+import com.romzz.musify.constants.MiniPlayerHeight
+import com.romzz.musify.constants.PureBlackMiniPlayerKey
+import com.romzz.musify.constants.SwipeSensitivityKey
+import com.romzz.musify.constants.SwipeThumbnailKey
+import com.romzz.musify.constants.ThumbnailCornerRadius
+import com.romzz.musify.constants.UseNewMiniPlayerDesignKey
+import com.romzz.musify.db.entities.ArtistEntity
+import com.romzz.musify.listentogether.ListenTogetherManager
+import com.romzz.musify.models.MediaMetadata
+import com.romzz.musify.playback.CastConnectionHandler
+import com.romzz.musify.playback.PlayerConnection
+import com.romzz.musify.ui.screens.settings.DarkMode
+import com.romzz.musify.ui.utils.resize
+import com.romzz.musify.utils.joinToArtistString
+import com.romzz.musify.utils.rememberEnumPreference
+import com.romzz.musify.utils.rememberPreference
 import kotlinx.coroutines.launch
 import kotlin.math.absoluteValue
 import kotlin.math.roundToInt
-import com.metrolist.music.ui.component.Icon as MIcon
+import com.romzz.musify.ui.component.Icon as MIcon
 import androidx.compose.ui.draw.blur
-import com.metrolist.music.constants.MiniPlayerBackgroundStyle
-import com.metrolist.music.constants.MiniPlayerBackgroundStyleKey
+import com.romzz.musify.constants.MiniPlayerBackgroundStyle
+import com.romzz.musify.constants.MiniPlayerBackgroundStyleKey
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.platform.LocalContext
@@ -121,9 +121,9 @@ import coil3.request.allowHardware
 import coil3.toBitmap
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
-import com.metrolist.music.ui.theme.PlayerColorExtractor
-import com.metrolist.music.ui.component.LocalMenuState
-import com.metrolist.music.ui.menu.AddToPlaylistDialog
+import com.romzz.musify.ui.theme.PlayerColorExtractor
+import com.romzz.musify.ui.component.LocalMenuState
+import com.romzz.musify.ui.menu.AddToPlaylistDialog
 
 /**
  * Stable wrapper for progress state - reads values only during draw phase

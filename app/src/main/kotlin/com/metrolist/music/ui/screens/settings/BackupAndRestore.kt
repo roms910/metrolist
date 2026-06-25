@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.screens.settings
+package com.romzz.musify.ui.screens.settings
 
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
@@ -50,22 +50,22 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import coil3.compose.AsyncImage
-import com.metrolist.music.LocalPlayerAwareWindowInsets
-import com.metrolist.music.R
-import com.metrolist.music.db.entities.Song
-import com.metrolist.music.ui.component.DefaultDialog
-import com.metrolist.music.ui.component.IconButton
-import com.metrolist.music.ui.component.Material3SettingsGroup
-import com.metrolist.music.ui.component.Material3SettingsItem
-import com.metrolist.music.ui.menu.AddToPlaylistDialogOnline
-import com.metrolist.music.ui.menu.CsvColumnMappingDialog
-import com.metrolist.music.ui.menu.CsvImportProgressDialog
-import com.metrolist.music.ui.menu.LoadingScreen
-import com.metrolist.music.ui.utils.backToMain
-import com.metrolist.music.viewmodels.BackupPreviewInfo
-import com.metrolist.music.viewmodels.BackupRestoreViewModel
-import com.metrolist.music.viewmodels.ConvertedSongLog
-import com.metrolist.music.viewmodels.CsvImportState
+import com.romzz.musify.LocalPlayerAwareWindowInsets
+import com.romzz.musify.R
+import com.romzz.musify.db.entities.Song
+import com.romzz.musify.ui.component.DefaultDialog
+import com.romzz.musify.ui.component.IconButton
+import com.romzz.musify.ui.component.Material3SettingsGroup
+import com.romzz.musify.ui.component.Material3SettingsItem
+import com.romzz.musify.ui.menu.AddToPlaylistDialogOnline
+import com.romzz.musify.ui.menu.CsvColumnMappingDialog
+import com.romzz.musify.ui.menu.CsvImportProgressDialog
+import com.romzz.musify.ui.menu.LoadingScreen
+import com.romzz.musify.ui.utils.backToMain
+import com.romzz.musify.viewmodels.BackupPreviewInfo
+import com.romzz.musify.viewmodels.BackupRestoreViewModel
+import com.romzz.musify.viewmodels.ConvertedSongLog
+import com.romzz.musify.viewmodels.CsvImportState
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.time.LocalDateTime

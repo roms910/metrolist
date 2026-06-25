@@ -1,4 +1,4 @@
-package com.metrolist.music.discord
+package com.romzz.musify.discord
 
 object DiscordDefaults {
     const val YOUTUBE_WATCH_URL = "https://music.youtube.com/watch?v="

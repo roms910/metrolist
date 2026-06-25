@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.di
+package com.romzz.musify.di
 
 import javax.inject.Qualifier
 

@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.screens.library
+package com.romzz.musify.ui.screens.library
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.layout.Box
@@ -49,36 +49,36 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
-import com.metrolist.music.LocalPlayerAwareWindowInsets
-import com.metrolist.music.LocalPlayerConnection
-import com.metrolist.music.R
-import com.metrolist.music.constants.AlbumFilter
-import com.metrolist.music.constants.AlbumFilterKey
-import com.metrolist.music.constants.AlbumSortDescendingKey
-import com.metrolist.music.constants.AlbumSortType
-import com.metrolist.music.constants.AlbumSortTypeKey
-import com.metrolist.music.constants.AlbumViewTypeKey
-import com.metrolist.music.constants.CONTENT_TYPE_ALBUM
-import com.metrolist.music.constants.CONTENT_TYPE_HEADER
-import com.metrolist.music.constants.GridItemSize
-import com.metrolist.music.constants.GridItemsSizeKey
-import com.metrolist.music.constants.GridThumbnailHeight
-import com.metrolist.music.constants.HideExplicitKey
-import com.metrolist.music.constants.LibraryViewType
-import com.metrolist.music.constants.YtmSyncKey
-import com.metrolist.music.extensions.matchesNormalizedQuery
-import com.metrolist.music.extensions.normalizeForSearch
-import com.metrolist.music.ui.component.ChipsRow
-import com.metrolist.music.ui.component.EmptyPlaceholder
-import com.metrolist.music.ui.component.LibrarySearchEmptyPlaceholder
-import com.metrolist.music.ui.component.LibrarySearchHeader
-import com.metrolist.music.ui.component.LibraryAlbumGridItem
-import com.metrolist.music.ui.component.LibraryAlbumListItem
-import com.metrolist.music.ui.component.LocalMenuState
-import com.metrolist.music.ui.component.SortHeader
-import com.metrolist.music.utils.rememberEnumPreference
-import com.metrolist.music.utils.rememberPreference
-import com.metrolist.music.viewmodels.LibraryAlbumsViewModel
+import com.romzz.musify.LocalPlayerAwareWindowInsets
+import com.romzz.musify.LocalPlayerConnection
+import com.romzz.musify.R
+import com.romzz.musify.constants.AlbumFilter
+import com.romzz.musify.constants.AlbumFilterKey
+import com.romzz.musify.constants.AlbumSortDescendingKey
+import com.romzz.musify.constants.AlbumSortType
+import com.romzz.musify.constants.AlbumSortTypeKey
+import com.romzz.musify.constants.AlbumViewTypeKey
+import com.romzz.musify.constants.CONTENT_TYPE_ALBUM
+import com.romzz.musify.constants.CONTENT_TYPE_HEADER
+import com.romzz.musify.constants.GridItemSize
+import com.romzz.musify.constants.GridItemsSizeKey
+import com.romzz.musify.constants.GridThumbnailHeight
+import com.romzz.musify.constants.HideExplicitKey
+import com.romzz.musify.constants.LibraryViewType
+import com.romzz.musify.constants.YtmSyncKey
+import com.romzz.musify.extensions.matchesNormalizedQuery
+import com.romzz.musify.extensions.normalizeForSearch
+import com.romzz.musify.ui.component.ChipsRow
+import com.romzz.musify.ui.component.EmptyPlaceholder
+import com.romzz.musify.ui.component.LibrarySearchEmptyPlaceholder
+import com.romzz.musify.ui.component.LibrarySearchHeader
+import com.romzz.musify.ui.component.LibraryAlbumGridItem
+import com.romzz.musify.ui.component.LibraryAlbumListItem
+import com.romzz.musify.ui.component.LocalMenuState
+import com.romzz.musify.ui.component.SortHeader
+import com.romzz.musify.utils.rememberEnumPreference
+import com.romzz.musify.utils.rememberPreference
+import com.romzz.musify.viewmodels.LibraryAlbumsViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 

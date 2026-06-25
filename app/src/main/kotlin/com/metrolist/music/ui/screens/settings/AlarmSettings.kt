@@ -1,4 +1,4 @@
-package com.metrolist.music.ui.screens.settings
+package com.romzz.musify.ui.screens.settings
 
 import android.app.AlarmManager
 import android.content.ActivityNotFoundException
@@ -51,15 +51,15 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.core.net.toUri
-import com.metrolist.music.LocalDatabase
-import com.metrolist.music.R
-import com.metrolist.music.db.entities.Playlist
-import com.metrolist.music.playback.alarm.MusicAlarmEntry
-import com.metrolist.music.playback.alarm.MusicAlarmScheduler
-import com.metrolist.music.playback.alarm.MusicAlarmStore
-import com.metrolist.music.ui.component.DefaultDialog
-import com.metrolist.music.ui.component.Material3SettingsGroup
-import com.metrolist.music.ui.component.Material3SettingsItem
+import com.romzz.musify.LocalDatabase
+import com.romzz.musify.R
+import com.romzz.musify.db.entities.Playlist
+import com.romzz.musify.playback.alarm.MusicAlarmEntry
+import com.romzz.musify.playback.alarm.MusicAlarmScheduler
+import com.romzz.musify.playback.alarm.MusicAlarmStore
+import com.romzz.musify.ui.component.DefaultDialog
+import com.romzz.musify.ui.component.Material3SettingsGroup
+import com.romzz.musify.ui.component.Material3SettingsItem
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.sync.Mutex

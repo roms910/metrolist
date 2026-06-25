@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.lyrics
+package com.romzz.musify.lyrics
 
 private val LRC_TIMESTAMP_HINT = Regex("""\[\d{1,2}:\d{2}""")
 

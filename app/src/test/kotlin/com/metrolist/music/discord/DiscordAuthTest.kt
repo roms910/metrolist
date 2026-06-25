@@ -1,4 +1,4 @@
-package com.metrolist.music.discord
+package com.romzz.musify.discord
 
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.mock.MockEngine

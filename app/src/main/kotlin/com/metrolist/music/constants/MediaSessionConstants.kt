@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.constants
+package com.romzz.musify.constants
 
 import android.os.Bundle
 import androidx.media3.session.SessionCommand

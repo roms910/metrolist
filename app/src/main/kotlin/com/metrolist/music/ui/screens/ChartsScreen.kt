@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.screens
+package com.romzz.musify.ui.screens
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
@@ -62,24 +62,24 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.metrolist.innertube.models.SongItem
 import com.metrolist.innertube.models.WatchEndpoint
-import com.metrolist.music.LocalPlayerAwareWindowInsets
-import com.metrolist.music.LocalPlayerConnection
-import com.metrolist.music.R
-import com.metrolist.music.constants.ListItemHeight
-import com.metrolist.music.models.toMediaMetadata
-import com.metrolist.music.playback.queues.YouTubeQueue
-import com.metrolist.music.ui.component.IconButton
-import com.metrolist.music.ui.component.LocalMenuState
-import com.metrolist.music.ui.component.NavigationTitle
-import com.metrolist.music.ui.component.YouTubeGridItem
-import com.metrolist.music.ui.component.YouTubeListItem
-import com.metrolist.music.ui.component.shimmer.GridItemPlaceHolder
-import com.metrolist.music.ui.component.shimmer.ShimmerHost
-import com.metrolist.music.ui.component.shimmer.TextPlaceholder
-import com.metrolist.music.ui.menu.YouTubeSongMenu
-import com.metrolist.music.ui.utils.SnapLayoutInfoProvider
-import com.metrolist.music.ui.utils.backToMain
-import com.metrolist.music.viewmodels.ChartsViewModel
+import com.romzz.musify.LocalPlayerAwareWindowInsets
+import com.romzz.musify.LocalPlayerConnection
+import com.romzz.musify.R
+import com.romzz.musify.constants.ListItemHeight
+import com.romzz.musify.models.toMediaMetadata
+import com.romzz.musify.playback.queues.YouTubeQueue
+import com.romzz.musify.ui.component.IconButton
+import com.romzz.musify.ui.component.LocalMenuState
+import com.romzz.musify.ui.component.NavigationTitle
+import com.romzz.musify.ui.component.YouTubeGridItem
+import com.romzz.musify.ui.component.YouTubeListItem
+import com.romzz.musify.ui.component.shimmer.GridItemPlaceHolder
+import com.romzz.musify.ui.component.shimmer.ShimmerHost
+import com.romzz.musify.ui.component.shimmer.TextPlaceholder
+import com.romzz.musify.ui.menu.YouTubeSongMenu
+import com.romzz.musify.ui.utils.SnapLayoutInfoProvider
+import com.romzz.musify.ui.utils.backToMain
+import com.romzz.musify.viewmodels.ChartsViewModel
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class)
 @Composable

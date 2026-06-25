@@ -1,4 +1,4 @@
-package com.metrolist.music.recognition
+package com.romzz.musify.recognition
 
 /**
  * Audio fingerprint generator for Shazam-compatible signatures.

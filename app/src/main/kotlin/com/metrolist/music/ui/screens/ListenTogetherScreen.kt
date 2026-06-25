@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.screens
+package com.romzz.musify.ui.screens
 
 import android.content.Context
 import android.widget.Toast
@@ -85,22 +85,22 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.navigation.NavController
 import androidx.navigation.compose.currentBackStackEntryAsState
-import com.metrolist.music.LocalListenTogetherManager
-import com.metrolist.music.LocalPlayerAwareWindowInsets
-import com.metrolist.music.R
-import com.metrolist.music.constants.AppBarHeight
-import com.metrolist.music.constants.ListenTogetherInTopBarKey
-import com.metrolist.music.constants.ListenTogetherUsernameKey
-import com.metrolist.music.listentogether.ConnectionState
-import com.metrolist.music.listentogether.JoinRequestPayload
-import com.metrolist.music.listentogether.ListenTogetherEvent
-import com.metrolist.music.listentogether.RoomRole
-import com.metrolist.music.listentogether.SuggestionReceivedPayload
-import com.metrolist.music.listentogether.UserInfo
-import com.metrolist.music.ui.component.DefaultDialog
-import com.metrolist.music.ui.component.IconButton
-import com.metrolist.music.ui.utils.backToMain
-import com.metrolist.music.utils.rememberPreference
+import com.romzz.musify.LocalListenTogetherManager
+import com.romzz.musify.LocalPlayerAwareWindowInsets
+import com.romzz.musify.R
+import com.romzz.musify.constants.AppBarHeight
+import com.romzz.musify.constants.ListenTogetherInTopBarKey
+import com.romzz.musify.constants.ListenTogetherUsernameKey
+import com.romzz.musify.listentogether.ConnectionState
+import com.romzz.musify.listentogether.JoinRequestPayload
+import com.romzz.musify.listentogether.ListenTogetherEvent
+import com.romzz.musify.listentogether.RoomRole
+import com.romzz.musify.listentogether.SuggestionReceivedPayload
+import com.romzz.musify.listentogether.UserInfo
+import com.romzz.musify.ui.component.DefaultDialog
+import com.romzz.musify.ui.component.IconButton
+import com.romzz.musify.ui.utils.backToMain
+import com.romzz.musify.utils.rememberPreference
 import kotlinx.coroutines.launch
 import androidx.compose.material3.IconButton as MaterialIconButton
 

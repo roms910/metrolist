@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.screens.search
+package com.romzz.musify.ui.screens.search
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
@@ -51,23 +51,23 @@ import androidx.compose.ui.unit.sp
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.LifecycleEventObserver
 import androidx.lifecycle.SavedStateHandle
-import com.metrolist.music.LocalNavController
+import com.romzz.musify.LocalNavController
 import com.metrolist.innertube.models.WatchEndpoint
 import com.metrolist.innertube.utils.YouTubeUrlParser
-import com.metrolist.music.LocalDatabase
-import com.metrolist.music.LocalIsPlayerExpanded
-import com.metrolist.music.LocalPlayerAwareWindowInsets
-import com.metrolist.music.LocalPlayerConnection
-import com.metrolist.music.R
-import com.metrolist.music.constants.PauseSearchHistoryKey
-import com.metrolist.music.constants.SearchSource
-import com.metrolist.music.constants.SearchSourceKey
-import com.metrolist.music.db.entities.SearchHistory
-import com.metrolist.music.playback.queues.YouTubeQueue
-import com.metrolist.music.ui.component.HideOnScrollFAB
-import com.metrolist.music.utils.SearchRoutes
-import com.metrolist.music.utils.rememberEnumPreference
-import com.metrolist.music.utils.rememberPreference
+import com.romzz.musify.LocalDatabase
+import com.romzz.musify.LocalIsPlayerExpanded
+import com.romzz.musify.LocalPlayerAwareWindowInsets
+import com.romzz.musify.LocalPlayerConnection
+import com.romzz.musify.R
+import com.romzz.musify.constants.PauseSearchHistoryKey
+import com.romzz.musify.constants.SearchSource
+import com.romzz.musify.constants.SearchSourceKey
+import com.romzz.musify.db.entities.SearchHistory
+import com.romzz.musify.playback.queues.YouTubeQueue
+import com.romzz.musify.ui.component.HideOnScrollFAB
+import com.romzz.musify.utils.SearchRoutes
+import com.romzz.musify.utils.rememberEnumPreference
+import com.romzz.musify.utils.rememberPreference
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 

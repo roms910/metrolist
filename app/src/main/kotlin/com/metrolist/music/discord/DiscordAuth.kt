@@ -1,4 +1,4 @@
-package com.metrolist.music.discord
+package com.romzz.musify.discord
 
 import android.app.Activity
 import android.content.ActivityNotFoundException
@@ -6,10 +6,10 @@ import android.content.Intent
 import android.util.Base64
 import androidx.browser.customtabs.CustomTabsIntent
 import androidx.core.net.toUri
-import com.metrolist.music.BuildConfig
-import com.metrolist.music.discord.DiscordDefaults.DISCORD_OAUTH_AUTHORIZE
-import com.metrolist.music.discord.DiscordDefaults.DISCORD_OAUTH_TOKEN
-import com.metrolist.music.discord.DiscordDefaults.DISCORD_SCOPES
+import com.romzz.musify.BuildConfig
+import com.romzz.musify.discord.DiscordDefaults.DISCORD_OAUTH_AUTHORIZE
+import com.romzz.musify.discord.DiscordDefaults.DISCORD_OAUTH_TOKEN
+import com.romzz.musify.discord.DiscordDefaults.DISCORD_SCOPES
 import io.ktor.client.HttpClient
 import io.ktor.client.engine.cio.CIO
 import io.ktor.client.plugins.HttpTimeout

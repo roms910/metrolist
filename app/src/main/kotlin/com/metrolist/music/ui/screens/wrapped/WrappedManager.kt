@@ -3,18 +3,18 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.screens.wrapped
+package com.romzz.musify.ui.screens.wrapped
 
 import android.content.Context
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import com.metrolist.innertube.YouTube
 import com.metrolist.innertube.models.AccountInfo
-import com.metrolist.music.constants.ArtistSongSortType
-import com.metrolist.music.db.DatabaseDao
-import com.metrolist.music.db.entities.Artist
-import com.metrolist.music.db.entities.PlaylistEntity
-import com.metrolist.music.db.entities.SongWithStats
+import com.romzz.musify.constants.ArtistSongSortType
+import com.romzz.musify.db.DatabaseDao
+import com.romzz.musify.db.entities.Artist
+import com.romzz.musify.db.entities.PlaylistEntity
+import com.romzz.musify.db.entities.SongWithStats
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.cancel
@@ -203,7 +203,7 @@ class WrappedManager(
             @Suppress("UNCHECKED_CAST")
             val topSongsResult = results[1] as List<SongWithStats>
             @Suppress("UNCHECKED_CAST")
-            val topAlbumsResult = results[3] as List<com.metrolist.music.db.entities.Album>
+            val topAlbumsResult = results[3] as List<com.romzz.musify.db.entities.Album>
             @Suppress("UNCHECKED_CAST")
             val topArtistsResult = results[2] as List<Artist>
             _state.update {

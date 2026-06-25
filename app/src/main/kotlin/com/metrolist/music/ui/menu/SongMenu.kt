@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.menu
+package com.romzz.musify.ui.menu
 
 import android.content.Intent
 import android.content.res.Configuration
@@ -66,37 +66,37 @@ import androidx.media3.exoplayer.offline.Download
 import androidx.media3.exoplayer.offline.DownloadRequest
 import androidx.media3.exoplayer.offline.DownloadService
 import coil3.compose.AsyncImage
-import com.metrolist.music.LocalNavController
+import com.romzz.musify.LocalNavController
 import com.metrolist.innertube.YouTube
-import com.metrolist.music.LocalDatabase
-import com.metrolist.music.LocalDownloadUtil
-import com.metrolist.music.LocalListenTogetherManager
-import com.metrolist.music.LocalPlayerConnection
-import com.metrolist.music.LocalSyncUtils
-import com.metrolist.music.R
-import com.metrolist.music.constants.ListItemHeight
-import com.metrolist.music.constants.ListThumbnailSize
-import com.metrolist.music.db.entities.ArtistEntity
-import com.metrolist.music.db.entities.Event
-import com.metrolist.music.db.entities.PlaylistSong
-import com.metrolist.music.db.entities.PodcastEntity
-import com.metrolist.music.db.entities.Song
-import com.metrolist.music.db.entities.SpeedDialItem
-import com.metrolist.music.extensions.toMediaItem
-import com.metrolist.music.models.toMediaMetadata
-import com.metrolist.music.playback.ExoDownloadService
-import com.metrolist.music.playback.queues.YouTubeQueue
-import com.metrolist.music.ui.component.DefaultDialog
-import com.metrolist.music.ui.component.ListDialog
-import com.metrolist.music.ui.component.LocalBottomSheetPageState
-import com.metrolist.music.ui.component.Material3MenuGroup
-import com.metrolist.music.ui.component.Material3MenuItemData
-import com.metrolist.music.ui.component.NewAction
-import com.metrolist.music.ui.component.NewActionGrid
-import com.metrolist.music.ui.component.SongListItem
-import com.metrolist.music.ui.component.TextFieldDialog
-import com.metrolist.music.ui.utils.ShowMediaInfo
-import com.metrolist.music.viewmodels.CachePlaylistViewModel
+import com.romzz.musify.LocalDatabase
+import com.romzz.musify.LocalDownloadUtil
+import com.romzz.musify.LocalListenTogetherManager
+import com.romzz.musify.LocalPlayerConnection
+import com.romzz.musify.LocalSyncUtils
+import com.romzz.musify.R
+import com.romzz.musify.constants.ListItemHeight
+import com.romzz.musify.constants.ListThumbnailSize
+import com.romzz.musify.db.entities.ArtistEntity
+import com.romzz.musify.db.entities.Event
+import com.romzz.musify.db.entities.PlaylistSong
+import com.romzz.musify.db.entities.PodcastEntity
+import com.romzz.musify.db.entities.Song
+import com.romzz.musify.db.entities.SpeedDialItem
+import com.romzz.musify.extensions.toMediaItem
+import com.romzz.musify.models.toMediaMetadata
+import com.romzz.musify.playback.ExoDownloadService
+import com.romzz.musify.playback.queues.YouTubeQueue
+import com.romzz.musify.ui.component.DefaultDialog
+import com.romzz.musify.ui.component.ListDialog
+import com.romzz.musify.ui.component.LocalBottomSheetPageState
+import com.romzz.musify.ui.component.Material3MenuGroup
+import com.romzz.musify.ui.component.Material3MenuItemData
+import com.romzz.musify.ui.component.NewAction
+import com.romzz.musify.ui.component.NewActionGrid
+import com.romzz.musify.ui.component.SongListItem
+import com.romzz.musify.ui.component.TextFieldDialog
+import com.romzz.musify.ui.utils.ShowMediaInfo
+import com.romzz.musify.viewmodels.CachePlaylistViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
@@ -580,7 +580,7 @@ fun SongMenu(
                                 onClick = {
                                     val durationMs = if (song.song.duration > 0) song.song.duration.toLong() * 1000 else 180000L
                                     val trackInfo =
-                                        com.metrolist.music.listentogether.TrackInfo(
+                                        com.romzz.musify.listentogether.TrackInfo(
                                             id = song.id,
                                             title = song.song.title,
                                             artist = orderedArtists.joinToString(", ") { it.name },

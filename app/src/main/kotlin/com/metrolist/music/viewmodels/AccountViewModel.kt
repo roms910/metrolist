@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.viewmodels
+package com.romzz.musify.viewmodels
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
@@ -14,13 +14,13 @@ import com.metrolist.innertube.models.ArtistItem
 import com.metrolist.innertube.models.PlaylistItem
 import com.metrolist.innertube.models.filterYoutubeShorts
 import com.metrolist.innertube.utils.completed
-import com.metrolist.music.constants.HideYoutubeShortsKey
-import com.metrolist.music.db.MusicDatabase
-import com.metrolist.music.db.entities.PodcastEntity
-import com.metrolist.music.ui.utils.resize
-import com.metrolist.music.utils.dataStore
-import com.metrolist.music.utils.get
-import com.metrolist.music.utils.reportException
+import com.romzz.musify.constants.HideYoutubeShortsKey
+import com.romzz.musify.db.MusicDatabase
+import com.romzz.musify.db.entities.PodcastEntity
+import com.romzz.musify.ui.utils.resize
+import com.romzz.musify.utils.dataStore
+import com.romzz.musify.utils.get
+import com.romzz.musify.utils.reportException
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers

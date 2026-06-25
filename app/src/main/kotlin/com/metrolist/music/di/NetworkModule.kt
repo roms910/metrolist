@@ -3,10 +3,10 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.di
+package com.romzz.musify.di
 
 import android.content.Context
-import com.metrolist.music.utils.NetworkConnectivityObserver
+import com.romzz.musify.utils.NetworkConnectivityObserver
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

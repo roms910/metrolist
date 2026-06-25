@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.menu
+package com.romzz.musify.ui.menu
 
 import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
@@ -16,10 +16,10 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.input.TextFieldValue
-import com.metrolist.music.LocalDatabase
-import com.metrolist.music.R
-import com.metrolist.music.db.entities.PlaylistEntity
-import com.metrolist.music.ui.component.TextFieldDialog
+import com.romzz.musify.LocalDatabase
+import com.romzz.musify.R
+import com.romzz.musify.db.entities.PlaylistEntity
+import com.romzz.musify.ui.component.TextFieldDialog
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.firstOrNull
 import kotlinx.coroutines.launch

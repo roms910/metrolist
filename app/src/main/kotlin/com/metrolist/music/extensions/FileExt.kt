@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.extensions
+package com.romzz.musify.extensions
 
 import java.io.File
 import java.io.InputStream

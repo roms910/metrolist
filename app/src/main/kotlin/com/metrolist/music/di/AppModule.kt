@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.di
+package com.romzz.musify.di
 
 import android.content.Context
 import androidx.media3.database.DatabaseProvider
@@ -15,13 +15,13 @@ import androidx.media3.datasource.cache.ContentMetadataMutations
 import androidx.media3.datasource.cache.LeastRecentlyUsedCacheEvictor
 import androidx.media3.datasource.cache.NoOpCacheEvictor
 import androidx.media3.datasource.cache.SimpleCache
-import com.metrolist.music.constants.MaxSongCacheSizeKey
-import com.metrolist.music.db.InternalDatabase
-import com.metrolist.music.db.MusicDatabase
-import com.metrolist.music.listentogether.ListenTogetherClient
-import com.metrolist.music.listentogether.ListenTogetherManager
-import com.metrolist.music.utils.dataStore
-import com.metrolist.music.utils.get
+import com.romzz.musify.constants.MaxSongCacheSizeKey
+import com.romzz.musify.db.InternalDatabase
+import com.romzz.musify.db.MusicDatabase
+import com.romzz.musify.listentogether.ListenTogetherClient
+import com.romzz.musify.listentogether.ListenTogetherManager
+import com.romzz.musify.utils.dataStore
+import com.romzz.musify.utils.get
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

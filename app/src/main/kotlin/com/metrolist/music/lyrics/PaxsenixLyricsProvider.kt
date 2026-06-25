@@ -3,13 +3,13 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.lyrics
+package com.romzz.musify.lyrics
 
 import android.content.Context
 import com.metrolist.paxsenix.Paxsenix
-import com.metrolist.music.constants.EnablePaxsenixKey
-import com.metrolist.music.utils.dataStore
-import com.metrolist.music.utils.get
+import com.romzz.musify.constants.EnablePaxsenixKey
+import com.romzz.musify.utils.dataStore
+import com.romzz.musify.utils.get
 import timber.log.Timber
 
 object PaxsenixLyricsProvider : LyricsProvider {

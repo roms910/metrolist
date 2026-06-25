@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.widget
+package com.romzz.musify.widget
 
 import android.app.NotificationChannel
 import android.app.NotificationManager
@@ -25,11 +25,11 @@ import coil3.request.ImageRequest
 import coil3.request.allowHardware
 import coil3.request.crossfade
 import coil3.toBitmap
-import com.metrolist.music.MainActivity
-import com.metrolist.music.R
-import com.metrolist.music.db.DatabaseDao
-import com.metrolist.music.db.entities.RecognitionHistory
-import com.metrolist.music.recognition.MusicRecognitionService
+import com.romzz.musify.MainActivity
+import com.romzz.musify.R
+import com.romzz.musify.db.DatabaseDao
+import com.romzz.musify.db.entities.RecognitionHistory
+import com.romzz.musify.recognition.MusicRecognitionService
 import com.metrolist.shazamkit.models.RecognitionStatus
 import dagger.hilt.EntryPoint
 import dagger.hilt.InstallIn
@@ -344,8 +344,8 @@ class MusicRecognizerWidgetService : Service() {
     // ─── Constants ────────────────────────────────────────────────────────────
 
     companion object {
-        const val ACTION_START_RECOGNITION = "com.metrolist.music.widget.recognizer.START"
-        const val ACTION_STOP_RECOGNITION = "com.metrolist.music.widget.recognizer.STOP"
+        const val ACTION_START_RECOGNITION = "com.romzz.musify.widget.recognizer.START"
+        const val ACTION_STOP_RECOGNITION = "com.romzz.musify.widget.recognizer.STOP"
 
         const val PREFS_NAME = "recognizer_widget_prefs"
         const val PREF_STATE = "state"

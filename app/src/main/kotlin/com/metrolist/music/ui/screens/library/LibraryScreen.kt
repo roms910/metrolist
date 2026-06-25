@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.screens.library
+package com.romzz.musify.ui.screens.library
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Row
@@ -13,12 +13,12 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
-import com.metrolist.music.LocalNavController
-import com.metrolist.music.R
-import com.metrolist.music.constants.ChipSortTypeKey
-import com.metrolist.music.constants.LibraryFilter
-import com.metrolist.music.ui.component.ChipsRow
-import com.metrolist.music.utils.rememberEnumPreference
+import com.romzz.musify.LocalNavController
+import com.romzz.musify.R
+import com.romzz.musify.constants.ChipSortTypeKey
+import com.romzz.musify.constants.LibraryFilter
+import com.romzz.musify.ui.component.ChipsRow
+import com.romzz.musify.utils.rememberEnumPreference
 
 @Composable
 fun LibraryScreen() {

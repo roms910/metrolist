@@ -3,9 +3,9 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.constants
+package com.romzz.musify.constants
 
-import com.metrolist.music.ui.screens.OptionStats
+import com.romzz.musify.ui.screens.OptionStats
 import java.time.LocalDateTime
 import java.time.ZoneOffset
 

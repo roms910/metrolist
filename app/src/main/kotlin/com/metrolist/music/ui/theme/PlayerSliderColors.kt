@@ -3,14 +3,14 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.theme
+package com.romzz.musify.ui.theme
 
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.SliderColors
 import androidx.compose.material3.SliderDefaults
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.graphics.Color
-import com.metrolist.music.constants.PlayerBackgroundStyle
+import com.romzz.musify.constants.PlayerBackgroundStyle
 
 /**
  * Player slider color configuration for consistent styling across all slider types

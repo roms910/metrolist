@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.listentogether
+package com.romzz.musify.listentogether
 
 import android.Manifest
 import android.app.NotificationChannel
@@ -23,18 +23,18 @@ import androidx.datastore.preferences.core.edit
 import androidx.lifecycle.DefaultLifecycleObserver
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ProcessLifecycleOwner
-import com.metrolist.music.R
-import com.metrolist.music.constants.ListenTogetherAutoApprovalKey
-import com.metrolist.music.constants.ListenTogetherAutoApproveSuggestionsKey
-import com.metrolist.music.constants.ListenTogetherIsHostKey
-import com.metrolist.music.constants.ListenTogetherRoomCodeKey
-import com.metrolist.music.constants.ListenTogetherServerUrlKey
-import com.metrolist.music.constants.ListenTogetherSessionTimestampKey
-import com.metrolist.music.constants.ListenTogetherSessionTokenKey
-import com.metrolist.music.constants.ListenTogetherUserIdKey
-import com.metrolist.music.utils.NetworkConnectivityObserver
-import com.metrolist.music.utils.dataStore
-import com.metrolist.music.utils.get
+import com.romzz.musify.R
+import com.romzz.musify.constants.ListenTogetherAutoApprovalKey
+import com.romzz.musify.constants.ListenTogetherAutoApproveSuggestionsKey
+import com.romzz.musify.constants.ListenTogetherIsHostKey
+import com.romzz.musify.constants.ListenTogetherRoomCodeKey
+import com.romzz.musify.constants.ListenTogetherServerUrlKey
+import com.romzz.musify.constants.ListenTogetherSessionTimestampKey
+import com.romzz.musify.constants.ListenTogetherSessionTokenKey
+import com.romzz.musify.constants.ListenTogetherUserIdKey
+import com.romzz.musify.utils.NetworkConnectivityObserver
+import com.romzz.musify.utils.dataStore
+import com.romzz.musify.utils.get
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -236,10 +236,10 @@ class ListenTogetherClient
 
             // Notification constants
             private const val NOTIFICATION_CHANNEL_ID = "listen_together_channel"
-            const val ACTION_APPROVE_JOIN = "com.metrolist.music.LISTEN_TOGETHER_APPROVE_JOIN"
-            const val ACTION_REJECT_JOIN = "com.metrolist.music.LISTEN_TOGETHER_REJECT_JOIN"
-            const val ACTION_APPROVE_SUGGESTION = "com.metrolist.music.LISTEN_TOGETHER_APPROVE_SUGGESTION"
-            const val ACTION_REJECT_SUGGESTION = "com.metrolist.music.LISTEN_TOGETHER_REJECT_SUGGESTION"
+            const val ACTION_APPROVE_JOIN = "com.romzz.musify.LISTEN_TOGETHER_APPROVE_JOIN"
+            const val ACTION_REJECT_JOIN = "com.romzz.musify.LISTEN_TOGETHER_REJECT_JOIN"
+            const val ACTION_APPROVE_SUGGESTION = "com.romzz.musify.LISTEN_TOGETHER_APPROVE_SUGGESTION"
+            const val ACTION_REJECT_SUGGESTION = "com.romzz.musify.LISTEN_TOGETHER_REJECT_SUGGESTION"
             const val EXTRA_USER_ID = "extra_user_id"
             const val EXTRA_SUGGESTION_ID = "extra_suggestion_id"
             const val EXTRA_NOTIFICATION_ID = "extra_notification_id"
@@ -461,7 +461,7 @@ class ListenTogetherClient
          */
         private fun loadBlockedUsernames() {
             try {
-                val blockedJson = context.dataStore.get(com.metrolist.music.constants.ListenTogetherBlockedUsersKey, "")
+                val blockedJson = context.dataStore.get(com.romzz.musify.constants.ListenTogetherBlockedUsersKey, "")
                 val blockedList =
                     if (blockedJson.isNotEmpty()) {
                         json.decodeFromString<List<String>>(blockedJson)
@@ -482,7 +482,7 @@ class ListenTogetherClient
             try {
                 val blockedJson = json.encodeToString(_blockedUsernames.value.toList())
                 context.dataStore.edit { preferences ->
-                    preferences[com.metrolist.music.constants.ListenTogetherBlockedUsersKey] = blockedJson
+                    preferences[com.romzz.musify.constants.ListenTogetherBlockedUsersKey] = blockedJson
                 }
             } catch (e: Exception) {
                 log(LogLevel.ERROR, "Failed to save blocked usernames", e.message)

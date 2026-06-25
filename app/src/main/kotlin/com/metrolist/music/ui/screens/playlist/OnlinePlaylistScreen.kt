@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.screens.playlist
+package com.romzz.musify.ui.screens.playlist
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -80,31 +80,31 @@ import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
 import com.metrolist.innertube.models.PlaylistItem
 import com.metrolist.innertube.models.SongItem
-import com.metrolist.music.LocalDatabase
-import com.metrolist.music.LocalListenTogetherManager
-import com.metrolist.music.LocalNavController
-import com.metrolist.music.LocalPlayerAwareWindowInsets
-import com.metrolist.music.LocalPlayerConnection
-import com.metrolist.music.LocalSyncUtils
-import com.metrolist.music.R
-import com.metrolist.music.constants.HideExplicitKey
-import com.metrolist.music.db.entities.Playlist
-import com.metrolist.music.db.entities.PlaylistEntity
-import com.metrolist.music.db.entities.PlaylistSongMap
-import com.metrolist.music.models.toMediaMetadata
-import com.metrolist.music.playback.queues.YouTubePlaylistQueue
-import com.metrolist.music.ui.component.ExpandableText
-import com.metrolist.music.ui.component.IconButton
-import com.metrolist.music.ui.component.LocalMenuState
-import com.metrolist.music.ui.component.YouTubeListItem
-import com.metrolist.music.ui.menu.YouTubePlaylistMenu
-import com.metrolist.music.ui.menu.YouTubeSelectionSongMenu
-import com.metrolist.music.ui.menu.YouTubeSongMenu
-import com.metrolist.music.ui.utils.backToMain
-import com.metrolist.music.ui.utils.resize
-import com.metrolist.music.utils.makeTimeString
-import com.metrolist.music.utils.rememberPreference
-import com.metrolist.music.viewmodels.OnlinePlaylistViewModel
+import com.romzz.musify.LocalDatabase
+import com.romzz.musify.LocalListenTogetherManager
+import com.romzz.musify.LocalNavController
+import com.romzz.musify.LocalPlayerAwareWindowInsets
+import com.romzz.musify.LocalPlayerConnection
+import com.romzz.musify.LocalSyncUtils
+import com.romzz.musify.R
+import com.romzz.musify.constants.HideExplicitKey
+import com.romzz.musify.db.entities.Playlist
+import com.romzz.musify.db.entities.PlaylistEntity
+import com.romzz.musify.db.entities.PlaylistSongMap
+import com.romzz.musify.models.toMediaMetadata
+import com.romzz.musify.playback.queues.YouTubePlaylistQueue
+import com.romzz.musify.ui.component.ExpandableText
+import com.romzz.musify.ui.component.IconButton
+import com.romzz.musify.ui.component.LocalMenuState
+import com.romzz.musify.ui.component.YouTubeListItem
+import com.romzz.musify.ui.menu.YouTubePlaylistMenu
+import com.romzz.musify.ui.menu.YouTubeSelectionSongMenu
+import com.romzz.musify.ui.menu.YouTubeSongMenu
+import com.romzz.musify.ui.utils.backToMain
+import com.romzz.musify.ui.utils.resize
+import com.romzz.musify.utils.makeTimeString
+import com.romzz.musify.utils.rememberPreference
+import com.romzz.musify.viewmodels.OnlinePlaylistViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch

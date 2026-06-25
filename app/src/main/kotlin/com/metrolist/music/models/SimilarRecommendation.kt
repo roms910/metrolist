@@ -3,10 +3,10 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.models
+package com.romzz.musify.models
 
 import com.metrolist.innertube.models.YTItem
-import com.metrolist.music.db.entities.LocalItem
+import com.romzz.musify.db.entities.LocalItem
 
 data class SimilarRecommendation(
     val title: LocalItem,

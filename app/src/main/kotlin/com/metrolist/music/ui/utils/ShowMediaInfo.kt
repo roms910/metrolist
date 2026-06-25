@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.utils
+package com.romzz.musify.ui.utils
 
 import android.content.ClipData
 import android.content.ClipboardManager
@@ -41,20 +41,20 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.metrolist.innertube.YouTube
 import com.metrolist.innertube.models.MediaInfo
-import com.metrolist.music.LocalDatabase
-import com.metrolist.music.LocalPlayerConnection
-import com.metrolist.music.R
-import com.metrolist.music.constants.LoudnessLevel
-import com.metrolist.music.constants.LoudnessLevelKey
-import com.metrolist.music.db.entities.FormatEntity
-import com.metrolist.music.db.entities.Song
-import com.metrolist.music.ui.component.Material3SettingsGroup
-import com.metrolist.music.utils.cipher.CipherDeobfuscator
-import com.metrolist.music.utils.cipher.PlayerDatesStore
-import com.metrolist.music.ui.component.Material3SettingsItem
-import com.metrolist.music.ui.component.shimmer.ShimmerHost
-import com.metrolist.music.ui.component.shimmer.TextPlaceholder
-import com.metrolist.music.utils.rememberEnumPreference
+import com.romzz.musify.LocalDatabase
+import com.romzz.musify.LocalPlayerConnection
+import com.romzz.musify.R
+import com.romzz.musify.constants.LoudnessLevel
+import com.romzz.musify.constants.LoudnessLevelKey
+import com.romzz.musify.db.entities.FormatEntity
+import com.romzz.musify.db.entities.Song
+import com.romzz.musify.ui.component.Material3SettingsGroup
+import com.romzz.musify.utils.cipher.CipherDeobfuscator
+import com.romzz.musify.utils.cipher.PlayerDatesStore
+import com.romzz.musify.ui.component.Material3SettingsItem
+import com.romzz.musify.ui.component.shimmer.ShimmerHost
+import com.romzz.musify.ui.component.shimmer.TextPlaceholder
+import com.romzz.musify.utils.rememberEnumPreference
 import androidx.compose.ui.platform.LocalLocale
 
 @Composable

@@ -1,4 +1,4 @@
-package com.metrolist.music.ui.screens.podcast
+package com.romzz.musify.ui.screens.podcast
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -68,23 +68,23 @@ import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.navigation.NavController
 import coil3.compose.AsyncImage
 import coil3.request.ImageRequest
-import com.metrolist.music.ui.utils.resize
+import com.romzz.musify.ui.utils.resize
 import com.metrolist.innertube.models.PodcastItem
 import timber.log.Timber
-import com.metrolist.music.LocalDatabase
-import com.metrolist.music.LocalPlayerAwareWindowInsets
-import com.metrolist.music.db.entities.PodcastEntity
-import com.metrolist.music.LocalPlayerConnection
-import com.metrolist.music.R
-import com.metrolist.music.models.toMediaMetadata
-import com.metrolist.music.extensions.toMediaItem
-import com.metrolist.music.playback.queues.ListQueue
-import com.metrolist.music.ui.component.IconButton
-import com.metrolist.music.ui.component.LocalMenuState
-import com.metrolist.music.ui.component.YouTubeListItem
-import com.metrolist.music.ui.menu.YouTubeSongMenu
-import com.metrolist.music.ui.utils.backToMain
-import com.metrolist.music.viewmodels.OnlinePodcastViewModel
+import com.romzz.musify.LocalDatabase
+import com.romzz.musify.LocalPlayerAwareWindowInsets
+import com.romzz.musify.db.entities.PodcastEntity
+import com.romzz.musify.LocalPlayerConnection
+import com.romzz.musify.R
+import com.romzz.musify.models.toMediaMetadata
+import com.romzz.musify.extensions.toMediaItem
+import com.romzz.musify.playback.queues.ListQueue
+import com.romzz.musify.ui.component.IconButton
+import com.romzz.musify.ui.component.LocalMenuState
+import com.romzz.musify.ui.component.YouTubeListItem
+import com.romzz.musify.ui.menu.YouTubeSongMenu
+import com.romzz.musify.ui.utils.backToMain
+import com.romzz.musify.viewmodels.OnlinePodcastViewModel
 
 @OptIn(ExperimentalMaterial3Api::class, ExperimentalFoundationApi::class, ExperimentalMaterial3ExpressiveApi::class)
 @Composable

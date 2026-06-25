@@ -1,11 +1,11 @@
-package com.metrolist.music.ui.screens.equalizer.wizard
+package com.romzz.musify.ui.screens.equalizer.wizard
 
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.metrolist.music.eq.data.EQProfileRepository
-import com.metrolist.music.eq.data.GitHubAutoEqSearch
-import com.metrolist.music.eq.data.SavedEQProfile
+import com.romzz.musify.eq.data.EQProfileRepository
+import com.romzz.musify.eq.data.GitHubAutoEqSearch
+import com.romzz.musify.eq.data.SavedEQProfile
 import dagger.hilt.android.lifecycle.HiltViewModel
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Job

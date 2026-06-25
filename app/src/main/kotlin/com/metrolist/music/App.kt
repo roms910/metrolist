@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music
+package com.romzz.musify
 
 import android.app.Application
 import android.app.NotificationChannel
@@ -26,16 +26,16 @@ import com.metrolist.innertube.models.ArtistConjunctions
 import com.metrolist.innertube.models.YouTubeLocale
 import com.metrolist.kugou.KuGou
 import com.metrolist.lastfm.LastFM
-import com.metrolist.music.BuildConfig
-import com.metrolist.music.constants.*
-import com.metrolist.music.di.ApplicationScope
-import com.metrolist.music.extensions.toEnum
-import com.metrolist.music.extensions.toInetSocketAddress
-import com.metrolist.music.utils.CrashHandler
-import com.metrolist.music.utils.YTPlayerUtils
-import com.metrolist.music.utils.cipher.CipherDeobfuscator
-import com.metrolist.music.utils.dataStore
-import com.metrolist.music.utils.reportException
+import com.romzz.musify.BuildConfig
+import com.romzz.musify.constants.*
+import com.romzz.musify.di.ApplicationScope
+import com.romzz.musify.extensions.toEnum
+import com.romzz.musify.extensions.toInetSocketAddress
+import com.romzz.musify.utils.CrashHandler
+import com.romzz.musify.utils.YTPlayerUtils
+import com.romzz.musify.utils.cipher.CipherDeobfuscator
+import com.romzz.musify.utils.dataStore
+import com.romzz.musify.utils.reportException
 import dagger.hilt.android.HiltAndroidApp
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers

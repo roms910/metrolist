@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.menu
+package com.romzz.musify.ui.menu
 
 import android.content.Intent
 import android.content.res.Configuration
@@ -46,30 +46,30 @@ import androidx.media3.exoplayer.offline.Download
 import androidx.media3.exoplayer.offline.DownloadRequest
 import androidx.media3.exoplayer.offline.DownloadService
 import com.metrolist.innertube.YouTube
-import com.metrolist.music.LocalDatabase
-import com.metrolist.music.LocalDownloadUtil
-import com.metrolist.music.LocalListenTogetherManager
-import com.metrolist.music.LocalPlayerConnection
-import com.metrolist.music.R
-import com.metrolist.music.db.entities.Playlist
-import com.metrolist.music.db.entities.PlaylistSong
-import com.metrolist.music.db.entities.Song
-import com.metrolist.music.db.entities.SpeedDialItem
-import com.metrolist.music.extensions.toMediaItem
-import com.metrolist.music.playback.ExoDownloadService
-import com.metrolist.music.playback.queues.ListQueue
-import com.metrolist.music.playback.queues.YouTubeQueue
-import com.metrolist.music.ui.component.DefaultDialog
-import com.metrolist.music.ui.component.Material3MenuGroup
-import com.metrolist.music.ui.component.Material3MenuItemData
-import com.metrolist.music.ui.component.NewAction
-import com.metrolist.music.ui.component.NewActionGrid
-import com.metrolist.music.ui.component.PlaylistListItem
-import com.metrolist.music.ui.component.TextFieldDialog
-import com.metrolist.music.ui.menu.ExportDialog
-import com.metrolist.music.utils.PlaylistExporter
-import com.metrolist.music.utils.getExportFileUri
-import com.metrolist.music.utils.saveToPublicDocuments
+import com.romzz.musify.LocalDatabase
+import com.romzz.musify.LocalDownloadUtil
+import com.romzz.musify.LocalListenTogetherManager
+import com.romzz.musify.LocalPlayerConnection
+import com.romzz.musify.R
+import com.romzz.musify.db.entities.Playlist
+import com.romzz.musify.db.entities.PlaylistSong
+import com.romzz.musify.db.entities.Song
+import com.romzz.musify.db.entities.SpeedDialItem
+import com.romzz.musify.extensions.toMediaItem
+import com.romzz.musify.playback.ExoDownloadService
+import com.romzz.musify.playback.queues.ListQueue
+import com.romzz.musify.playback.queues.YouTubeQueue
+import com.romzz.musify.ui.component.DefaultDialog
+import com.romzz.musify.ui.component.Material3MenuGroup
+import com.romzz.musify.ui.component.Material3MenuItemData
+import com.romzz.musify.ui.component.NewAction
+import com.romzz.musify.ui.component.NewActionGrid
+import com.romzz.musify.ui.component.PlaylistListItem
+import com.romzz.musify.ui.component.TextFieldDialog
+import com.romzz.musify.ui.menu.ExportDialog
+import com.romzz.musify.utils.PlaylistExporter
+import com.romzz.musify.utils.getExportFileUri
+import com.romzz.musify.utils.saveToPublicDocuments
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -663,9 +663,9 @@ fun PlaylistMenu(
             onShare = { format ->
                 val playlistSongs =
                     songs.map { s ->
-                        com.metrolist.music.db.entities.PlaylistSong(
+                        com.romzz.musify.db.entities.PlaylistSong(
                             map =
-                                com.metrolist.music.db.entities.PlaylistSongMap(
+                                com.romzz.musify.db.entities.PlaylistSongMap(
                                     songId = s.id,
                                     playlistId = playlist.id,
                                     position = 0,
@@ -698,9 +698,9 @@ fun PlaylistMenu(
             onSave = { format ->
                 val playlistSongs =
                     songs.map { s ->
-                        com.metrolist.music.db.entities.PlaylistSong(
+                        com.romzz.musify.db.entities.PlaylistSong(
                             map =
-                                com.metrolist.music.db.entities.PlaylistSongMap(
+                                com.romzz.musify.db.entities.PlaylistSongMap(
                                     songId = s.id,
                                     playlistId = playlist.id,
                                     position = 0,

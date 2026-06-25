@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.screens.search
+package com.romzz.musify.ui.screens.search
 
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
@@ -45,27 +45,27 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
-import com.metrolist.music.LocalNavController
-import com.metrolist.music.LocalPlayerConnection
-import com.metrolist.music.R
-import com.metrolist.music.constants.CONTENT_TYPE_LIST
-import com.metrolist.music.constants.ListItemHeight
-import com.metrolist.music.db.entities.Album
-import com.metrolist.music.db.entities.Artist
-import com.metrolist.music.db.entities.Playlist
-import com.metrolist.music.db.entities.Song
-import com.metrolist.music.extensions.toMediaItem
-import com.metrolist.music.playback.queues.ListQueue
-import com.metrolist.music.ui.component.AlbumListItem
-import com.metrolist.music.ui.component.ArtistListItem
-import com.metrolist.music.ui.component.ChipsRow
-import com.metrolist.music.ui.component.EmptyPlaceholder
-import com.metrolist.music.ui.component.LocalMenuState
-import com.metrolist.music.ui.component.PlaylistListItem
-import com.metrolist.music.ui.component.SongListItem
-import com.metrolist.music.ui.menu.SongMenu
-import com.metrolist.music.viewmodels.LocalFilter
-import com.metrolist.music.viewmodels.LocalSearchViewModel
+import com.romzz.musify.LocalNavController
+import com.romzz.musify.LocalPlayerConnection
+import com.romzz.musify.R
+import com.romzz.musify.constants.CONTENT_TYPE_LIST
+import com.romzz.musify.constants.ListItemHeight
+import com.romzz.musify.db.entities.Album
+import com.romzz.musify.db.entities.Artist
+import com.romzz.musify.db.entities.Playlist
+import com.romzz.musify.db.entities.Song
+import com.romzz.musify.extensions.toMediaItem
+import com.romzz.musify.playback.queues.ListQueue
+import com.romzz.musify.ui.component.AlbumListItem
+import com.romzz.musify.ui.component.ArtistListItem
+import com.romzz.musify.ui.component.ChipsRow
+import com.romzz.musify.ui.component.EmptyPlaceholder
+import com.romzz.musify.ui.component.LocalMenuState
+import com.romzz.musify.ui.component.PlaylistListItem
+import com.romzz.musify.ui.component.SongListItem
+import com.romzz.musify.ui.menu.SongMenu
+import com.romzz.musify.viewmodels.LocalFilter
+import com.romzz.musify.viewmodels.LocalSearchViewModel
 import kotlinx.coroutines.flow.drop
 
 @OptIn(ExperimentalFoundationApi::class)

@@ -3,13 +3,13 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.lyrics
+package com.romzz.musify.lyrics
 
 import android.content.Context
 import com.metrolist.kugou.KuGou
-import com.metrolist.music.constants.EnableKugouKey
-import com.metrolist.music.utils.dataStore
-import com.metrolist.music.utils.get
+import com.romzz.musify.constants.EnableKugouKey
+import com.romzz.musify.utils.dataStore
+import com.romzz.musify.utils.get
 
 object KuGouLyricsProvider : LyricsProvider {
     override val name = "Kugou"

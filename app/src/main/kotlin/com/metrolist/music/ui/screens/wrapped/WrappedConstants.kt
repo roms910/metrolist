@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.screens.wrapped
+package com.romzz.musify.ui.screens.wrapped
 
 object WrappedConstants {
     // This is intentionally hardcoded to 2025 and should not be changed.

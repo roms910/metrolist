@@ -1,4 +1,4 @@
-package com.metrolist.music.utils.cipher
+package com.romzz.musify.utils.cipher
 
 import android.content.Context
 import android.net.Uri

@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.screens.wrapped.pages
+package com.romzz.musify.ui.screens.wrapped.pages
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.Animatable
@@ -47,11 +47,11 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil3.compose.AsyncImage
-import com.metrolist.music.R
-import com.metrolist.music.db.entities.Album
-import com.metrolist.music.ui.screens.wrapped.components.AnimatedBackground
-import com.metrolist.music.ui.screens.wrapped.components.ShapeType
-import com.metrolist.music.ui.theme.bbh_bartle
+import com.romzz.musify.R
+import com.romzz.musify.db.entities.Album
+import com.romzz.musify.ui.screens.wrapped.components.AnimatedBackground
+import com.romzz.musify.ui.screens.wrapped.components.ShapeType
+import com.romzz.musify.ui.theme.bbh_bartle
 import kotlinx.coroutines.delay
 
 @Composable

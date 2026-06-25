@@ -11,7 +11,7 @@
  * - Inset icon size: 24dp
  */
 
-package com.metrolist.music.ui.component
+package com.romzz.musify.ui.component
 
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.height
@@ -33,7 +33,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.DpSize
 import androidx.compose.ui.unit.dp
-import com.metrolist.music.R
+import com.romzz.musify.R
 
 /**
  * Material 3 Expressive Volume Slider dimensions (Size M)

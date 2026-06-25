@@ -1,4 +1,4 @@
-package com.metrolist.music.ui.screens.equalizer
+package com.romzz.musify.ui.screens.equalizer
 
 import android.annotation.SuppressLint
 import android.provider.OpenableColumns
@@ -45,10 +45,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import com.metrolist.music.LocalNavController
-import com.metrolist.music.LocalPlayerAwareWindowInsets
-import com.metrolist.music.R
-import com.metrolist.music.eq.data.SavedEQProfile
+import com.romzz.musify.LocalNavController
+import com.romzz.musify.LocalPlayerAwareWindowInsets
+import com.romzz.musify.R
+import com.romzz.musify.eq.data.SavedEQProfile
 import timber.log.Timber
 
 /**

@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.screens.settings
+package com.romzz.musify.ui.screens.settings
 
 import androidx.annotation.StringRes
 import androidx.compose.foundation.horizontalScroll
@@ -37,20 +37,20 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.metrolist.music.LocalPlayerAwareWindowInsets
-import com.metrolist.music.R
-import com.metrolist.music.constants.StreamSourceAndroidCreatorKey
-import com.metrolist.music.constants.StreamSourceAndroidVRKey
-import com.metrolist.music.constants.StreamSourceIOSKey
-import com.metrolist.music.constants.StreamSourceTVHTML5Key
-import com.metrolist.music.constants.StreamSourceVisionOSKey
-import com.metrolist.music.constants.StreamSourceWebCreatorKey
-import com.metrolist.music.constants.StreamSourceWebRemixKey
-import com.metrolist.music.ui.component.IconButton
-import com.metrolist.music.ui.component.Material3SettingsGroup
-import com.metrolist.music.ui.component.Material3SettingsItem
-import com.metrolist.music.ui.utils.backToMain
-import com.metrolist.music.utils.rememberPreference
+import com.romzz.musify.LocalPlayerAwareWindowInsets
+import com.romzz.musify.R
+import com.romzz.musify.constants.StreamSourceAndroidCreatorKey
+import com.romzz.musify.constants.StreamSourceAndroidVRKey
+import com.romzz.musify.constants.StreamSourceIOSKey
+import com.romzz.musify.constants.StreamSourceTVHTML5Key
+import com.romzz.musify.constants.StreamSourceVisionOSKey
+import com.romzz.musify.constants.StreamSourceWebCreatorKey
+import com.romzz.musify.constants.StreamSourceWebRemixKey
+import com.romzz.musify.ui.component.IconButton
+import com.romzz.musify.ui.component.Material3SettingsGroup
+import com.romzz.musify.ui.component.Material3SettingsItem
+import com.romzz.musify.ui.utils.backToMain
+import com.romzz.musify.utils.rememberPreference
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

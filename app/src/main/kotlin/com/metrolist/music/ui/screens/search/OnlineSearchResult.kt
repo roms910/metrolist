@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.screens.search
+package com.romzz.musify.ui.screens.search
 
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.ExperimentalFoundationApi
@@ -65,7 +65,7 @@ import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.unit.dp
 import androidx.hilt.lifecycle.viewmodel.compose.hiltViewModel
 import androidx.lifecycle.SavedStateHandle
-import com.metrolist.music.LocalNavController
+import com.romzz.musify.LocalNavController
 import com.metrolist.innertube.YouTube.SearchFilter.Companion.FILTER_ALBUM
 import com.metrolist.innertube.YouTube.SearchFilter.Companion.FILTER_ARTIST
 import com.metrolist.innertube.YouTube.SearchFilter.Companion.FILTER_COMMUNITY_PLAYLIST
@@ -83,35 +83,35 @@ import com.metrolist.innertube.models.PodcastItem
 import com.metrolist.innertube.models.SongItem
 import com.metrolist.innertube.models.WatchEndpoint
 import com.metrolist.innertube.models.YTItem
-import com.metrolist.music.LocalDatabase
-import com.metrolist.music.LocalPlayerConnection
-import com.metrolist.music.R
-import com.metrolist.music.constants.AutoRadioQueueKey
-import com.metrolist.music.constants.HideVideoSongsKey
-import com.metrolist.music.constants.MiniPlayerBottomSpacing
-import com.metrolist.music.constants.MiniPlayerHeight
-import com.metrolist.music.constants.NavigationBarHeight
-import com.metrolist.music.constants.PauseSearchHistoryKey
-import com.metrolist.music.db.entities.SearchHistory
-import com.metrolist.music.extensions.toMediaItem
-import com.metrolist.music.models.toMediaMetadata
-import com.metrolist.music.playback.queues.ListQueue
-import com.metrolist.music.playback.queues.YouTubeQueue
-import com.metrolist.music.ui.component.ChipsRow
-import com.metrolist.music.ui.component.EmptyPlaceholder
-import com.metrolist.music.ui.component.HideOnScrollFAB
-import com.metrolist.music.ui.component.LocalMenuState
-import com.metrolist.music.ui.component.NavigationTitle
-import com.metrolist.music.ui.component.YouTubeListItem
-import com.metrolist.music.ui.component.shimmer.ListItemPlaceHolder
-import com.metrolist.music.ui.component.shimmer.ShimmerHost
-import com.metrolist.music.ui.menu.YouTubeAlbumMenu
-import com.metrolist.music.ui.menu.YouTubeArtistMenu
-import com.metrolist.music.ui.menu.YouTubePlaylistMenu
-import com.metrolist.music.ui.menu.YouTubeSongMenu
-import com.metrolist.music.utils.SearchRoutes
-import com.metrolist.music.utils.rememberPreference
-import com.metrolist.music.viewmodels.OnlineSearchViewModel
+import com.romzz.musify.LocalDatabase
+import com.romzz.musify.LocalPlayerConnection
+import com.romzz.musify.R
+import com.romzz.musify.constants.AutoRadioQueueKey
+import com.romzz.musify.constants.HideVideoSongsKey
+import com.romzz.musify.constants.MiniPlayerBottomSpacing
+import com.romzz.musify.constants.MiniPlayerHeight
+import com.romzz.musify.constants.NavigationBarHeight
+import com.romzz.musify.constants.PauseSearchHistoryKey
+import com.romzz.musify.db.entities.SearchHistory
+import com.romzz.musify.extensions.toMediaItem
+import com.romzz.musify.models.toMediaMetadata
+import com.romzz.musify.playback.queues.ListQueue
+import com.romzz.musify.playback.queues.YouTubeQueue
+import com.romzz.musify.ui.component.ChipsRow
+import com.romzz.musify.ui.component.EmptyPlaceholder
+import com.romzz.musify.ui.component.HideOnScrollFAB
+import com.romzz.musify.ui.component.LocalMenuState
+import com.romzz.musify.ui.component.NavigationTitle
+import com.romzz.musify.ui.component.YouTubeListItem
+import com.romzz.musify.ui.component.shimmer.ListItemPlaceHolder
+import com.romzz.musify.ui.component.shimmer.ShimmerHost
+import com.romzz.musify.ui.menu.YouTubeAlbumMenu
+import com.romzz.musify.ui.menu.YouTubeArtistMenu
+import com.romzz.musify.ui.menu.YouTubePlaylistMenu
+import com.romzz.musify.ui.menu.YouTubeSongMenu
+import com.romzz.musify.utils.SearchRoutes
+import com.romzz.musify.utils.rememberPreference
+import com.romzz.musify.viewmodels.OnlineSearchViewModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 

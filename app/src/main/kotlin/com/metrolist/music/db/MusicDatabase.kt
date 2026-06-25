@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.db
+package com.romzz.musify.db
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -21,29 +21,29 @@ import androidx.room.migration.AutoMigrationSpec
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 import androidx.sqlite.db.SupportSQLiteOpenHelper
-import com.metrolist.music.db.daos.SpeedDialDao
-import com.metrolist.music.db.entities.AlbumArtistMap
-import com.metrolist.music.db.entities.AlbumEntity
-import com.metrolist.music.db.entities.ArtistEntity
-import com.metrolist.music.db.entities.Event
-import com.metrolist.music.db.entities.FormatEntity
-import com.metrolist.music.db.entities.LyricsEntity
-import com.metrolist.music.db.entities.PlayCountEntity
-import com.metrolist.music.db.entities.PlaylistEntity
-import com.metrolist.music.db.entities.PlaylistSongMap
-import com.metrolist.music.db.entities.PlaylistSongMapPreview
-import com.metrolist.music.db.entities.PodcastEntity
-import com.metrolist.music.db.entities.RecognitionHistory
-import com.metrolist.music.db.entities.RelatedSongMap
-import com.metrolist.music.db.entities.SearchHistory
-import com.metrolist.music.db.entities.SetVideoIdEntity
-import com.metrolist.music.db.entities.SongAlbumMap
-import com.metrolist.music.db.entities.SongArtistMap
-import com.metrolist.music.db.entities.SongEntity
-import com.metrolist.music.db.entities.SortedSongAlbumMap
-import com.metrolist.music.db.entities.SortedSongArtistMap
-import com.metrolist.music.db.entities.SpeedDialItem
-import com.metrolist.music.extensions.toSQLiteQuery
+import com.romzz.musify.db.daos.SpeedDialDao
+import com.romzz.musify.db.entities.AlbumArtistMap
+import com.romzz.musify.db.entities.AlbumEntity
+import com.romzz.musify.db.entities.ArtistEntity
+import com.romzz.musify.db.entities.Event
+import com.romzz.musify.db.entities.FormatEntity
+import com.romzz.musify.db.entities.LyricsEntity
+import com.romzz.musify.db.entities.PlayCountEntity
+import com.romzz.musify.db.entities.PlaylistEntity
+import com.romzz.musify.db.entities.PlaylistSongMap
+import com.romzz.musify.db.entities.PlaylistSongMapPreview
+import com.romzz.musify.db.entities.PodcastEntity
+import com.romzz.musify.db.entities.RecognitionHistory
+import com.romzz.musify.db.entities.RelatedSongMap
+import com.romzz.musify.db.entities.SearchHistory
+import com.romzz.musify.db.entities.SetVideoIdEntity
+import com.romzz.musify.db.entities.SongAlbumMap
+import com.romzz.musify.db.entities.SongArtistMap
+import com.romzz.musify.db.entities.SongEntity
+import com.romzz.musify.db.entities.SortedSongAlbumMap
+import com.romzz.musify.db.entities.SortedSongArtistMap
+import com.romzz.musify.db.entities.SpeedDialItem
+import com.romzz.musify.extensions.toSQLiteQuery
 import timber.log.Timber
 import java.io.File
 import java.text.SimpleDateFormat

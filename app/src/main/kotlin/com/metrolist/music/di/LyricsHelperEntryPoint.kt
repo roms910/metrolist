@@ -3,9 +3,9 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.di
+package com.romzz.musify.di
 
-import com.metrolist.music.lyrics.LyricsHelper
+import com.romzz.musify.lyrics.LyricsHelper
 import dagger.hilt.EntryPoint
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent

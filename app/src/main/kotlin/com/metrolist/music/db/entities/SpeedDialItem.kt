@@ -1,4 +1,4 @@
-package com.metrolist.music.db.entities
+package com.romzz.musify.db.entities
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

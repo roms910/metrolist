@@ -3,13 +3,13 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.lyrics
+package com.romzz.musify.lyrics
 
 import android.content.Context
-import com.metrolist.music.betterlyrics.TTMLParser
-import com.metrolist.music.constants.EnableLyricsPlus
-import com.metrolist.music.utils.dataStore
-import com.metrolist.music.utils.get
+import com.romzz.musify.betterlyrics.TTMLParser
+import com.romzz.musify.constants.EnableLyricsPlus
+import com.romzz.musify.utils.dataStore
+import com.romzz.musify.utils.get
 import io.ktor.client.HttpClient
 import io.ktor.client.call.body
 import io.ktor.client.engine.cio.CIO

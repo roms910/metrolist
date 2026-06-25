@@ -1,4 +1,4 @@
-package com.metrolist.music.ui.screens.equalizer
+package com.romzz.musify.ui.screens.equalizer
 
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -21,8 +21,8 @@ import androidx.compose.ui.text.drawText
 import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.metrolist.music.eq.data.FilterType
-import com.metrolist.music.eq.data.ParametricEQBand
+import com.romzz.musify.eq.data.FilterType
+import com.romzz.musify.eq.data.ParametricEQBand
 import kotlin.math.PI
 import kotlin.math.abs
 import kotlin.math.ceil

@@ -1,9 +1,9 @@
-package com.metrolist.music.di
+package com.romzz.musify.di
 
 import android.content.Context
-import com.metrolist.music.db.DatabaseDao
-import com.metrolist.music.ui.screens.wrapped.WrappedAudioService
-import com.metrolist.music.ui.screens.wrapped.WrappedManager
+import com.romzz.musify.db.DatabaseDao
+import com.romzz.musify.ui.screens.wrapped.WrappedAudioService
+import com.romzz.musify.ui.screens.wrapped.WrappedManager
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

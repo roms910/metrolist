@@ -1,4 +1,4 @@
-package com.metrolist.music.listentogether
+package com.romzz.musify.listentogether
 
 import android.content.BroadcastReceiver
 import android.content.Context

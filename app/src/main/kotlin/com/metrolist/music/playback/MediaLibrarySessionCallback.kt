@@ -3,7 +3,7 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.playback
+package com.romzz.musify.playback
 
 import android.content.ContentResolver
 import android.content.Context
@@ -33,22 +33,22 @@ import com.metrolist.innertube.models.PlaylistItem
 import com.metrolist.innertube.models.SongItem
 import com.metrolist.innertube.models.filterExplicit
 import com.metrolist.innertube.models.filterVideoSongs
-import com.metrolist.music.R
-import com.metrolist.music.constants.HideExplicitKey
-import com.metrolist.music.constants.HideVideoSongsKey
-import com.metrolist.music.constants.MediaSessionConstants
-import com.metrolist.music.constants.SongSortType
-import com.metrolist.music.db.MusicDatabase
-import com.metrolist.music.db.entities.PlaylistEntity
-import com.metrolist.music.db.entities.Song
-import com.metrolist.music.extensions.toMediaItem
-import com.metrolist.music.extensions.toggleRepeatMode
-import com.metrolist.music.models.toMediaMetadata
-import com.metrolist.music.utils.dataStore
-import com.metrolist.music.utils.get
-import com.metrolist.music.utils.getArtistSeparator
-import com.metrolist.music.utils.joinToArtistString
-import com.metrolist.music.utils.reportException
+import com.romzz.musify.R
+import com.romzz.musify.constants.HideExplicitKey
+import com.romzz.musify.constants.HideVideoSongsKey
+import com.romzz.musify.constants.MediaSessionConstants
+import com.romzz.musify.constants.SongSortType
+import com.romzz.musify.db.MusicDatabase
+import com.romzz.musify.db.entities.PlaylistEntity
+import com.romzz.musify.db.entities.Song
+import com.romzz.musify.extensions.toMediaItem
+import com.romzz.musify.extensions.toggleRepeatMode
+import com.romzz.musify.models.toMediaMetadata
+import com.romzz.musify.utils.dataStore
+import com.romzz.musify.utils.get
+import com.romzz.musify.utils.getArtistSeparator
+import com.romzz.musify.utils.joinToArtistString
+import com.romzz.musify.utils.reportException
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
@@ -61,11 +61,11 @@ import kotlinx.coroutines.guava.future
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.plus
 import javax.inject.Inject
-import com.metrolist.music.constants.AndroidAutoSectionsOrderKey
-import com.metrolist.music.constants.AndroidAutoYouTubePlaylistsKey
-import com.metrolist.music.ui.screens.settings.AndroidAutoSection
-import com.metrolist.music.ui.screens.settings.deserializeSections
-import com.metrolist.music.ui.screens.settings.serializeSections
+import com.romzz.musify.constants.AndroidAutoSectionsOrderKey
+import com.romzz.musify.constants.AndroidAutoYouTubePlaylistsKey
+import com.romzz.musify.ui.screens.settings.AndroidAutoSection
+import com.romzz.musify.ui.screens.settings.deserializeSections
+import com.romzz.musify.ui.screens.settings.serializeSections
 
 class MediaLibrarySessionCallback
 @Inject

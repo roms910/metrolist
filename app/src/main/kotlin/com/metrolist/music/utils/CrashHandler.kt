@@ -3,13 +3,13 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.utils
+package com.romzz.musify.utils
 
 import android.content.Context
 import android.content.Intent
 import android.os.Build
-import com.metrolist.music.BuildConfig
-import com.metrolist.music.ui.screens.CrashActivity
+import com.romzz.musify.BuildConfig
+import com.romzz.musify.ui.screens.CrashActivity
 import timber.log.Timber
 import java.io.PrintWriter
 import java.io.StringWriter

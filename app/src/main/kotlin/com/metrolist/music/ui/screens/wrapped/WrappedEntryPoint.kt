@@ -3,11 +3,11 @@
  * Licensed under GPL-3.0 | See git history for contributors
  */
 
-package com.metrolist.music.ui.screens.wrapped
+package com.romzz.musify.ui.screens.wrapped
 
 import android.content.Context
 import androidx.compose.runtime.compositionLocalOf
-import com.metrolist.music.db.DatabaseDao
+import com.romzz.musify.db.DatabaseDao
 import dagger.hilt.EntryPoint
 import dagger.hilt.InstallIn
 import dagger.hilt.android.EntryPointAccessors
